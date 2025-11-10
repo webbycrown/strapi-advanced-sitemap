@@ -1,6 +1,31 @@
+# ----------------------------
+# Ignore unnecessary files
+# ----------------------------
 node_modules
 .git
+.gitignore
+.env
+.DS_Store
+tests
+coverage
+*.log
+
+# ----------------------------
+# Ignore development / source folders
+# ----------------------------
 src
 admin/src
-tests
-.env
+scripts
+build-config
+
+# ----------------------------
+# Keep only built files (dist)
+# ----------------------------
+!dist
+
+# ----------------------------
+# Ignore editor & OS metadata
+# ----------------------------
+.vscode
+.idea
+Thumbs.db

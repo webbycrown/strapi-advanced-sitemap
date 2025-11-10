@@ -175,5 +175,5 @@ MIT – see [LICENSE](LICENSE) for details.
 ---
 
 <div align="center">
-  <strong>Crafted with ❤️ by <a href="https://webbycrown.com">WebbyCrown</a></strong>
+  <strong>Made with ❤️ by <a href="https://webbycrown.com">WebbyCrown</a></strong>
 </div>

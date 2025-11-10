@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/strapi-advanced-sitemap",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "keywords": [
     "strapi",
     "plugin",
@@ -18,7 +18,12 @@
       "require": "./dist/admin/index.js",
       "default": "./dist/admin/index.js"
     },
-    "./strapi-server": "./strapi-server.js"
+    "./strapi-server": {
+      "source": "./server/src/index.js",
+      "import": "./dist/server/index.mjs",
+      "require": "./dist/server/index.js",
+      "default": "./dist/server/index.js"
+    }
   },
   "files": [
     "dist",
@@ -26,8 +31,9 @@
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run build:admin",
+    "build": "npm run build:admin && npm run build:server",
     "build:admin": "strapi-plugin build",
+    "build:server": "node scripts/build-server.js",
     "watch": "strapi-plugin watch",
     "watch:link": "strapi-plugin watch:link",
     "verify": "strapi-plugin verify"
@@ -65,7 +71,7 @@
     "email": "info@webbycrown.com",
     "url": "https://webbycrown.com"
   },
-   "repository": {
+  "repository": {
     "type": "git",
     "url": "https://github.com/webbycrown/strapi-advanced-sitemap.git"
   },
@@ -74,5 +80,3 @@
     "npm": ">=8.0.0"
   }
 }
-
-
