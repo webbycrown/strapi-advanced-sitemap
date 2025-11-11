@@ -157,20 +157,35 @@ Example pattern:
 
 ---
 
-## 📦 Publishing Notes
-
-When submitting to the Strapi Marketplace include:
-- Summary: “Configure manual and dynamic XML sitemaps from the Strapi admin.”  
-- Feature bullets (manual vs index, collection patterns, permissions)  
-- Screenshots of the Settings UI  
-- Compatibility (Strapi version, Node version)  
-- Link to this README for docs
-
----
-
 ## 📝 License
 
 MIT – see [LICENSE](LICENSE) for details.
+
+---
+
+## 🆘 Support
+
+- **Documentation**: [GitHub Wiki](https://github.com/webbycrown/strapi-advanced-sitemap/wiki)
+- **Issues**: [GitHub Issues](https://github.com/webbycrown/strapi-advanced-sitemap/issues)
+- **Discussions**: [GitHub Discussions](https://github.com/webbycrown/strapi-advanced-sitemap/discussions)
+- **Email**: info@webbycrown.com
+
+## 🙏 Acknowledgments
+
+- Built for the amazing [Strapi](https://strapi.io/) community
+- Inspired by modern form design principles
+- Thanks to all contributors and users
+
+## 📊 Changelog
+
+### v1.0.0
+- ✨ Initial release of **Strapi Advanced Sitemap**
+- 🧭 Manual sitemap builder supporting URL sets and sitemap indexes
+- ⚙️ Dynamic collection sitemaps powered by pattern tokens
+- 🔐 Role-based access control for each sitemap endpoint
+- 🌍 Configurable frontend base URL with live preview inside the admin panel
+- 📦 Easy integration and management from Strapi settings
+- 🚀 Published to NPM: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)
 
 ---
 
