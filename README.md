@@ -41,22 +41,22 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 ## 📸 Feature Screens
 
 ### Configure Sitemap Page
-![Configure Sitemap Page](https://github.com/user-attachments/assets/5009771b-8e79-404f-9eb2-f24f40f8030b)
+![Configure Sitemap Page](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/configure-sitemap-page.png)
 
 ### Permissions in Public Role Screen
-![Permissions in Public Role Screen](https://github.com/user-attachments/assets/e4c62666-2524-426e-bf7f-6988b1d1f71c)
+![Permissions in Public Role Screen](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/permissions.png)
 
 ### Manual Sitemap Settings (Sitemap Index)
-![Manual Sitemap Settings (Sitemap Index)](https://github.com/user-attachments/assets/606f4e57-1897-4c9d-8de7-10df6580f06b)
+![Manual Sitemap Settings (Sitemap Index)](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/manual-sitemap-settings-sitemap-index.png)
 
 ### Manual Sitemap Settings (URL Set)
-![Manual Sitemap Settings (Url Set)](https://github.com/user-attachments/assets/7cb32f52-eb14-4db4-84f9-cad7b0fd8ab7)
+![Manual Sitemap Settings (Url Set)](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/manual-sitemap-settings-url-set.png)
 
 ### Collection Sitemap Settings
-![Collection Sitemap Settings](https://github.com/user-attachments/assets/a0597dd6-03e6-4d16-81f7-96c60c1bec60)
+![Collection Sitemap Settings](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/collection-sitemap-settings.png)
 
 ### Collection Sitemap Entry
-![Collection Sitemap Entry](https://github.com/user-attachments/assets/b04bea0d-6c52-4795-8e65-73740e19cd3e)
+![Collection Sitemap Entry](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/collection-sitemap-entry.png)
 
 ---
 
