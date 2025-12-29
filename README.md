@@ -41,22 +41,29 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 ## 📸 Feature Screens
 
 ### Configure Sitemap Page
-![Configure Sitemap Page](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/configure-sitemap-page.png)
+![Configure Sitemap Page](https://github.com/user-attachments/assets/5009771b-8e79-404f-9eb2-f24f40f8030b)
 
 ### Permissions in Public Role Screen
-![Permissions in Public Role Screen](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/permissions.png)
+![Permissions in Public Role Screen](https://github.com/user-attachments/assets/e4c62666-2524-426e-bf7f-6988b1d1f71c)
 
 ### Manual Sitemap Settings (Sitemap Index)
-![Manual Sitemap Settings (Sitemap Index)](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/manual-sitemap-settings-sitemap-index.png)
+![Manual Sitemap Settings (Sitemap Index)](https://github.com/user-attachments/assets/606f4e57-1897-4c9d-8de7-10df6580f06b)
 
 ### Manual Sitemap Settings (URL Set)
-![Manual Sitemap Settings (Url Set)](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/manual-sitemap-settings-url-set.png)
+![Manual Sitemap Settings (Url Set)](https://github.com/user-attachments/assets/7cb32f52-eb14-4db4-84f9-cad7b0fd8ab7)
 
 ### Collection Sitemap Settings
-![Collection Sitemap Settings](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/collection-sitemap-settings.png)
+![Collection Sitemap Settings](https://github.com/user-attachments/assets/a0597dd6-03e6-4d16-81f7-96c60c1bec60)
 
 ### Collection Sitemap Entry
-![Collection Sitemap Entry](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/collection-sitemap-entry.png)
+![Collection Sitemap Entry](https://github.com/user-attachments/assets/b04bea0d-6c52-4795-8e65-73740e19cd3e)
+
+---
+
+## 🎥 Demo Video
+
+[![Watch the demo](https://img.youtube.com/vi/4HBuf8fhNCQ/hqdefault.jpg)](https://www.youtube.com/watch?v=4HBuf8fhNCQ)  
+[View on YouTube](https://www.youtube.com/watch?v=4HBuf8fhNCQ)
 
 ---
 
@@ -157,38 +164,25 @@ Example pattern:
 
 ---
 
+## 📦 Publishing Notes
+
+When submitting to the Strapi Marketplace include:
+- Summary: “Configure manual and dynamic XML sitemaps from the Strapi admin.”  
+- Feature bullets (manual vs index, collection patterns, permissions)  
+- Screenshots of the Settings UI  
+- Compatibility (Strapi version, Node version)  
+- Link to this README for docs
+
+---
+
 ## 📝 License
 
 MIT – see [LICENSE](LICENSE) for details.
 
 ---
 
-## 🆘 Support
-
-- **Documentation**: [GitHub Wiki](https://github.com/webbycrown/strapi-advanced-sitemap/wiki)
-- **Issues**: [GitHub Issues](https://github.com/webbycrown/strapi-advanced-sitemap/issues)
-- **Discussions**: [GitHub Discussions](https://github.com/webbycrown/strapi-advanced-sitemap/discussions)
-- **Email**: info@webbycrown.com
-
-## 🙏 Acknowledgments
-
-- Built for the amazing [Strapi](https://strapi.io/) community
-- Inspired by modern form design principles
-- Thanks to all contributors and users
-
-## 📊 Changelog
-
-### v1.0.0
-- ✨ Initial release of **Strapi Advanced Sitemap**
-- 🧭 Manual sitemap builder supporting URL sets and sitemap indexes
-- ⚙️ Dynamic collection sitemaps powered by pattern tokens
-- 🔐 Role-based access control for each sitemap endpoint
-- 🌍 Configurable frontend base URL with live preview inside the admin panel
-- 📦 Easy integration and management from Strapi settings
-- 🚀 Published to NPM: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)
-
----
-
 <div align="center">
-  <strong>Made with ❤️ by <a href="https://webbycrown.com">WebbyCrown</a></strong>
+  <strong>Crafted with ❤️ by <a href="https://webbycrown.com">WebbyCrown</a></strong>
 </div>
+
+
