@@ -178,33 +178,34 @@ When submitting to the Strapi Marketplace include:
 
 ## 📣 Changelog
 
-### 1.0.4
+### v1.0.4
 
 - 📝 Updated README to include Demo Video section
 - ⚡ Improved documentation clarity for plugin setup and usage
 
-### 1.0.3
+### v1.0.3
 
 - 🐛 Fixed bugs.
 - 🛠️ Resolved minor issues affecting
 
-### 1.0.2
+### v1.0.2
 
 - 📝 README documentation updates
 
-### 1.0.1
+### v1.0.1
 
 - 📝 README documentation updates
 - ✨ Improved helper text and UI hints in admin settings
 
-### 1.0.0
+### v1.0.0
 
-- 🎉 Initial release
-- 🗂️ Manual sitemap builder (URL set & sitemap index)
-- 🔁 Dynamic collection-based sitemaps
-- 🔒 Role-based permission support
-
-🛠️ Admin-first configuration workflow
+- ✨ Initial release of Strapi Advanced Sitemap
+- 🧭 Manual sitemap builder supporting URL sets and sitemap indexes
+- ⚙️ Dynamic collection sitemaps powered by pattern tokens
+- 🔐 Role-based access control for each sitemap endpoint
+- 🌍 Configurable frontend base URL with live preview inside the admin panel
+- 📦 Easy integration and management from Strapi settings
+- 🚀 Published to NPM: @webbycrown/strapi-advanced-sitemap
 
 ---
 
