@@ -178,6 +178,11 @@ When submitting to the Strapi Marketplace include:
 
 ## 📣 Changelog
 
+### 1.0.4
+
+- 📝 Updated README to include Demo Video section
+- ⚡ Improved documentation clarity for plugin setup and usage
+
 ### 1.0.3
 
 - 🐛 Fixed bugs.
