@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/strapi-advanced-sitemap",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "keywords": [
     "strapi",
     "plugin",
@@ -70,5 +70,3 @@
     "npm": ">=8.0.0"
   }
 }
-
-
