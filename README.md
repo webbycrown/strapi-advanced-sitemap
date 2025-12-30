@@ -178,6 +178,11 @@ When submitting to the Strapi Marketplace include:
 
 ## 📣 Changelog
 
+### 1.0.3
+
+- 🐛 Fixed bugs.
+- 🛠️ Resolved minor issues affecting
+
 ### 1.0.2
 
 - 📝 README documentation updates
