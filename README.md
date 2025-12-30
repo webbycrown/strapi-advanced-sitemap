@@ -9,6 +9,14 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 📦 **NPM Package**: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)  
 💻 **Repository**: [GitHub – webbycrown/strapi-advanced-sitemap](https://github.com/webbycrown/strapi-advanced-sitemap)
 
+## 🎥 Overview & Usage Demo
+
+A short introduction and quick overview of **Strapi Advanced Sitemap**, showcasing how to build manual or dynamic XML sitemaps, publish sitemap indexes, and control access per role inside the Strapi admin panel.
+
+[![Watch the demo](https://img.youtube.com/vi/4HBuf8fhNCQ/hqdefault.jpg)](https://www.youtube.com/watch?v=4HBuf8fhNCQ)  
+
+▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=4HBuf8fhNCQ)**
+
 ---
 
 ## ✨ Features
@@ -57,13 +65,6 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 
 ### Collection Sitemap Entry
 ![Collection Sitemap Entry](https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/collection-sitemap-entry.png)
-
----
-
-## 🎥 Demo Video
-
-[![Watch the demo](https://img.youtube.com/vi/4HBuf8fhNCQ/hqdefault.jpg)](https://www.youtube.com/watch?v=4HBuf8fhNCQ)  
-[View on YouTube](https://www.youtube.com/watch?v=4HBuf8fhNCQ)
 
 ---
 
@@ -172,6 +173,24 @@ When submitting to the Strapi Marketplace include:
 - Screenshots of the Settings UI  
 - Compatibility (Strapi version, Node version)  
 - Link to this README for docs
+
+---
+
+## 📣 Changelog
+
+### 1.0.1
+
+- 📝 README documentation updates
+- ✨ Improved helper text and UI hints in admin settings
+
+### 1.0.0
+
+- 🎉 Initial release
+- 🗂️ Manual sitemap builder (URL set & sitemap index)
+- 🔁 Dynamic collection-based sitemaps
+- 🔒 Role-based permission support
+
+🛠️ Admin-first configuration workflow
 
 ---
 

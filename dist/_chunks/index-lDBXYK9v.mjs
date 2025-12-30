@@ -51,7 +51,7 @@ const index = {
           defaultMessage: "Configuration"
         },
         to: `${PLUGIN_ID}`,
-        Component: () => import("./Settings-C2T_ZvMe.mjs")
+        Component: () => import("./Settings-O4TWg_hE.mjs")
       }
     );
   },
