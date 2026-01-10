@@ -182,6 +182,10 @@ When submitting to the Strapi Marketplace include:
 
 ## 📣 Changelog
 
+### v1.0.6
+
+- 📝 Updated the README to properly display the YouTube preview image in Any documentation.
+
 
 ### v1.0.5
 
