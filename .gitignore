@@ -17,6 +17,7 @@ src
 admin/src
 scripts
 build-config
+.npmignore
 
 # ----------------------------
 # Keep only built files (dist)
