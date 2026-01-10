@@ -1,0 +1,35 @@
+# This repo uses package.json "files" as the primary publish allowlist.
+# This .npmignore exists for compatibility with tooling and as a safety net
+# if the allowlist is removed/changed in the future.
+
+# dependencies / logs
+node_modules
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+*.log
+
+# VCS / OS / editor
+.git
+.gitignore
+.DS_Store
+Thumbs.db
+.vscode
+.idea
+
+
+# tests / coverage / local env
+tests
+test
+__tests__
+coverage
+.env
+.env.*
+
+# source-only assets (not needed at runtime)
+assets
+admin/src
+admin/jsconfig.json
+
+
