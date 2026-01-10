@@ -13,7 +13,11 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 
 A short introduction and quick overview of **Strapi Advanced Sitemap**, showcasing how to build manual or dynamic XML sitemaps, publish sitemap indexes, and control access per role inside the Strapi admin panel.
 
-[![Watch the demo](assets/strapi-advanced-sitemap-play.png)](https://www.youtube.com/watch?v=4HBuf8fhNCQ)  
+<div style="margin: 20px 0" align="center">
+  <a href="https://www.youtube.com/watch?v=4HBuf8fhNCQ">
+    <img style="width: 100%; height: auto;" src="https://raw.githubusercontent.com/webbycrown/strapi-advanced-sitemap/main/assets/strapi-advanced-sitemap-play.png" alt="Watch the demo" />
+  </a>
+</div>  
 
 ▶️ **[Watch Full Video on YouTube](https://www.youtube.com/watch?v=4HBuf8fhNCQ)**
 
@@ -177,6 +181,11 @@ When submitting to the Strapi Marketplace include:
 ---
 
 ## 📣 Changelog
+
+
+### v1.0.5
+
+- 📝 Updated README to include Youtube Image
 
 ### v1.0.4
 
