@@ -31,6 +31,13 @@ const Initializer = ({ setPlugin }) => {
 };
 const index = {
   register(app) {
+    const settingsSection = {
+      id: `${PLUGIN_ID}-settings-section`,
+      intlLabel: {
+        id: `${PLUGIN_ID}.settings.section`,
+        defaultMessage: "Advanced Sitemap"
+      }
+    };
     app.registerPlugin({
       id: PLUGIN_ID,
       initializer: Initializer,
@@ -38,13 +45,7 @@ const index = {
       name: "Strapi Advanced Sitemap"
     });
     app.addSettingsLink(
-      {
-        id: "sitemap",
-        intlLabel: {
-          id: `${PLUGIN_ID}.settings.section`,
-          defaultMessage: "Advanced Sitemap"
-        }
-      },
+      settingsSection,
       {
         id: `${PLUGIN_ID}.settings`,
         intlLabel: {
@@ -52,7 +53,7 @@ const index = {
           defaultMessage: "Configuration"
         },
         to: `${PLUGIN_ID}`,
-        Component: () => Promise.resolve().then(() => require("./Settings-BA3_-WUh.js"))
+        Component: () => Promise.resolve().then(() => require("./Home-DWqC7130.js"))
       }
     );
   },
