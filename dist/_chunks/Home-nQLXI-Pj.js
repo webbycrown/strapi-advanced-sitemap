@@ -5,7 +5,7 @@ const React = require("react");
 const designSystem = require("@strapi/design-system");
 const icons = require("@strapi/icons");
 const reactIntl = require("react-intl");
-const index = require("./index-Bc6SxLIA.js");
+const index = require("./index-B8f75HgH.js");
 require("react-dom/client");
 const ReactDOM = require("react-dom");
 require("@strapi/icons/symbols");
@@ -10163,7 +10163,7 @@ var objectInspect = function inspect_(obj, options, depth, seen) {
     var ys = arrObjKeys(obj, inspect2);
     var isPlainObject2 = gPO ? gPO(obj) === Object.prototype : obj instanceof Object || obj.constructor === Object;
     var protoTag = obj instanceof Object ? "" : "null prototype";
-    var stringTag2 = !isPlainObject2 && toStringTag$1 && Object(obj) === obj && toStringTag$1 in obj ? $slice.call(toStr$1(obj), 8, -1) : protoTag ? "Object" : "";
+    var stringTag2 = !isPlainObject2 && toStringTag$1 && Object(obj) === obj && toStringTag$1 in obj ? $slice.call(toStr(obj), 8, -1) : protoTag ? "Object" : "";
     var constructorTag = isPlainObject2 || typeof obj.constructor !== "function" ? "" : obj.constructor.name ? obj.constructor.name + " " : "";
     var tag = constructorTag + (stringTag2 || protoTag ? "[" + $join.call($concat$1.call([], stringTag2 || [], protoTag || []), ": ") + "] " : "");
     if (ys.length === 0) {
@@ -10188,25 +10188,25 @@ function canTrustToString(obj) {
   return !toStringTag$1 || !(typeof obj === "object" && (toStringTag$1 in obj || typeof obj[toStringTag$1] !== "undefined"));
 }
 function isArray$4(obj) {
-  return toStr$1(obj) === "[object Array]" && canTrustToString(obj);
+  return toStr(obj) === "[object Array]" && canTrustToString(obj);
 }
 function isDate$2(obj) {
-  return toStr$1(obj) === "[object Date]" && canTrustToString(obj);
+  return toStr(obj) === "[object Date]" && canTrustToString(obj);
 }
 function isRegExp$2(obj) {
-  return toStr$1(obj) === "[object RegExp]" && canTrustToString(obj);
+  return toStr(obj) === "[object RegExp]" && canTrustToString(obj);
 }
 function isError(obj) {
-  return toStr$1(obj) === "[object Error]" && canTrustToString(obj);
+  return toStr(obj) === "[object Error]" && canTrustToString(obj);
 }
 function isString$1(obj) {
-  return toStr$1(obj) === "[object String]" && canTrustToString(obj);
+  return toStr(obj) === "[object String]" && canTrustToString(obj);
 }
 function isNumber$1(obj) {
-  return toStr$1(obj) === "[object Number]" && canTrustToString(obj);
+  return toStr(obj) === "[object Number]" && canTrustToString(obj);
 }
 function isBoolean$1(obj) {
-  return toStr$1(obj) === "[object Boolean]" && canTrustToString(obj);
+  return toStr(obj) === "[object Boolean]" && canTrustToString(obj);
 }
 function isSymbol(obj) {
   if (hasShammedSymbols) {
@@ -10242,7 +10242,7 @@ var hasOwn$1 = Object.prototype.hasOwnProperty || function(key) {
 function has$5(obj, key) {
   return hasOwn$1.call(obj, key);
 }
-function toStr$1(obj) {
+function toStr(obj) {
   return objectToString.call(obj);
 }
 function nameOf(f2) {
@@ -10551,7 +10551,7 @@ var syntax = SyntaxError;
 var uri = URIError;
 var abs$1 = Math.abs;
 var floor$1 = Math.floor;
-var max$2 = Math.max;
+var max$1 = Math.max;
 var min$1 = Math.min;
 var pow$1 = Math.pow;
 var round$1 = Math.round;
@@ -10680,78 +10680,99 @@ function requireObject_getPrototypeOf() {
   Object_getPrototypeOf = $Object2.getPrototypeOf || null;
   return Object_getPrototypeOf;
 }
-var ERROR_MESSAGE = "Function.prototype.bind called on incompatible ";
-var toStr = Object.prototype.toString;
-var max$1 = Math.max;
-var funcType = "[object Function]";
-var concatty = function concatty2(a2, b2) {
-  var arr = [];
-  for (var i2 = 0; i2 < a2.length; i2 += 1) {
-    arr[i2] = a2[i2];
-  }
-  for (var j2 = 0; j2 < b2.length; j2 += 1) {
-    arr[j2 + a2.length] = b2[j2];
-  }
-  return arr;
-};
-var slicy = function slicy2(arrLike, offset) {
-  var arr = [];
-  for (var i2 = offset, j2 = 0; i2 < arrLike.length; i2 += 1, j2 += 1) {
-    arr[j2] = arrLike[i2];
-  }
-  return arr;
-};
-var joiny = function(arr, joiner) {
-  var str = "";
-  for (var i2 = 0; i2 < arr.length; i2 += 1) {
-    str += arr[i2];
-    if (i2 + 1 < arr.length) {
-      str += joiner;
+var implementation;
+var hasRequiredImplementation;
+function requireImplementation() {
+  if (hasRequiredImplementation) return implementation;
+  hasRequiredImplementation = 1;
+  var ERROR_MESSAGE = "Function.prototype.bind called on incompatible ";
+  var toStr2 = Object.prototype.toString;
+  var max2 = Math.max;
+  var funcType = "[object Function]";
+  var concatty = function concatty2(a2, b2) {
+    var arr = [];
+    for (var i2 = 0; i2 < a2.length; i2 += 1) {
+      arr[i2] = a2[i2];
     }
-  }
-  return str;
-};
-var implementation$1 = function bind(that) {
-  var target = this;
-  if (typeof target !== "function" || toStr.apply(target) !== funcType) {
-    throw new TypeError(ERROR_MESSAGE + target);
-  }
-  var args = slicy(arguments, 1);
-  var bound;
-  var binder = function() {
-    if (this instanceof bound) {
-      var result = target.apply(
-        this,
+    for (var j2 = 0; j2 < b2.length; j2 += 1) {
+      arr[j2 + a2.length] = b2[j2];
+    }
+    return arr;
+  };
+  var slicy = function slicy2(arrLike, offset) {
+    var arr = [];
+    for (var i2 = offset, j2 = 0; i2 < arrLike.length; i2 += 1, j2 += 1) {
+      arr[j2] = arrLike[i2];
+    }
+    return arr;
+  };
+  var joiny = function(arr, joiner) {
+    var str = "";
+    for (var i2 = 0; i2 < arr.length; i2 += 1) {
+      str += arr[i2];
+      if (i2 + 1 < arr.length) {
+        str += joiner;
+      }
+    }
+    return str;
+  };
+  implementation = function bind2(that) {
+    var target = this;
+    if (typeof target !== "function" || toStr2.apply(target) !== funcType) {
+      throw new TypeError(ERROR_MESSAGE + target);
+    }
+    var args = slicy(arguments, 1);
+    var bound;
+    var binder = function() {
+      if (this instanceof bound) {
+        var result = target.apply(
+          this,
+          concatty(args, arguments)
+        );
+        if (Object(result) === result) {
+          return result;
+        }
+        return this;
+      }
+      return target.apply(
+        that,
         concatty(args, arguments)
       );
-      if (Object(result) === result) {
-        return result;
-      }
-      return this;
-    }
-    return target.apply(
-      that,
-      concatty(args, arguments)
-    );
-  };
-  var boundLength = max$1(0, target.length - args.length);
-  var boundArgs = [];
-  for (var i2 = 0; i2 < boundLength; i2++) {
-    boundArgs[i2] = "$" + i2;
-  }
-  bound = Function("binder", "return function (" + joiny(boundArgs, ",") + "){ return binder.apply(this,arguments); }")(binder);
-  if (target.prototype) {
-    var Empty = function Empty2() {
     };
-    Empty.prototype = target.prototype;
-    bound.prototype = new Empty();
-    Empty.prototype = null;
-  }
-  return bound;
-};
-var implementation = implementation$1;
-var functionBind = Function.prototype.bind || implementation;
-var functionCall = Function.prototype.call;
+    var boundLength = max2(0, target.length - args.length);
+    var boundArgs = [];
+    for (var i2 = 0; i2 < boundLength; i2++) {
+      boundArgs[i2] = "$" + i2;
+    }
+    bound = Function("binder", "return function (" + joiny(boundArgs, ",") + "){ return binder.apply(this,arguments); }")(binder);
+    if (target.prototype) {
+      var Empty = function Empty2() {
+      };
+      Empty.prototype = target.prototype;
+      bound.prototype = new Empty();
+      Empty.prototype = null;
+    }
+    return bound;
+  };
+  return implementation;
+}
+var functionBind;
+var hasRequiredFunctionBind;
+function requireFunctionBind() {
+  if (hasRequiredFunctionBind) return functionBind;
+  hasRequiredFunctionBind = 1;
+  var implementation2 = requireImplementation();
+  functionBind = Function.prototype.bind || implementation2;
+  return functionBind;
+}
+var functionCall;
+var hasRequiredFunctionCall;
+function requireFunctionCall() {
+  if (hasRequiredFunctionCall) return functionCall;
+  hasRequiredFunctionCall = 1;
+  functionCall = Function.prototype.call;
+  return functionCall;
+}
 var functionApply;
 var hasRequiredFunctionApply;
 function requireFunctionApply() {
@@ -10761,14 +10782,14 @@ function requireFunctionApply() {
   return functionApply;
 }
 var reflectApply = typeof Reflect !== "undefined" && Reflect && Reflect.apply;
-var bind$3 = functionBind;
+var bind$3 = requireFunctionBind();
 var $apply$1 = requireFunctionApply();
-var $call$2 = functionCall;
+var $call$2 = requireFunctionCall();
 var $reflectApply = reflectApply;
 var actualApply = $reflectApply || bind$3.call($call$2, $apply$1);
-var bind$2 = functionBind;
+var bind$2 = requireFunctionBind();
 var $TypeError$4 = type;
-var $call$1 = functionCall;
+var $call$1 = requireFunctionCall();
 var $actualApply = actualApply;
 var callBindApplyHelpers = function callBindBasic(args) {
   if (args.length < 1 || typeof args[0] !== "function") {
@@ -10834,8 +10855,8 @@ function requireHasown() {
   hasRequiredHasown = 1;
   var call = Function.prototype.call;
   var $hasOwn = Object.prototype.hasOwnProperty;
-  var bind3 = functionBind;
-  hasown = bind3.call(call, $hasOwn);
+  var bind2 = requireFunctionBind();
+  hasown = bind2.call(call, $hasOwn);
   return hasown;
 }
 var undefined$1;
@@ -10849,7 +10870,7 @@ var $TypeError$3 = type;
 var $URIError = uri;
 var abs = abs$1;
 var floor = floor$1;
-var max = max$2;
+var max = max$1;
 var min = min$1;
 var pow = pow$1;
 var round = round$1;
@@ -10883,7 +10904,7 @@ var getProto = requireGetProto();
 var $ObjectGPO = requireObject_getPrototypeOf();
 var $ReflectGPO = requireReflect_getPrototypeOf();
 var $apply = requireFunctionApply();
-var $call = functionCall;
+var $call = requireFunctionCall();
 var needsEval = {};
 var TypedArray = typeof Uint8Array === "undefined" || !getProto ? undefined$1 : getProto(Uint8Array);
 var INTRINSICS = {
@@ -11054,7 +11075,7 @@ var LEGACY_ALIASES = {
   "%WeakMapPrototype%": ["WeakMap", "prototype"],
   "%WeakSetPrototype%": ["WeakSet", "prototype"]
 };
-var bind$1 = functionBind;
+var bind$1 = requireFunctionBind();
 var hasOwn = requireHasown();
 var $concat = bind$1.call($call, Array.prototype.concat);
 var $spliceApply = bind$1.call($apply, Array.prototype.splice);
@@ -15166,7 +15187,7 @@ const admin = adminApi.enhanceEndpoints({
   overrideExisting: false
 });
 const { useInitQuery, useTelemetryPropertiesQuery, useInformationQuery, useProjectSettingsQuery, useUpdateProjectSettingsMutation, useGetPluginsQuery, useGetLicenseLimitsQuery, useGetLicenseTrialTimeLeftQuery, useGetGuidedTourMetaQuery } = admin;
-function bind2(fn2, thisArg) {
+function bind(fn2, thisArg) {
   return function wrap() {
     return fn2.apply(thisArg, arguments);
   };
@@ -15303,7 +15324,7 @@ function merge2() {
 const extend = (a2, b2, thisArg, { allOwnKeys } = {}) => {
   forEach$1(b2, (val, key) => {
     if (thisArg && isFunction$1(val)) {
-      a2[key] = bind2(val, thisArg);
+      a2[key] = bind(val, thisArg);
     } else {
       a2[key] = val;
     }
@@ -17583,7 +17604,7 @@ Object.entries(HttpStatusCode$1).forEach(([key, value]) => {
 });
 function createInstance(defaultConfig) {
   const context = new Axios$1(defaultConfig);
-  const instance = bind2(Axios$1.prototype.request, context);
+  const instance = bind(Axios$1.prototype.request, context);
   utils$1.extend(instance, Axios$1.prototype, context, { allOwnKeys: true });
   utils$1.extend(instance, context, null, { allOwnKeys: true });
   instance.create = function create2(instanceConfig) {
@@ -25564,19 +25585,10 @@ objectType({
     booleanType()
   ])
 });
-const getStrapiAdminBackendBaseUrl = () => {
-  if (typeof window === "undefined") return "";
-  const { origin: origin2, pathname } = window.location;
-  const adminSegmentIndex = pathname.indexOf("/admin");
-  const prefix = adminSegmentIndex !== -1 ? pathname.slice(0, adminSegmentIndex) : "";
-  return `${origin2}${prefix}/admin`;
-};
 const adminApiUrl = (pluginId, subPath = "") => {
-  const base = getStrapiAdminBackendBaseUrl();
   const cleanSubPath = typeof subPath === "string" ? subPath : "";
   const normalizedSubPath = cleanSubPath.startsWith("/") ? cleanSubPath : `/${cleanSubPath}`;
-  if (!base) return `/${pluginId}${normalizedSubPath}`;
-  return `${base}/${pluginId}${normalizedSubPath}`;
+  return `/${pluginId}${normalizedSubPath}`;
 };
 function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = null, contentTypes = [] }) {
   const { formatMessage } = reactIntl.useIntl();
@@ -25584,6 +25596,10 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
   const [submitting, setSubmitting] = React.useState(false);
   const [errorMessage, setErrorMessage] = React.useState(null);
   const fetchClient = React.useMemo(() => getFetchClient(), []);
+  const ensureRelativePath = (value = "") => {
+    if (typeof value !== "string") return "";
+    return value.replace(/^https?:\/\/[^/]+/i, "");
+  };
   const labelIds = React.useMemo(() => {
     const unique = Math.random().toString(36).slice(2);
     return {
@@ -25656,7 +25672,7 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
     try {
       setSubmitting(true);
       setErrorMessage(null);
-      await fetchClient.post(adminApiUrl(index.PLUGIN_ID, "/admin"), payload);
+      await fetchClient.post(ensureRelativePath(adminApiUrl(index.PLUGIN_ID, "/admin")), payload);
       await onSaved?.();
     } catch (error) {
       const message = error?.response?.data?.error?.message || error?.message || formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.error.request`, defaultMessage: "Failed to save the collection sitemap." });
@@ -25977,7 +25993,11 @@ const Settings = () => {
     return map2;
   }, [contentTypes]);
   const fetchClient = React.useMemo(() => getFetchClient(), []);
-  const adminUrl = React.useCallback((subPath) => adminApiUrl(index.PLUGIN_ID, subPath), []);
+  const ensureRelativePath = React.useCallback((value = "") => {
+    if (typeof value !== "string") return "";
+    return value.replace(/^https?:\/\/[^/]+/i, "");
+  }, []);
+  const adminUrl = React.useCallback((subPath) => ensureRelativePath(adminApiUrl(index.PLUGIN_ID, subPath)), [ensureRelativePath]);
   const loadCollectionConfigs = React.useCallback(async () => {
     setIsCollectionLoading(true);
     setCollectionFeedback(null);

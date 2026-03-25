@@ -1,6 +1,7 @@
-import { useRef, useEffect } from "react";
-import "react/jsx-runtime";
-import "@strapi/design-system";
+"use strict";
+const React = require("react");
+require("react/jsx-runtime");
+require("@strapi/design-system");
 const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
   const v = glob[path];
   if (v) {
@@ -19,8 +20,8 @@ const __variableDynamicImportRuntimeHelper = (glob, path, segs) => {
 };
 const PLUGIN_ID = "strapi-advanced-sitemap";
 const Initializer = ({ setPlugin }) => {
-  const ref = useRef(false);
-  useEffect(() => {
+  const ref = React.useRef(false);
+  React.useEffect(() => {
     if (!ref.current) {
       setPlugin(PLUGIN_ID);
       ref.current = true;
@@ -52,7 +53,7 @@ const index = {
           defaultMessage: "Configuration"
         },
         to: `${PLUGIN_ID}`,
-        Component: () => import("./Home-_wZ0yrUk.mjs")
+        Component: () => Promise.resolve().then(() => require("./Home-nQLXI-Pj.js"))
       }
     );
   },
@@ -63,14 +64,14 @@ const index = {
       locales.map(async (locale) => {
         if (locale === "en") {
           try {
-            const { default: data } = await import("./en-B2cxOPRT.mjs");
+            const { default: data } = await Promise.resolve().then(() => require("./en-DXDFX_Yk.js"));
             return { data, locale };
           } catch {
             return { data: {}, locale };
           }
         }
         try {
-          const { default: data } = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./translations/en.json": () => import("./en-B2cxOPRT.mjs") }), `./translations/${locale}.json`, 3);
+          const { default: data } = await __variableDynamicImportRuntimeHelper(/* @__PURE__ */ Object.assign({ "./translations/en.json": () => Promise.resolve().then(() => require("./en-DXDFX_Yk.js")) }), `./translations/${locale}.json`, 3);
           return { data, locale };
         } catch {
           return { data: {}, locale };
@@ -79,7 +80,5 @@ const index = {
     );
   }
 };
-export {
-  PLUGIN_ID as P,
-  index as i
-};
+exports.PLUGIN_ID = PLUGIN_ID;
+exports.index = index;
