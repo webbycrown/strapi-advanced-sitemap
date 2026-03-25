@@ -52,7 +52,7 @@ const index = {
           defaultMessage: "Configuration"
         },
         to: `${PLUGIN_ID}`,
-        Component: () => import("./Home-CCucPlxk.mjs")
+        Component: () => import("./Home-BvMPrgpM.mjs")
       }
     );
   },
