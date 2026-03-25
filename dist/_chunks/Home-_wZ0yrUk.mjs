@@ -1,35 +1,14 @@
-"use strict";
-Object.defineProperty(exports, Symbol.toStringTag, { value: "Module" });
-const jsxRuntime = require("react/jsx-runtime");
-const React = require("react");
-const designSystem = require("@strapi/design-system");
-const icons = require("@strapi/icons");
-const reactIntl = require("react-intl");
-const index = require("./index-BaaJOJfM.js");
-require("react-dom/client");
-const ReactDOM = require("react-dom");
-require("@strapi/icons/symbols");
-const styled = require("styled-components");
-const _interopDefault = (e2) => e2 && e2.__esModule ? e2 : { default: e2 };
-function _interopNamespace(e2) {
-  if (e2 && e2.__esModule) return e2;
-  const n2 = Object.create(null, { [Symbol.toStringTag]: { value: "Module" } });
-  if (e2) {
-    for (const k2 in e2) {
-      if (k2 !== "default") {
-        const d2 = Object.getOwnPropertyDescriptor(e2, k2);
-        Object.defineProperty(n2, k2, d2.get ? d2 : {
-          enumerable: true,
-          get: () => e2[k2]
-        });
-      }
-    }
-  }
-  n2.default = e2;
-  return Object.freeze(n2);
-}
-const React__namespace = /* @__PURE__ */ _interopNamespace(React);
-const ReactDOM__default = /* @__PURE__ */ _interopDefault(ReactDOM);
+import { jsx, jsxs, Fragment } from "react/jsx-runtime";
+import * as React from "react";
+import React__default, { useContext, useRef, useCallback, useDebugValue, useMemo, useState, useEffect, useLayoutEffect, createContext as createContext$1, createElement, useReducer } from "react";
+import { DesignSystemProvider, Main, Box, Typography, Grid, Flex, Link as Link$1, Divider, Popover, Button, LinkButton, Portal, Alert, Field, SubNav, Badge, Modal, TextInput, IconButton } from "@strapi/design-system";
+import { Phone, Mail, WarningCircle, CaretDown, Trash, ArrowUp, ArrowDown } from "@strapi/icons";
+import { useIntl, FormattedMessage } from "react-intl";
+import { P as PLUGIN_ID } from "./index-CbcQZ-qE.mjs";
+import "react-dom/client";
+import ReactDOM, { unstable_batchedUpdates as unstable_batchedUpdates$1 } from "react-dom";
+import "@strapi/icons/symbols";
+import { styled, createGlobalStyle } from "styled-components";
 const version = "1.0.8";
 const pluginPackage = {
   version
@@ -75,49 +54,49 @@ const MORE_PLUGINS = [
     href: "https://market.strapi.io/plugins/@webbycrown-webbycommerce"
   }
 ];
-const SectionCard = ({ title, children }) => /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { background: "neutral0", borderColor: "neutral150", hasRadius: true, padding: 6, shadow: "filterShadow", children: [
-  /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", tag: "h2", children: title }),
-  /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 4, children })
+const SectionCard = ({ title, children }) => /* @__PURE__ */ jsxs(Box, { background: "neutral0", borderColor: "neutral150", hasRadius: true, padding: 6, shadow: "filterShadow", children: [
+  /* @__PURE__ */ jsx(Typography, { variant: "delta", tag: "h2", children: title }),
+  /* @__PURE__ */ jsx(Box, { paddingTop: 4, children })
 ] });
-const StepCard = ({ index: index2, text }) => /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { background: "neutral0", borderColor: "neutral200", hasRadius: true, padding: 4, shadow: "tableShadow", children: [
-  /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { background: "primary100", borderColor: "primary200", hasRadius: true, paddingTop: 1, paddingBottom: 1, paddingLeft: 2, paddingRight: 2, width: "fit-content", children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", fontWeight: "bold", textColor: "primary700", children: [
+const StepCard = ({ index, text }) => /* @__PURE__ */ jsxs(Box, { background: "neutral0", borderColor: "neutral200", hasRadius: true, padding: 4, shadow: "tableShadow", children: [
+  /* @__PURE__ */ jsx(Box, { background: "primary100", borderColor: "primary200", hasRadius: true, paddingTop: 1, paddingBottom: 1, paddingLeft: 2, paddingRight: 2, width: "fit-content", children: /* @__PURE__ */ jsxs(Typography, { variant: "pi", fontWeight: "bold", textColor: "primary700", children: [
     "Step ",
-    index2
+    index
   ] }) }),
-  /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 3, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: text }) })
+  /* @__PURE__ */ jsx(Box, { paddingTop: 3, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral700", children: text }) })
 ] });
 const Overview = () => {
-  const { formatMessage, locale } = reactIntl.useIntl();
+  const { formatMessage, locale } = useIntl();
   const currentVersion = pluginPackage.version;
-  return /* @__PURE__ */ jsxRuntime.jsx(designSystem.DesignSystemProvider, { locale, tooltipConfig: { delayDuration: 200 }, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Main, { children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { padding: 8, children: [
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "alpha", as: "h1", children: formatMessage({
-      id: `${index.PLUGIN_ID}.overview.pageTitle`,
+  return /* @__PURE__ */ jsx(DesignSystemProvider, { locale, tooltipConfig: { delayDuration: 200 }, children: /* @__PURE__ */ jsx(Main, { children: /* @__PURE__ */ jsxs(Box, { padding: 8, children: [
+    /* @__PURE__ */ jsx(Typography, { variant: "alpha", as: "h1", children: formatMessage({
+      id: `${PLUGIN_ID}.overview.pageTitle`,
       defaultMessage: "Sitemap Overview"
     }) }),
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({
-      id: `${index.PLUGIN_ID}.overview.subtitle`,
+    /* @__PURE__ */ jsx(Box, { marginTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({
+      id: `${PLUGIN_ID}.overview.subtitle`,
       defaultMessage: "Learn how to use Strapi Advanced Sitemap and manage SEO-ready sitemap output."
     }) }) }),
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 6, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Grid.Root, { gap: 6, children: [
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "Introduction & Overview", children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { alignItems: "flex-start", gap: 6, wrap: "wrap", children: [
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { style: { flex: 1, minWidth: "320px" }, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { direction: "column", gap: 2, alignItems: "flex-start", children: [
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: [
-            /* @__PURE__ */ jsxRuntime.jsx("strong", { children: "Plugin Name:" }),
+    /* @__PURE__ */ jsx(Box, { marginTop: 6, children: /* @__PURE__ */ jsxs(Grid.Root, { gap: 6, children: [
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "Introduction & Overview", children: /* @__PURE__ */ jsxs(Flex, { alignItems: "flex-start", gap: 6, wrap: "wrap", children: [
+        /* @__PURE__ */ jsx(Box, { style: { flex: 1, minWidth: "320px" }, children: /* @__PURE__ */ jsxs(Flex, { direction: "column", gap: 2, alignItems: "flex-start", children: [
+          /* @__PURE__ */ jsxs(Typography, { variant: "omega", textColor: "neutral700", children: [
+            /* @__PURE__ */ jsx("strong", { children: "Plugin Name:" }),
             " Strapi Advanced Sitemap"
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", textColor: "neutral600", children: [
-            /* @__PURE__ */ jsxRuntime.jsx("strong", { children: "Description:" }),
+          /* @__PURE__ */ jsxs(Typography, { variant: "omega", textColor: "neutral600", children: [
+            /* @__PURE__ */ jsx("strong", { children: "Description:" }),
             " A production-ready sitemap manager for Strapi that helps you define manual sitemap files and generate collection-based sitemaps with SEO-focused controls."
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { paddingTop: 1, children: [
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", tag: "h3", children: "Key Benefits" }),
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { as: "ul", paddingTop: 2, paddingLeft: 5, children: BENEFITS.map((benefit) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { as: "li", paddingBottom: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: benefit }) }, benefit)) })
+          /* @__PURE__ */ jsxs(Box, { paddingTop: 1, children: [
+            /* @__PURE__ */ jsx(Typography, { variant: "delta", tag: "h3", children: "Key Benefits" }),
+            /* @__PURE__ */ jsx(Box, { as: "ul", paddingTop: 2, paddingLeft: 5, children: BENEFITS.map((benefit) => /* @__PURE__ */ jsx(Box, { as: "li", paddingBottom: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral700", children: benefit }) }, benefit)) })
           ] })
         ] }) }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { style: { flex: 1, minWidth: "320px" }, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { direction: "column", gap: 3, alignItems: "flex-start", children: [
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: "Watch the complete walkthrough for Strapi Advanced Sitemap." }),
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, { href: VIDEO_LINK, isExternal: true, children: /* @__PURE__ */ jsxRuntime.jsx(
-            designSystem.Box,
+        /* @__PURE__ */ jsx(Box, { style: { flex: 1, minWidth: "320px" }, children: /* @__PURE__ */ jsxs(Flex, { direction: "column", gap: 3, alignItems: "flex-start", children: [
+          /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral700", children: "Watch the complete walkthrough for Strapi Advanced Sitemap." }),
+          /* @__PURE__ */ jsx(Link$1, { href: VIDEO_LINK, isExternal: true, children: /* @__PURE__ */ jsx(
+            Box,
             {
               as: "img",
               src: VIDEO_PREVIEW_IMAGE,
@@ -130,62 +109,62 @@ const Overview = () => {
               }
             }
           ) }),
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", children: [
+          /* @__PURE__ */ jsxs(Typography, { variant: "omega", children: [
             "Video link:",
             " ",
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, { href: VIDEO_LINK, isExternal: true, children: VIDEO_LINK })
+            /* @__PURE__ */ jsx(Link$1, { href: VIDEO_LINK, isExternal: true, children: VIDEO_LINK })
           ] })
         ] }) })
       ] }) }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsxs(SectionCard, { title: "Version Information", children: [
-        /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: [
-          /* @__PURE__ */ jsxRuntime.jsx("strong", { children: "Current Installed Version:" }),
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxs(SectionCard, { title: "Version Information", children: [
+        /* @__PURE__ */ jsxs(Typography, { variant: "omega", textColor: "neutral700", children: [
+          /* @__PURE__ */ jsx("strong", { children: "Current Installed Version:" }),
           " ",
           currentVersion
         ] }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "success600", children: "You are on the latest version." }) })
+        /* @__PURE__ */ jsx(Box, { paddingTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "success600", children: "You are on the latest version." }) })
       ] }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "How to Use", children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Root, { gap: 4, children: HOW_TO_USE.map((step, idx) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(StepCard, { index: idx + 1, text: step }) }, step)) }) }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "FAQs", children: FAQS.map((item) => /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { paddingBottom: 4, children: [
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", tag: "h3", children: item.q }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: item.a }) })
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "How to Use", children: /* @__PURE__ */ jsx(Grid.Root, { gap: 4, children: HOW_TO_USE.map((step, idx) => /* @__PURE__ */ jsx(Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsx(StepCard, { index: idx + 1, text: step }) }, step)) }) }) }),
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "FAQs", children: FAQS.map((item) => /* @__PURE__ */ jsxs(Box, { paddingBottom: 4, children: [
+        /* @__PURE__ */ jsx(Typography, { variant: "delta", tag: "h3", children: item.q }),
+        /* @__PURE__ */ jsx(Box, { paddingTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral700", children: item.a }) })
       ] }, item.q)) }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "Explore More Powerful Plugins", children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Root, { gap: 4, children: MORE_PLUGINS.map((plugin) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 4, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { background: "neutral0", borderColor: "neutral150", hasRadius: true, padding: 4, shadow: "tableShadow", children: [
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", tag: "h3", textColor: "neutral800", children: plugin.title }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral700", children: plugin.description }) }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, { href: plugin.href, isExternal: true, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "primary600", children: "Learn more" }) }) })
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "Explore More Powerful Plugins", children: /* @__PURE__ */ jsx(Grid.Root, { gap: 4, children: MORE_PLUGINS.map((plugin) => /* @__PURE__ */ jsx(Grid.Item, { col: 4, s: 12, xs: 12, children: /* @__PURE__ */ jsxs(Box, { background: "neutral0", borderColor: "neutral150", hasRadius: true, padding: 4, shadow: "tableShadow", children: [
+        /* @__PURE__ */ jsx(Typography, { variant: "delta", tag: "h3", textColor: "neutral800", children: plugin.title }),
+        /* @__PURE__ */ jsx(Box, { paddingTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral700", children: plugin.description }) }),
+        /* @__PURE__ */ jsx(Box, { paddingTop: 4, children: /* @__PURE__ */ jsx(Link$1, { href: plugin.href, isExternal: true, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "primary600", children: "Learn more" }) }) })
       ] }) }, plugin.title)) }) }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsx(SectionCard, { title: "Need Help?", children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Grid.Root, { gap: 4, children: [
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { background: "primary100", borderColor: "primary200", hasRadius: true, padding: 5, style: { minHeight: "130px" }, children: [
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { display: "flex", alignItems: "center", gap: 3, children: [
-            /* @__PURE__ */ jsxRuntime.jsx(icons.Phone, { width: "20px", height: "20px", fill: "#4945ff" }),
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "beta", children: "Have any question?" })
+      /* @__PURE__ */ jsx(Grid.Item, { col: 12, s: 12, xs: 12, children: /* @__PURE__ */ jsx(SectionCard, { title: "Need Help?", children: /* @__PURE__ */ jsxs(Grid.Root, { gap: 4, children: [
+        /* @__PURE__ */ jsx(Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxs(Box, { background: "primary100", borderColor: "primary200", hasRadius: true, padding: 5, style: { minHeight: "130px" }, children: [
+          /* @__PURE__ */ jsxs(Box, { display: "flex", alignItems: "center", gap: 3, children: [
+            /* @__PURE__ */ jsx(Phone, { width: "20px", height: "20px", fill: "#4945ff" }),
+            /* @__PURE__ */ jsx(Typography, { variant: "beta", children: "Have any question?" })
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 3, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", children: [
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Sales:" }),
+          /* @__PURE__ */ jsx(Box, { paddingTop: 3, children: /* @__PURE__ */ jsxs(Typography, { variant: "omega", children: [
+            /* @__PURE__ */ jsx(Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Sales:" }),
             " ",
             "+91 (942) 867-7503"
           ] }) })
         ] }) }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { background: "primary100", borderColor: "primary200", hasRadius: true, padding: 5, style: { minHeight: "130px" }, children: [
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { display: "flex", alignItems: "center", gap: 3, children: [
-            /* @__PURE__ */ jsxRuntime.jsx(icons.Mail, { width: "20px", height: "20px", fill: "#4945ff" }),
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "beta", children: "Write & Send Email" })
+        /* @__PURE__ */ jsx(Grid.Item, { col: 6, s: 12, xs: 12, children: /* @__PURE__ */ jsxs(Box, { background: "primary100", borderColor: "primary200", hasRadius: true, padding: 5, style: { minHeight: "130px" }, children: [
+          /* @__PURE__ */ jsxs(Box, { display: "flex", alignItems: "center", gap: 3, children: [
+            /* @__PURE__ */ jsx(Mail, { width: "20px", height: "20px", fill: "#4945ff" }),
+            /* @__PURE__ */ jsx(Typography, { variant: "beta", children: "Write & Send Email" })
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 3, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", children: [
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Sales:" }),
+          /* @__PURE__ */ jsx(Box, { paddingTop: 3, children: /* @__PURE__ */ jsxs(Typography, { variant: "omega", children: [
+            /* @__PURE__ */ jsx(Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Sales:" }),
             " ",
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, { href: "mailto:sales@webbycrown.com", children: "sales@webbycrown.com" })
+            /* @__PURE__ */ jsx(Link$1, { href: "mailto:sales@webbycrown.com", children: "sales@webbycrown.com" })
           ] }) }),
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "omega", children: [
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Support:" }),
+          /* @__PURE__ */ jsxs(Typography, { variant: "omega", children: [
+            /* @__PURE__ */ jsx(Typography, { as: "span", variant: "omega", textColor: "primary600", children: "Support:" }),
             " ",
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, { href: "mailto:info@webbycrown.com", children: "info@webbycrown.com" })
+            /* @__PURE__ */ jsx(Link$1, { href: "mailto:info@webbycrown.com", children: "info@webbycrown.com" })
           ] })
         ] }) })
       ] }) }) })
     ] }) }),
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 6, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Divider, {}) })
+    /* @__PURE__ */ jsx(Box, { paddingTop: 6, children: /* @__PURE__ */ jsx(Divider, {}) })
   ] }) }) });
 };
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
@@ -303,15 +282,15 @@ var assocIndexOf$3 = _assocIndexOf;
 var arrayProto = Array.prototype;
 var splice = arrayProto.splice;
 function listCacheDelete$1(key) {
-  var data = this.__data__, index2 = assocIndexOf$3(data, key);
-  if (index2 < 0) {
+  var data = this.__data__, index = assocIndexOf$3(data, key);
+  if (index < 0) {
     return false;
   }
   var lastIndex = data.length - 1;
-  if (index2 == lastIndex) {
+  if (index == lastIndex) {
     data.pop();
   } else {
-    splice.call(data, index2, 1);
+    splice.call(data, index, 1);
   }
   --this.size;
   return true;
@@ -319,8 +298,8 @@ function listCacheDelete$1(key) {
 var _listCacheDelete = listCacheDelete$1;
 var assocIndexOf$2 = _assocIndexOf;
 function listCacheGet$1(key) {
-  var data = this.__data__, index2 = assocIndexOf$2(data, key);
-  return index2 < 0 ? void 0 : data[index2][1];
+  var data = this.__data__, index = assocIndexOf$2(data, key);
+  return index < 0 ? void 0 : data[index][1];
 }
 var _listCacheGet = listCacheGet$1;
 var assocIndexOf$1 = _assocIndexOf;
@@ -330,22 +309,22 @@ function listCacheHas$1(key) {
 var _listCacheHas = listCacheHas$1;
 var assocIndexOf = _assocIndexOf;
 function listCacheSet$1(key, value) {
-  var data = this.__data__, index2 = assocIndexOf(data, key);
-  if (index2 < 0) {
+  var data = this.__data__, index = assocIndexOf(data, key);
+  if (index < 0) {
     ++this.size;
     data.push([key, value]);
   } else {
-    data[index2][1] = value;
+    data[index][1] = value;
   }
   return this;
 }
 var _listCacheSet = listCacheSet$1;
 var listCacheClear = _listCacheClear, listCacheDelete = _listCacheDelete, listCacheGet = _listCacheGet, listCacheHas = _listCacheHas, listCacheSet = _listCacheSet;
 function ListCache$4(entries) {
-  var index2 = -1, length = entries == null ? 0 : entries.length;
+  var index = -1, length = entries == null ? 0 : entries.length;
   this.clear();
-  while (++index2 < length) {
-    var entry = entries[index2];
+  while (++index < length) {
+    var entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -480,10 +459,10 @@ function hashSet$1(key, value) {
 var _hashSet = hashSet$1;
 var hashClear = _hashClear, hashDelete = _hashDelete, hashGet = _hashGet, hashHas = _hashHas, hashSet = _hashSet;
 function Hash$1(entries) {
-  var index2 = -1, length = entries == null ? 0 : entries.length;
+  var index = -1, length = entries == null ? 0 : entries.length;
   this.clear();
-  while (++index2 < length) {
-    var entry = entries[index2];
+  while (++index < length) {
+    var entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -541,10 +520,10 @@ function mapCacheSet$1(key, value) {
 var _mapCacheSet = mapCacheSet$1;
 var mapCacheClear = _mapCacheClear, mapCacheDelete = _mapCacheDelete, mapCacheGet = _mapCacheGet, mapCacheHas = _mapCacheHas, mapCacheSet = _mapCacheSet;
 function MapCache$3(entries) {
-  var index2 = -1, length = entries == null ? 0 : entries.length;
+  var index = -1, length = entries == null ? 0 : entries.length;
   this.clear();
-  while (++index2 < length) {
-    var entry = entries[index2];
+  while (++index < length) {
+    var entry = entries[index];
     this.set(entry[0], entry[1]);
   }
 }
@@ -616,9 +595,9 @@ function assignMergeValue$2(object2, key, value) {
 var _assignMergeValue = assignMergeValue$2;
 function createBaseFor$1(fromRight) {
   return function(object2, iteratee2, keysFunc) {
-    var index2 = -1, iterable = Object(object2), props = keysFunc(object2), length = props.length;
+    var index = -1, iterable = Object(object2), props = keysFunc(object2), length = props.length;
     while (length--) {
-      var key = props[fromRight ? length : ++index2];
+      var key = props[fromRight ? length : ++index];
       if (iteratee2(iterable[key], key, iterable) === false) {
         break;
       }
@@ -632,10 +611,10 @@ var baseFor$2 = createBaseFor();
 var _baseFor = baseFor$2;
 var _cloneBuffer = { exports: {} };
 _cloneBuffer.exports;
-(function(module2, exports2) {
+(function(module, exports) {
   var root2 = _root;
-  var freeExports = exports2 && !exports2.nodeType && exports2;
-  var freeModule = freeExports && true && module2 && !module2.nodeType && module2;
+  var freeExports = exports && !exports.nodeType && exports;
+  var freeModule = freeExports && true && module && !module.nodeType && module;
   var moduleExports = freeModule && freeModule.exports === freeExports;
   var Buffer2 = moduleExports ? root2.Buffer : void 0, allocUnsafe = Buffer2 ? Buffer2.allocUnsafe : void 0;
   function cloneBuffer2(buffer, isDeep) {
@@ -646,7 +625,7 @@ _cloneBuffer.exports;
     buffer.copy(result);
     return result;
   }
-  module2.exports = cloneBuffer2;
+  module.exports = cloneBuffer2;
 })(_cloneBuffer, _cloneBuffer.exports);
 var _cloneBufferExports = _cloneBuffer.exports;
 var root$8 = _root;
@@ -666,10 +645,10 @@ function cloneTypedArray$2(typedArray, isDeep) {
 }
 var _cloneTypedArray = cloneTypedArray$2;
 function copyArray$4(source, array2) {
-  var index2 = -1, length = source.length;
+  var index = -1, length = source.length;
   array2 || (array2 = Array(length));
-  while (++index2 < length) {
-    array2[index2] = source[index2];
+  while (++index < length) {
+    array2[index] = source[index];
   }
   return array2;
 }
@@ -756,15 +735,15 @@ function stubFalse() {
 }
 var stubFalse_1 = stubFalse;
 isBuffer$6.exports;
-(function(module2, exports2) {
+(function(module, exports) {
   var root2 = _root, stubFalse2 = stubFalse_1;
-  var freeExports = exports2 && !exports2.nodeType && exports2;
-  var freeModule = freeExports && true && module2 && !module2.nodeType && module2;
+  var freeExports = exports && !exports.nodeType && exports;
+  var freeModule = freeExports && true && module && !module.nodeType && module;
   var moduleExports = freeModule && freeModule.exports === freeExports;
   var Buffer2 = moduleExports ? root2.Buffer : void 0;
   var nativeIsBuffer = Buffer2 ? Buffer2.isBuffer : void 0;
   var isBuffer3 = nativeIsBuffer || stubFalse2;
-  module2.exports = isBuffer3;
+  module.exports = isBuffer3;
 })(isBuffer$6, isBuffer$6.exports);
 var isBufferExports = isBuffer$6.exports;
 var baseGetTag$4 = _baseGetTag, getPrototype$1 = _getPrototype, isObjectLike$7 = isObjectLike_1;
@@ -803,10 +782,10 @@ function baseUnary$3(func2) {
 var _baseUnary = baseUnary$3;
 var _nodeUtil = { exports: {} };
 _nodeUtil.exports;
-(function(module2, exports2) {
+(function(module, exports) {
   var freeGlobal2 = _freeGlobal;
-  var freeExports = exports2 && !exports2.nodeType && exports2;
-  var freeModule = freeExports && true && module2 && !module2.nodeType && module2;
+  var freeExports = exports && !exports.nodeType && exports;
+  var freeModule = freeExports && true && module && !module.nodeType && module;
   var moduleExports = freeModule && freeModule.exports === freeExports;
   var freeProcess = moduleExports && freeGlobal2.process;
   var nodeUtil2 = function() {
@@ -819,7 +798,7 @@ _nodeUtil.exports;
     } catch (e2) {
     }
   }();
-  module2.exports = nodeUtil2;
+  module.exports = nodeUtil2;
 })(_nodeUtil, _nodeUtil.exports);
 var _nodeUtilExports = _nodeUtil.exports;
 var baseIsTypedArray = _baseIsTypedArray, baseUnary$2 = _baseUnary, nodeUtil$2 = _nodeUtilExports;
@@ -850,9 +829,9 @@ var assignValue$2 = _assignValue, baseAssignValue$2 = _baseAssignValue;
 function copyObject$6(source, props, object2, customizer) {
   var isNew = !object2;
   object2 || (object2 = {});
-  var index2 = -1, length = props.length;
-  while (++index2 < length) {
-    var key = props[index2];
+  var index = -1, length = props.length;
+  while (++index < length) {
+    var key = props[index];
     var newValue = customizer ? customizer(object2[key], source[key], key, object2, source) : void 0;
     if (newValue === void 0) {
       newValue = source[key];
@@ -867,9 +846,9 @@ function copyObject$6(source, props, object2, customizer) {
 }
 var _copyObject = copyObject$6;
 function baseTimes$1(n2, iteratee2) {
-  var index2 = -1, result = Array(n2);
-  while (++index2 < n2) {
-    result[index2] = iteratee2(index2);
+  var index = -1, result = Array(n2);
+  while (++index < n2) {
+    result[index] = iteratee2(index);
   }
   return result;
 }
@@ -1022,14 +1001,14 @@ var nativeMax$3 = Math.max;
 function overRest$2(func2, start, transform) {
   start = nativeMax$3(start === void 0 ? func2.length - 1 : start, 0);
   return function() {
-    var args = arguments, index2 = -1, length = nativeMax$3(args.length - start, 0), array2 = Array(length);
-    while (++index2 < length) {
-      array2[index2] = args[start + index2];
+    var args = arguments, index = -1, length = nativeMax$3(args.length - start, 0), array2 = Array(length);
+    while (++index < length) {
+      array2[index] = args[start + index];
     }
-    index2 = -1;
+    index = -1;
     var otherArgs = Array(start + 1);
-    while (++index2 < start) {
-      otherArgs[index2] = args[index2];
+    while (++index < start) {
+      otherArgs[index] = args[index];
     }
     otherArgs[start] = transform(array2);
     return apply$3(func2, this, otherArgs);
@@ -1079,13 +1058,13 @@ function baseRest$2(func2, start) {
 }
 var _baseRest = baseRest$2;
 var eq$1 = eq_1, isArrayLike$1 = isArrayLike_1, isIndex$3 = _isIndex, isObject$8 = isObject_1;
-function isIterateeCall$1(value, index2, object2) {
+function isIterateeCall$1(value, index, object2) {
   if (!isObject$8(object2)) {
     return false;
   }
-  var type2 = typeof index2;
-  if (type2 == "number" ? isArrayLike$1(object2) && isIndex$3(index2, object2.length) : type2 == "string" && index2 in object2) {
-    return eq$1(object2[index2], value);
+  var type2 = typeof index;
+  if (type2 == "number" ? isArrayLike$1(object2) && isIndex$3(index, object2.length) : type2 == "string" && index in object2) {
+    return eq$1(object2[index], value);
   }
   return false;
 }
@@ -1093,17 +1072,17 @@ var _isIterateeCall = isIterateeCall$1;
 var baseRest$1 = _baseRest, isIterateeCall = _isIterateeCall;
 function createAssigner$2(assigner) {
   return baseRest$1(function(object2, sources) {
-    var index2 = -1, length = sources.length, customizer = length > 1 ? sources[length - 1] : void 0, guard = length > 2 ? sources[2] : void 0;
+    var index = -1, length = sources.length, customizer = length > 1 ? sources[length - 1] : void 0, guard = length > 2 ? sources[2] : void 0;
     customizer = assigner.length > 3 && typeof customizer == "function" ? (length--, customizer) : void 0;
     if (guard && isIterateeCall(sources[0], sources[1], guard)) {
       customizer = length < 3 ? void 0 : customizer;
       length = 1;
     }
     object2 = Object(object2);
-    while (++index2 < length) {
-      var source = sources[index2];
+    while (++index < length) {
+      var source = sources[index];
       if (source) {
-        assigner(object2, source, index2, customizer);
+        assigner(object2, source, index, customizer);
       }
     }
     return object2;
@@ -1181,9 +1160,9 @@ var stringToPath$3 = memoizeCapped(function(string2) {
 });
 var _stringToPath = stringToPath$3;
 function arrayMap$3(array2, iteratee2) {
-  var index2 = -1, length = array2 == null ? 0 : array2.length, result = Array(length);
-  while (++index2 < length) {
-    result[index2] = iteratee2(array2[index2], index2, array2);
+  var index = -1, length = array2 == null ? 0 : array2.length, result = Array(length);
+  while (++index < length) {
+    result[index] = iteratee2(array2[index], index, array2);
   }
   return result;
 }
@@ -1229,11 +1208,11 @@ var _toKey = toKey$7;
 var castPath$5 = _castPath, toKey$6 = _toKey;
 function baseGet$4(object2, path) {
   path = castPath$5(path, object2);
-  var index2 = 0, length = path.length;
-  while (object2 != null && index2 < length) {
-    object2 = object2[toKey$6(path[index2++])];
+  var index = 0, length = path.length;
+  while (object2 != null && index < length) {
+    object2 = object2[toKey$6(path[index++])];
   }
-  return index2 && index2 == length ? object2 : void 0;
+  return index && index == length ? object2 : void 0;
 }
 var _baseGet = baseGet$4;
 var assignValue$1 = _assignValue, castPath$4 = _castPath, isIndex$2 = _isIndex, isObject$7 = isObject_1, toKey$5 = _toKey;
@@ -1242,17 +1221,17 @@ function baseSet$1(object2, path, value, customizer) {
     return object2;
   }
   path = castPath$4(path, object2);
-  var index2 = -1, length = path.length, lastIndex = length - 1, nested = object2;
-  while (nested != null && ++index2 < length) {
-    var key = toKey$5(path[index2]), newValue = value;
+  var index = -1, length = path.length, lastIndex = length - 1, nested = object2;
+  while (nested != null && ++index < length) {
+    var key = toKey$5(path[index]), newValue = value;
     if (key === "__proto__" || key === "constructor" || key === "prototype") {
       return object2;
     }
-    if (index2 != lastIndex) {
+    if (index != lastIndex) {
       var objValue = nested[key];
       newValue = customizer ? customizer(objValue, key, nested) : void 0;
       if (newValue === void 0) {
-        newValue = isObject$7(objValue) ? objValue : isIndex$2(path[index2 + 1]) ? [] : {};
+        newValue = isObject$7(objValue) ? objValue : isIndex$2(path[index + 1]) ? [] : {};
       }
     }
     assignValue$1(nested, key, newValue);
@@ -1263,9 +1242,9 @@ function baseSet$1(object2, path, value, customizer) {
 var _baseSet = baseSet$1;
 var baseGet$3 = _baseGet, baseSet = _baseSet, castPath$3 = _castPath;
 function basePickBy$1(object2, paths, predicate) {
-  var index2 = -1, length = paths.length, result = {};
-  while (++index2 < length) {
-    var path = paths[index2], value = baseGet$3(object2, path);
+  var index = -1, length = paths.length, result = {};
+  while (++index < length) {
+    var path = paths[index], value = baseGet$3(object2, path);
     if (predicate(value, path)) {
       baseSet(result, castPath$3(path, object2), value);
     }
@@ -1280,15 +1259,15 @@ var _baseHasIn = baseHasIn$1;
 var castPath$2 = _castPath, isArguments$1 = isArguments_1, isArray$b = isArray_1, isIndex$1 = _isIndex, isLength = isLength_1, toKey$4 = _toKey;
 function hasPath$2(object2, path, hasFunc) {
   path = castPath$2(path, object2);
-  var index2 = -1, length = path.length, result = false;
-  while (++index2 < length) {
-    var key = toKey$4(path[index2]);
+  var index = -1, length = path.length, result = false;
+  while (++index < length) {
+    var key = toKey$4(path[index]);
     if (!(result = object2 != null && hasFunc(object2, key))) {
       break;
     }
     object2 = object2[key];
   }
-  if (result || ++index2 != length) {
+  if (result || ++index != length) {
     return result;
   }
   length = object2 == null ? 0 : object2.length;
@@ -1308,9 +1287,9 @@ function basePick$1(object2, paths) {
 }
 var _basePick = basePick$1;
 function arrayPush$3(array2, values) {
-  var index2 = -1, length = values.length, offset = array2.length;
-  while (++index2 < length) {
-    array2[offset + index2] = values[index2];
+  var index = -1, length = values.length, offset = array2.length;
+  while (++index < length) {
+    array2[offset + index] = values[index];
   }
   return array2;
 }
@@ -1323,11 +1302,11 @@ function isFlattenable$1(value) {
 var _isFlattenable = isFlattenable$1;
 var arrayPush$2 = _arrayPush, isFlattenable = _isFlattenable;
 function baseFlatten$1(array2, depth, predicate, isStrict, result) {
-  var index2 = -1, length = array2.length;
+  var index = -1, length = array2.length;
   predicate || (predicate = isFlattenable);
   result || (result = []);
-  while (++index2 < length) {
-    var value = array2[index2];
+  while (++index < length) {
+    var value = array2[index];
     if (depth > 0 && predicate(value)) {
       if (depth > 1) {
         baseFlatten$1(value, depth - 1, predicate, isStrict, result);
@@ -1450,16 +1429,16 @@ function matchPath(pattern, pathname) {
   let matchedPathname = match[0];
   let pathnameBase = matchedPathname.replace(/(.)\/+$/, "$1");
   let captureGroups = match.slice(1);
-  let params = compiledParams.reduce((memo, _ref, index2) => {
+  let params = compiledParams.reduce((memo, _ref, index) => {
     let {
       paramName,
       isOptional
     } = _ref;
     if (paramName === "*") {
-      let splatValue = captureGroups[index2] || "";
+      let splatValue = captureGroups[index] || "";
       pathnameBase = matchedPathname.slice(0, matchedPathname.length - splatValue.length).replace(/(.)\/+$/, "$1");
     }
-    const value = captureGroups[index2];
+    const value = captureGroups[index];
     if (isOptional && !value) {
       memo[paramName] = void 0;
     } else {
@@ -1547,7 +1526,7 @@ function getInvalidPathError(char, field, dest, path) {
   return "Cannot include a '" + char + "' character in a manually specified " + ("`to." + field + "` field [" + JSON.stringify(path) + "].  Please separate it out to the ") + ("`to." + dest + "` field. Alternatively you may provide the full path as ") + 'a string in <Link to="..."> and the router will parse it for you.';
 }
 function getPathContributingMatches(matches2) {
-  return matches2.filter((match, index2) => index2 === 0 || match.route.path && match.route.path.length > 0);
+  return matches2.filter((match, index) => index === 0 || match.route.path && match.route.path.length > 0);
 }
 function getResolveToMatches(matches2, v7_relativeSplatPath) {
   let pathMatches = getPathContributingMatches(matches2);
@@ -1625,27 +1604,27 @@ function _extends$6() {
   };
   return _extends$6.apply(this, arguments);
 }
-const DataRouterContext = /* @__PURE__ */ React__namespace.createContext(null);
+const DataRouterContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   DataRouterContext.displayName = "DataRouter";
 }
-const DataRouterStateContext = /* @__PURE__ */ React__namespace.createContext(null);
+const DataRouterStateContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   DataRouterStateContext.displayName = "DataRouterState";
 }
-const AwaitContext = /* @__PURE__ */ React__namespace.createContext(null);
+const AwaitContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   AwaitContext.displayName = "Await";
 }
-const NavigationContext = /* @__PURE__ */ React__namespace.createContext(null);
+const NavigationContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   NavigationContext.displayName = "Navigation";
 }
-const LocationContext = /* @__PURE__ */ React__namespace.createContext(null);
+const LocationContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   LocationContext.displayName = "Location";
 }
-const RouteContext = /* @__PURE__ */ React__namespace.createContext({
+const RouteContext = /* @__PURE__ */ React.createContext({
   outlet: null,
   matches: [],
   isDataRoute: false
@@ -1653,7 +1632,7 @@ const RouteContext = /* @__PURE__ */ React__namespace.createContext({
 if (process.env.NODE_ENV !== "production") {
   RouteContext.displayName = "Route";
 }
-const RouteErrorContext = /* @__PURE__ */ React__namespace.createContext(null);
+const RouteErrorContext = /* @__PURE__ */ React.createContext(null);
 if (process.env.NODE_ENV !== "production") {
   RouteErrorContext.displayName = "RouteError";
 }
@@ -1670,7 +1649,7 @@ function useHref(to, _temp) {
   let {
     basename,
     navigator: navigator2
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let {
     hash,
     pathname,
@@ -1689,7 +1668,7 @@ function useHref(to, _temp) {
   });
 }
 function useInRouterContext() {
-  return React__namespace.useContext(LocationContext) != null;
+  return React.useContext(LocationContext) != null;
 }
 function useLocation() {
   !useInRouterContext() ? process.env.NODE_ENV !== "production" ? invariant(
@@ -1698,19 +1677,19 @@ function useLocation() {
     // router loaded. We can help them understand how to avoid that.
     "useLocation() may be used only in the context of a <Router> component."
   ) : invariant(false) : void 0;
-  return React__namespace.useContext(LocationContext).location;
+  return React.useContext(LocationContext).location;
 }
 const navigateEffectWarning = "You should call navigate() in a React.useEffect(), not when your component is first rendered.";
 function useIsomorphicLayoutEffect$1(cb) {
-  let isStatic = React__namespace.useContext(NavigationContext).static;
+  let isStatic = React.useContext(NavigationContext).static;
   if (!isStatic) {
-    React__namespace.useLayoutEffect(cb);
+    React.useLayoutEffect(cb);
   }
 }
 function useNavigate() {
   let {
     isDataRoute
-  } = React__namespace.useContext(RouteContext);
+  } = React.useContext(RouteContext);
   return isDataRoute ? useNavigateStable() : useNavigateUnstable();
 }
 function useNavigateUnstable() {
@@ -1720,24 +1699,24 @@ function useNavigateUnstable() {
     // router loaded. We can help them understand how to avoid that.
     "useNavigate() may be used only in the context of a <Router> component."
   ) : invariant(false) : void 0;
-  let dataRouterContext = React__namespace.useContext(DataRouterContext);
+  let dataRouterContext = React.useContext(DataRouterContext);
   let {
     basename,
     future,
     navigator: navigator2
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let {
     matches: matches2
-  } = React__namespace.useContext(RouteContext);
+  } = React.useContext(RouteContext);
   let {
     pathname: locationPathname
   } = useLocation();
   let routePathnamesJson = JSON.stringify(getResolveToMatches(matches2, future.v7_relativeSplatPath));
-  let activeRef = React__namespace.useRef(false);
+  let activeRef = React.useRef(false);
   useIsomorphicLayoutEffect$1(() => {
     activeRef.current = true;
   });
-  let navigate = React__namespace.useCallback(function(to, options) {
+  let navigate = React.useCallback(function(to, options) {
     if (options === void 0) {
       options = {};
     }
@@ -1758,7 +1737,7 @@ function useNavigateUnstable() {
 function useParams() {
   let {
     matches: matches2
-  } = React__namespace.useContext(RouteContext);
+  } = React.useContext(RouteContext);
   let routeMatch = matches2[matches2.length - 1];
   return routeMatch ? routeMatch.params : {};
 }
@@ -1768,15 +1747,15 @@ function useResolvedPath(to, _temp2) {
   } = _temp2 === void 0 ? {} : _temp2;
   let {
     future
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let {
     matches: matches2
-  } = React__namespace.useContext(RouteContext);
+  } = React.useContext(RouteContext);
   let {
     pathname: locationPathname
   } = useLocation();
   let routePathnamesJson = JSON.stringify(getResolveToMatches(matches2, future.v7_relativeSplatPath));
-  return React__namespace.useMemo(() => resolveTo(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path"), [to, routePathnamesJson, locationPathname, relative]);
+  return React.useMemo(() => resolveTo(to, JSON.parse(routePathnamesJson), locationPathname, relative === "path"), [to, routePathnamesJson, locationPathname, relative]);
 }
 var DataRouterHook$1 = /* @__PURE__ */ function(DataRouterHook2) {
   DataRouterHook2["UseBlocker"] = "useBlocker";
@@ -1801,12 +1780,12 @@ function getDataRouterConsoleError$1(hookName) {
   return hookName + " must be used within a data router.  See https://reactrouter.com/v6/routers/picking-a-router.";
 }
 function useDataRouterContext$1(hookName) {
-  let ctx = React__namespace.useContext(DataRouterContext);
+  let ctx = React.useContext(DataRouterContext);
   !ctx ? process.env.NODE_ENV !== "production" ? invariant(false, getDataRouterConsoleError$1(hookName)) : invariant(false) : void 0;
   return ctx;
 }
 function useRouteContext(hookName) {
-  let route = React__namespace.useContext(RouteContext);
+  let route = React.useContext(RouteContext);
   !route ? process.env.NODE_ENV !== "production" ? invariant(false, getDataRouterConsoleError$1(hookName)) : invariant(false) : void 0;
   return route;
 }
@@ -1824,11 +1803,11 @@ function useNavigateStable() {
     router
   } = useDataRouterContext$1(DataRouterHook$1.UseNavigateStable);
   let id = useCurrentRouteId(DataRouterStateHook$1.UseNavigateStable);
-  let activeRef = React__namespace.useRef(false);
+  let activeRef = React.useRef(false);
   useIsomorphicLayoutEffect$1(() => {
     activeRef.current = true;
   });
-  let navigate = React__namespace.useCallback(function(to, options) {
+  let navigate = React.useCallback(function(to, options) {
     if (options === void 0) {
       options = {};
     }
@@ -1990,20 +1969,20 @@ try {
   window.__reactRouterVersion = REACT_ROUTER_VERSION;
 } catch (e2) {
 }
-const ViewTransitionContext = /* @__PURE__ */ React__namespace.createContext({
+const ViewTransitionContext = /* @__PURE__ */ React.createContext({
   isTransitioning: false
 });
 if (process.env.NODE_ENV !== "production") {
   ViewTransitionContext.displayName = "ViewTransition";
 }
-const FetchersContext = /* @__PURE__ */ React__namespace.createContext(/* @__PURE__ */ new Map());
+const FetchersContext = /* @__PURE__ */ React.createContext(/* @__PURE__ */ new Map());
 if (process.env.NODE_ENV !== "production") {
   FetchersContext.displayName = "Fetchers";
 }
 if (process.env.NODE_ENV !== "production") ;
 const isBrowser = typeof window !== "undefined" && typeof window.document !== "undefined" && typeof window.document.createElement !== "undefined";
 const ABSOLUTE_URL_REGEX = /^(?:[a-z][a-z0-9+.-]*:|\/\/)/i;
-const Link = /* @__PURE__ */ React__namespace.forwardRef(function LinkWithRef(_ref7, ref2) {
+const Link = /* @__PURE__ */ React.forwardRef(function LinkWithRef(_ref7, ref2) {
   let {
     onClick,
     relative,
@@ -2017,7 +1996,7 @@ const Link = /* @__PURE__ */ React__namespace.forwardRef(function LinkWithRef(_r
   } = _ref7, rest = _objectWithoutPropertiesLoose$1(_ref7, _excluded);
   let {
     basename
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let absoluteHref;
   let isExternal = false;
   if (typeof to === "string" && ABSOLUTE_URL_REGEX.test(to)) {
@@ -2056,7 +2035,7 @@ const Link = /* @__PURE__ */ React__namespace.forwardRef(function LinkWithRef(_r
   }
   return (
     // eslint-disable-next-line jsx-a11y/anchor-has-content
-    /* @__PURE__ */ React__namespace.createElement("a", _extends$5({}, rest, {
+    /* @__PURE__ */ React.createElement("a", _extends$5({}, rest, {
       href: absoluteHref || href,
       onClick: isExternal || reloadDocument ? onClick : handleClick,
       ref: ref2,
@@ -2067,7 +2046,7 @@ const Link = /* @__PURE__ */ React__namespace.forwardRef(function LinkWithRef(_r
 if (process.env.NODE_ENV !== "production") {
   Link.displayName = "Link";
 }
-const NavLink = /* @__PURE__ */ React__namespace.forwardRef(function NavLinkWithRef(_ref8, ref2) {
+const NavLink = /* @__PURE__ */ React.forwardRef(function NavLinkWithRef(_ref8, ref2) {
   let {
     "aria-current": ariaCurrentProp = "page",
     caseSensitive = false,
@@ -2082,11 +2061,11 @@ const NavLink = /* @__PURE__ */ React__namespace.forwardRef(function NavLinkWith
     relative: rest.relative
   });
   let location = useLocation();
-  let routerState = React__namespace.useContext(DataRouterStateContext);
+  let routerState = React.useContext(DataRouterStateContext);
   let {
     navigator: navigator2,
     basename
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let isTransitioning = routerState != null && // Conditional usage is OK here because the usage of a data router is static
   // eslint-disable-next-line react-hooks/rules-of-hooks
   useViewTransitionState(path) && viewTransition === true;
@@ -2117,7 +2096,7 @@ const NavLink = /* @__PURE__ */ React__namespace.forwardRef(function NavLinkWith
     className = [classNameProp, isActive ? "active" : null, isPending2 ? "pending" : null, isTransitioning ? "transitioning" : null].filter(Boolean).join(" ");
   }
   let style = typeof styleProp === "function" ? styleProp(renderProps) : styleProp;
-  return /* @__PURE__ */ React__namespace.createElement(Link, _extends$5({}, rest, {
+  return /* @__PURE__ */ React.createElement(Link, _extends$5({}, rest, {
     "aria-current": ariaCurrent,
     className,
     ref: ref2,
@@ -2129,7 +2108,7 @@ const NavLink = /* @__PURE__ */ React__namespace.forwardRef(function NavLinkWith
 if (process.env.NODE_ENV !== "production") {
   NavLink.displayName = "NavLink";
 }
-const Form = /* @__PURE__ */ React__namespace.forwardRef((_ref9, forwardedRef) => {
+const Form = /* @__PURE__ */ React.forwardRef((_ref9, forwardedRef) => {
   let {
     fetcherKey,
     navigate,
@@ -2165,7 +2144,7 @@ const Form = /* @__PURE__ */ React__namespace.forwardRef((_ref9, forwardedRef) =
       viewTransition
     });
   };
-  return /* @__PURE__ */ React__namespace.createElement("form", _extends$5({
+  return /* @__PURE__ */ React.createElement("form", _extends$5({
     ref: forwardedRef,
     method: formMethod,
     action: formAction,
@@ -2194,7 +2173,7 @@ function getDataRouterConsoleError(hookName) {
   return hookName + " must be used within a data router.  See https://reactrouter.com/v6/routers/picking-a-router.";
 }
 function useDataRouterContext(hookName) {
-  let ctx = React__namespace.useContext(DataRouterContext);
+  let ctx = React.useContext(DataRouterContext);
   !ctx ? process.env.NODE_ENV !== "production" ? invariant(false, getDataRouterConsoleError(hookName)) : invariant(false) : void 0;
   return ctx;
 }
@@ -2212,7 +2191,7 @@ function useLinkClickHandler(to, _temp) {
   let path = useResolvedPath(to, {
     relative
   });
-  return React__namespace.useCallback((event) => {
+  return React.useCallback((event) => {
     if (shouldProcessLinkClick(event, target)) {
       event.preventDefault();
       let replace2 = replaceProp !== void 0 ? replaceProp : createPath(location) === createPath(path);
@@ -2239,9 +2218,9 @@ function useSubmit() {
   } = useDataRouterContext(DataRouterHook.UseSubmit);
   let {
     basename
-  } = React__namespace.useContext(NavigationContext);
+  } = React.useContext(NavigationContext);
   let currentRouteId = useRouteId();
-  return React__namespace.useCallback(function(target, options) {
+  return React.useCallback(function(target, options) {
     if (options === void 0) {
       options = {};
     }
@@ -2285,8 +2264,8 @@ function useFormAction(action, _temp2) {
   } = _temp2 === void 0 ? {} : _temp2;
   let {
     basename
-  } = React__namespace.useContext(NavigationContext);
-  let routeContext = React__namespace.useContext(RouteContext);
+  } = React.useContext(NavigationContext);
+  let routeContext = React.useContext(RouteContext);
   !routeContext ? process.env.NODE_ENV !== "production" ? invariant(false, "useFormAction must be used inside a RouteContext") : invariant(false) : void 0;
   let [match] = routeContext.matches.slice(-1);
   let path = _extends$5({}, useResolvedPath(action ? action : ".", {
@@ -2317,7 +2296,7 @@ function useViewTransitionState(to, opts) {
   if (opts === void 0) {
     opts = {};
   }
-  let vtContext = React__namespace.useContext(ViewTransitionContext);
+  let vtContext = React.useContext(ViewTransitionContext);
   !(vtContext != null) ? process.env.NODE_ENV !== "production" ? invariant(false, "`useViewTransitionState` must be used within `react-router-dom`'s `RouterProvider`.  Did you accidentally import `RouterProvider` from `react-router`?") : invariant(false) : void 0;
   let {
     basename
@@ -2894,14 +2873,14 @@ var hasRequiredUseSyncExternalStoreShim_production;
 function requireUseSyncExternalStoreShim_production() {
   if (hasRequiredUseSyncExternalStoreShim_production) return useSyncExternalStoreShim_production;
   hasRequiredUseSyncExternalStoreShim_production = 1;
-  var React2 = React__namespace.default;
+  var React2 = React__default;
   function is2(x2, y2) {
     return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
   }
-  var objectIs = "function" === typeof Object.is ? Object.is : is2, useState = React2.useState, useEffect = React2.useEffect, useLayoutEffect = React2.useLayoutEffect, useDebugValue = React2.useDebugValue;
+  var objectIs = "function" === typeof Object.is ? Object.is : is2, useState2 = React2.useState, useEffect2 = React2.useEffect, useLayoutEffect2 = React2.useLayoutEffect, useDebugValue2 = React2.useDebugValue;
   function useSyncExternalStore$2(subscribe, getSnapshot) {
-    var value = getSnapshot(), _useState = useState({ inst: { value, getSnapshot } }), inst = _useState[0].inst, forceUpdate = _useState[1];
-    useLayoutEffect(
+    var value = getSnapshot(), _useState = useState2({ inst: { value, getSnapshot } }), inst = _useState[0].inst, forceUpdate = _useState[1];
+    useLayoutEffect2(
       function() {
         inst.value = value;
         inst.getSnapshot = getSnapshot;
@@ -2909,7 +2888,7 @@ function requireUseSyncExternalStoreShim_production() {
       },
       [subscribe, value, getSnapshot]
     );
-    useEffect(
+    useEffect2(
       function() {
         checkIfSnapshotChanged(inst) && forceUpdate({ inst });
         return subscribe(function() {
@@ -2918,7 +2897,7 @@ function requireUseSyncExternalStoreShim_production() {
       },
       [subscribe]
     );
-    useDebugValue(value);
+    useDebugValue2(value);
     return value;
   }
   function checkIfSnapshotChanged(inst) {
@@ -2967,11 +2946,11 @@ function requireUseSyncExternalStoreShim_development() {
           "The result of getSnapshot should be cached to avoid an infinite loop"
         ), didWarnUncachedGetSnapshot = true);
       }
-      cachedValue = useState({
+      cachedValue = useState2({
         inst: { value, getSnapshot }
       });
       var inst = cachedValue[0].inst, forceUpdate = cachedValue[1];
-      useLayoutEffect(
+      useLayoutEffect2(
         function() {
           inst.value = value;
           inst.getSnapshot = getSnapshot;
@@ -2979,7 +2958,7 @@ function requireUseSyncExternalStoreShim_development() {
         },
         [subscribe, value, getSnapshot]
       );
-      useEffect(
+      useEffect2(
         function() {
           checkIfSnapshotChanged(inst) && forceUpdate({ inst });
           return subscribe(function() {
@@ -2988,7 +2967,7 @@ function requireUseSyncExternalStoreShim_development() {
         },
         [subscribe]
       );
-      useDebugValue(value);
+      useDebugValue2(value);
       return value;
     }
     function checkIfSnapshotChanged(inst) {
@@ -3005,7 +2984,7 @@ function requireUseSyncExternalStoreShim_development() {
       return getSnapshot();
     }
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-    var React2 = React__namespace.default, objectIs = "function" === typeof Object.is ? Object.is : is2, useState = React2.useState, useEffect = React2.useEffect, useLayoutEffect = React2.useLayoutEffect, useDebugValue = React2.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim2 = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
+    var React2 = React__default, objectIs = "function" === typeof Object.is ? Object.is : is2, useState2 = React2.useState, useEffect2 = React2.useEffect, useLayoutEffect2 = React2.useLayoutEffect, useDebugValue2 = React2.useDebugValue, didWarnOld18Alpha = false, didWarnUncachedGetSnapshot = false, shim2 = "undefined" === typeof window || "undefined" === typeof window.document || "undefined" === typeof window.document.createElement ? useSyncExternalStore$1 : useSyncExternalStore$2;
     useSyncExternalStoreShim_development.useSyncExternalStore = void 0 !== React2.useSyncExternalStore ? React2.useSyncExternalStore : shim2;
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
   }();
@@ -3032,18 +3011,18 @@ var hasRequiredWithSelector_production;
 function requireWithSelector_production() {
   if (hasRequiredWithSelector_production) return withSelector_production;
   hasRequiredWithSelector_production = 1;
-  var React2 = React__namespace.default, shim2 = shimExports;
+  var React2 = React__default, shim2 = shimExports;
   function is2(x2, y2) {
     return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
   }
-  var objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore = shim2.useSyncExternalStore, useRef = React2.useRef, useEffect = React2.useEffect, useMemo = React2.useMemo, useDebugValue = React2.useDebugValue;
+  var objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore = shim2.useSyncExternalStore, useRef2 = React2.useRef, useEffect2 = React2.useEffect, useMemo2 = React2.useMemo, useDebugValue2 = React2.useDebugValue;
   withSelector_production.useSyncExternalStoreWithSelector = function(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
-    var instRef = useRef(null);
+    var instRef = useRef2(null);
     if (null === instRef.current) {
       var inst = { hasValue: false, value: null };
       instRef.current = inst;
     } else inst = instRef.current;
-    instRef = useMemo(
+    instRef = useMemo2(
       function() {
         function memoizedSelector(nextSnapshot) {
           if (!hasMemo) {
@@ -3078,14 +3057,14 @@ function requireWithSelector_production() {
       [getSnapshot, getServerSnapshot, selector, isEqual]
     );
     var value = useSyncExternalStore(subscribe, instRef[0], instRef[1]);
-    useEffect(
+    useEffect2(
       function() {
         inst.hasValue = true;
         inst.value = value;
       },
       [value]
     );
-    useDebugValue(value);
+    useDebugValue2(value);
     return value;
   };
   return withSelector_production;
@@ -3109,14 +3088,14 @@ function requireWithSelector_development() {
       return x2 === y2 && (0 !== x2 || 1 / x2 === 1 / y2) || x2 !== x2 && y2 !== y2;
     }
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart(Error());
-    var React2 = React__namespace.default, shim2 = shimExports, objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore = shim2.useSyncExternalStore, useRef = React2.useRef, useEffect = React2.useEffect, useMemo = React2.useMemo, useDebugValue = React2.useDebugValue;
+    var React2 = React__default, shim2 = shimExports, objectIs = "function" === typeof Object.is ? Object.is : is2, useSyncExternalStore = shim2.useSyncExternalStore, useRef2 = React2.useRef, useEffect2 = React2.useEffect, useMemo2 = React2.useMemo, useDebugValue2 = React2.useDebugValue;
     withSelector_development.useSyncExternalStoreWithSelector = function(subscribe, getSnapshot, getServerSnapshot, selector, isEqual) {
-      var instRef = useRef(null);
+      var instRef = useRef2(null);
       if (null === instRef.current) {
         var inst = { hasValue: false, value: null };
         instRef.current = inst;
       } else inst = instRef.current;
-      instRef = useMemo(
+      instRef = useMemo2(
         function() {
           function memoizedSelector(nextSnapshot) {
             if (!hasMemo) {
@@ -3152,14 +3131,14 @@ function requireWithSelector_development() {
         [getSnapshot, getServerSnapshot, selector, isEqual]
       );
       var value = useSyncExternalStore(subscribe, instRef[0], instRef[1]);
-      useEffect(
+      useEffect2(
         function() {
           inst.hasValue = true;
           inst.value = value;
         },
         [value]
       );
-      useDebugValue(value);
+      useDebugValue2(value);
       return value;
     };
     "undefined" !== typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ && "function" === typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop && __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(Error());
@@ -3179,22 +3158,22 @@ const gT = typeof globalThis !== "undefined" ? globalThis : (
 );
 function getContext() {
   var _gT$ContextKey;
-  if (!React__namespace.createContext) return {};
+  if (!React.createContext) return {};
   const contextMap = (_gT$ContextKey = gT[ContextKey]) != null ? _gT$ContextKey : gT[ContextKey] = /* @__PURE__ */ new Map();
-  let realContext = contextMap.get(React__namespace.createContext);
+  let realContext = contextMap.get(React.createContext);
   if (!realContext) {
-    realContext = React__namespace.createContext(null);
+    realContext = React.createContext(null);
     if (process.env.NODE_ENV !== "production") {
       realContext.displayName = "ReactRedux";
     }
-    contextMap.set(React__namespace.createContext, realContext);
+    contextMap.set(React.createContext, realContext);
   }
   return realContext;
 }
 const ReactReduxContext = /* @__PURE__ */ getContext();
 function createReduxContextHook(context = ReactReduxContext) {
   return function useReduxContext2() {
-    const contextValue = React.useContext(context);
+    const contextValue = useContext(context);
     if (process.env.NODE_ENV !== "production" && !contextValue) {
       throw new Error("could not find react-redux context value; please ensure the component is wrapped in a <Provider>");
     }
@@ -3238,8 +3217,8 @@ function createSelectorHook(context = ReactReduxContext) {
       stabilityCheck: globalStabilityCheck,
       noopCheck: globalNoopCheck
     } = useReduxContext$1();
-    const firstRun = React.useRef(true);
-    const wrappedSelector = React.useCallback({
+    const firstRun = useRef(true);
+    const wrappedSelector = useCallback({
       [selector.name](state) {
         const selected = selector(state);
         if (process.env.NODE_ENV !== "production") {
@@ -3285,7 +3264,7 @@ function createSelectorHook(context = ReactReduxContext) {
       }
     }[selector.name], [selector, globalStabilityCheck, stabilityCheck]);
     const selectedState = useSyncExternalStoreWithSelector(subscription.addNestedSub, store.getState, getServerState || store.getState, wrappedSelector, equalityFn);
-    React.useDebugValue(selectedState);
+    useDebugValue(selectedState);
     return selectedState;
   };
 }
@@ -3480,10 +3459,10 @@ function requireReactIs_development$1() {
       var ContextProvider = REACT_PROVIDER_TYPE;
       var Element = REACT_ELEMENT_TYPE;
       var ForwardRef = REACT_FORWARD_REF_TYPE;
-      var Fragment = REACT_FRAGMENT_TYPE;
+      var Fragment2 = REACT_FRAGMENT_TYPE;
       var Lazy = REACT_LAZY_TYPE;
       var Memo = REACT_MEMO_TYPE;
-      var Portal = REACT_PORTAL_TYPE;
+      var Portal2 = REACT_PORTAL_TYPE;
       var Profiler = REACT_PROFILER_TYPE;
       var StrictMode = REACT_STRICT_MODE_TYPE;
       var Suspense = REACT_SUSPENSE_TYPE;
@@ -3539,10 +3518,10 @@ function requireReactIs_development$1() {
       reactIs_development$1.ContextProvider = ContextProvider;
       reactIs_development$1.Element = Element;
       reactIs_development$1.ForwardRef = ForwardRef;
-      reactIs_development$1.Fragment = Fragment;
+      reactIs_development$1.Fragment = Fragment2;
       reactIs_development$1.Lazy = Lazy;
       reactIs_development$1.Memo = Memo;
-      reactIs_development$1.Portal = Portal;
+      reactIs_development$1.Portal = Portal2;
       reactIs_development$1.Profiler = Profiler;
       reactIs_development$1.StrictMode = StrictMode;
       reactIs_development$1.Suspense = Suspense;
@@ -3790,10 +3769,10 @@ function requireReactIs_development() {
       var ContextProvider = REACT_PROVIDER_TYPE;
       var Element = REACT_ELEMENT_TYPE;
       var ForwardRef = REACT_FORWARD_REF_TYPE;
-      var Fragment = REACT_FRAGMENT_TYPE;
+      var Fragment2 = REACT_FRAGMENT_TYPE;
       var Lazy = REACT_LAZY_TYPE;
       var Memo = REACT_MEMO_TYPE;
-      var Portal = REACT_PORTAL_TYPE;
+      var Portal2 = REACT_PORTAL_TYPE;
       var Profiler = REACT_PROFILER_TYPE;
       var StrictMode = REACT_STRICT_MODE_TYPE;
       var Suspense = REACT_SUSPENSE_TYPE;
@@ -3858,10 +3837,10 @@ function requireReactIs_development() {
       reactIs_development.ContextProvider = ContextProvider;
       reactIs_development.Element = Element;
       reactIs_development.ForwardRef = ForwardRef;
-      reactIs_development.Fragment = Fragment;
+      reactIs_development.Fragment = Fragment2;
       reactIs_development.Lazy = Lazy;
       reactIs_development.Memo = Memo;
-      reactIs_development.Portal = Portal;
+      reactIs_development.Portal = Portal2;
       reactIs_development.Profiler = Profiler;
       reactIs_development.StrictMode = StrictMode;
       reactIs_development.Suspense = Suspense;
@@ -7118,14 +7097,14 @@ var __spreadProps = function(a2, b2) {
   return __defProps(a2, __getOwnPropDescs(b2));
 };
 function useStableQueryArgs(queryArgs, serialize, endpointDefinition, endpointName) {
-  var incoming = React.useMemo(function() {
+  var incoming = useMemo(function() {
     return {
       queryArgs,
       serialized: typeof queryArgs == "object" ? serialize({ queryArgs, endpointDefinition, endpointName }) : queryArgs
     };
   }, [queryArgs, serialize, endpointDefinition, endpointName]);
-  var cache2 = React.useRef(incoming);
-  React.useEffect(function() {
+  var cache2 = useRef(incoming);
+  useEffect(function() {
     if (cache2.current.serialized !== incoming.serialized) {
       cache2.current = incoming;
     }
@@ -7134,8 +7113,8 @@ function useStableQueryArgs(queryArgs, serialize, endpointDefinition, endpointNa
 }
 var UNINITIALIZED_VALUE = Symbol();
 function useShallowStableValue(value) {
-  var cache2 = React.useRef(value);
-  React.useEffect(function() {
+  var cache2 = useRef(value);
+  useEffect(function() {
     if (!shallowEqual(cache2.current, value)) {
       cache2.current = value;
     }
@@ -7163,7 +7142,7 @@ var defaultSerializeQueryArgs = function(_c) {
   }
   return endpointName + "(" + serialized + ")";
 };
-var useIsomorphicLayoutEffect = typeof window !== "undefined" && !!window.document && !!window.document.createElement ? React.useLayoutEffect : React.useEffect;
+var useIsomorphicLayoutEffect = typeof window !== "undefined" && !!window.document && !!window.document.createElement ? useLayoutEffect : useEffect;
 var defaultMutationStateSelector = function(x2) {
   return x2;
 };
@@ -7182,7 +7161,7 @@ function buildHooks(_c) {
   var api = _c.api, _d = _c.moduleOptions, batch = _d.batch, useDispatch2 = _d.useDispatch, useSelector2 = _d.useSelector, useStore2 = _d.useStore, unstable__sideEffectsInRender = _d.unstable__sideEffectsInRender, serializeQueryArgs = _c.serializeQueryArgs, context = _c.context;
   var usePossiblyImmediateEffect = unstable__sideEffectsInRender ? function(cb) {
     return cb();
-  } : React.useEffect;
+  } : useEffect;
   return { buildQueryHooks, buildMutationHook, usePrefetch };
   function queryStatePreSelector(currentState, lastResult, queryArgs) {
     if ((lastResult == null ? void 0 : lastResult.endpointName) && currentState.isUninitialized) {
@@ -7217,7 +7196,7 @@ function buildHooks(_c) {
   function usePrefetch(endpointName, defaultOptions) {
     var dispatch = useDispatch2();
     var stableDefaultOptions = useShallowStableValue(defaultOptions);
-    return React.useCallback(function(arg, options) {
+    return useCallback(function(arg, options) {
       return dispatch(api.util.prefetch(endpointName, arg, __spreadValues(__spreadValues({}, stableDefaultOptions), options)));
     }, [endpointName, dispatch, stableDefaultOptions]);
   }
@@ -7232,8 +7211,8 @@ function buildHooks(_c) {
         refetchOnFocus,
         pollingInterval
       });
-      var lastRenderHadSubscription = React.useRef(false);
-      var promiseRef = React.useRef();
+      var lastRenderHadSubscription = useRef(false);
+      var promiseRef = useRef();
       var _g = promiseRef.current || {}, queryCacheKey = _g.queryCacheKey, requestId = _g.requestId;
       var currentRenderHasSubscription = false;
       if (queryCacheKey && requestId) {
@@ -7287,14 +7266,14 @@ function buildHooks(_c) {
         stableSubscriptionOptions,
         subscriptionRemoved
       ]);
-      React.useEffect(function() {
+      useEffect(function() {
         return function() {
           var _a;
           (_a = promiseRef.current) == null ? void 0 : _a.unsubscribe();
           promiseRef.current = void 0;
         };
       }, []);
-      return React.useMemo(function() {
+      return useMemo(function() {
         return {
           refetch: function() {
             var _a;
@@ -7309,8 +7288,8 @@ function buildHooks(_c) {
       var _d2 = _c2 === void 0 ? {} : _c2, refetchOnReconnect = _d2.refetchOnReconnect, refetchOnFocus = _d2.refetchOnFocus, _e = _d2.pollingInterval, pollingInterval = _e === void 0 ? 0 : _e;
       var initiate = api.endpoints[name].initiate;
       var dispatch = useDispatch2();
-      var _f = React.useState(UNINITIALIZED_VALUE), arg = _f[0], setArg = _f[1];
-      var promiseRef = React.useRef();
+      var _f = useState(UNINITIALIZED_VALUE), arg = _f[0], setArg = _f[1];
+      var promiseRef = useRef();
       var stableSubscriptionOptions = useShallowStableValue({
         refetchOnReconnect,
         refetchOnFocus,
@@ -7323,11 +7302,11 @@ function buildHooks(_c) {
           (_b = promiseRef.current) == null ? void 0 : _b.updateSubscriptionOptions(stableSubscriptionOptions);
         }
       }, [stableSubscriptionOptions]);
-      var subscriptionOptionsRef = React.useRef(stableSubscriptionOptions);
+      var subscriptionOptionsRef = useRef(stableSubscriptionOptions);
       usePossiblyImmediateEffect(function() {
         subscriptionOptionsRef.current = stableSubscriptionOptions;
       }, [stableSubscriptionOptions]);
-      var trigger = React.useCallback(function(arg2, preferCacheValue) {
+      var trigger = useCallback(function(arg2, preferCacheValue) {
         if (preferCacheValue === void 0) {
           preferCacheValue = false;
         }
@@ -7343,18 +7322,18 @@ function buildHooks(_c) {
         });
         return promise2;
       }, [dispatch, initiate]);
-      React.useEffect(function() {
+      useEffect(function() {
         return function() {
           var _a;
           (_a = promiseRef == null ? void 0 : promiseRef.current) == null ? void 0 : _a.unsubscribe();
         };
       }, []);
-      React.useEffect(function() {
+      useEffect(function() {
         if (arg !== UNINITIALIZED_VALUE && !promiseRef.current) {
           trigger(arg, true);
         }
       }, [arg, trigger]);
-      return React.useMemo(function() {
+      return useMemo(function() {
         return [trigger, arg];
       }, [trigger, arg]);
     };
@@ -7362,8 +7341,8 @@ function buildHooks(_c) {
       var _d2 = _c2 === void 0 ? {} : _c2, _e = _d2.skip, skip = _e === void 0 ? false : _e, selectFromResult = _d2.selectFromResult;
       var select = api.endpoints[name].select;
       var stableArg = useStableQueryArgs(skip ? skipToken : arg, serializeQueryArgs, context.endpointDefinitions[name], name);
-      var lastValue = React.useRef();
-      var selectDefaultResult = React.useMemo(function() {
+      var lastValue = useRef();
+      var selectDefaultResult = useMemo(function() {
         return createSelector([
           select(stableArg),
           function(_2, lastResult) {
@@ -7374,7 +7353,7 @@ function buildHooks(_c) {
           }
         ], queryStatePreSelector);
       }, [select, stableArg]);
-      var querySelector = React.useMemo(function() {
+      var querySelector = useMemo(function() {
         return selectFromResult ? createSelector([selectDefaultResult], selectFromResult) : selectDefaultResult;
       }, [selectDefaultResult, selectFromResult]);
       var currentState = useSelector2(function(state) {
@@ -7396,10 +7375,10 @@ function buildHooks(_c) {
         var queryStateResults = useQueryState(arg, __spreadProps(__spreadValues({}, options), {
           skip: arg === UNINITIALIZED_VALUE
         }));
-        var info = React.useMemo(function() {
+        var info = useMemo(function() {
           return { lastArg: arg };
         }, [arg]);
-        return React.useMemo(function() {
+        return useMemo(function() {
           return [trigger, queryStateResults, info];
         }, [trigger, queryStateResults, info]);
       },
@@ -7409,8 +7388,8 @@ function buildHooks(_c) {
           selectFromResult: arg === skipToken || (options == null ? void 0 : options.skip) ? void 0 : noPendingQueryStateSelector
         }, options));
         var data = queryStateResults.data, status = queryStateResults.status, isLoading = queryStateResults.isLoading, isSuccess = queryStateResults.isSuccess, isError2 = queryStateResults.isError, error = queryStateResults.error;
-        React.useDebugValue({ data, status, isLoading, isSuccess, isError: isError2, error });
-        return React.useMemo(function() {
+        useDebugValue({ data, status, isLoading, isSuccess, isError: isError2, error });
+        return useMemo(function() {
           return __spreadValues(__spreadValues({}, queryStateResults), querySubscriptionResults);
         }, [queryStateResults, querySubscriptionResults]);
       }
@@ -7421,26 +7400,26 @@ function buildHooks(_c) {
       var _d2 = _c2 === void 0 ? {} : _c2, _e = _d2.selectFromResult, selectFromResult = _e === void 0 ? defaultMutationStateSelector : _e, fixedCacheKey = _d2.fixedCacheKey;
       var _f = api.endpoints[name], select = _f.select, initiate = _f.initiate;
       var dispatch = useDispatch2();
-      var _g = React.useState(), promise2 = _g[0], setPromise = _g[1];
-      React.useEffect(function() {
+      var _g = useState(), promise2 = _g[0], setPromise = _g[1];
+      useEffect(function() {
         return function() {
           if (!(promise2 == null ? void 0 : promise2.arg.fixedCacheKey)) {
             promise2 == null ? void 0 : promise2.reset();
           }
         };
       }, [promise2]);
-      var triggerMutation = React.useCallback(function(arg) {
+      var triggerMutation = useCallback(function(arg) {
         var promise22 = dispatch(initiate(arg, { fixedCacheKey }));
         setPromise(promise22);
         return promise22;
       }, [dispatch, initiate, fixedCacheKey]);
       var requestId = (promise2 || {}).requestId;
-      var mutationSelector = React.useMemo(function() {
+      var mutationSelector = useMemo(function() {
         return createSelector([select({ fixedCacheKey, requestId: promise2 == null ? void 0 : promise2.requestId })], selectFromResult);
       }, [select, promise2, selectFromResult, fixedCacheKey]);
       var currentState = useSelector2(mutationSelector, shallowEqual);
       var originalArgs = fixedCacheKey == null ? promise2 == null ? void 0 : promise2.arg.originalArgs : void 0;
-      var reset = React.useCallback(function() {
+      var reset = useCallback(function() {
         batch(function() {
           if (promise2) {
             setPromise(void 0);
@@ -7454,7 +7433,7 @@ function buildHooks(_c) {
         });
       }, [dispatch, fixedCacheKey, promise2, requestId]);
       var endpointName = currentState.endpointName, data = currentState.data, status = currentState.status, isLoading = currentState.isLoading, isSuccess = currentState.isSuccess, isError2 = currentState.isError, error = currentState.error;
-      React.useDebugValue({
+      useDebugValue({
         endpointName,
         data,
         status,
@@ -7463,10 +7442,10 @@ function buildHooks(_c) {
         isError: isError2,
         error
       });
-      var finalState = React.useMemo(function() {
+      var finalState = useMemo(function() {
         return __spreadProps(__spreadValues({}, currentState), { originalArgs, reset });
       }, [currentState, originalArgs, reset]);
-      return React.useMemo(function() {
+      return useMemo(function() {
         return [triggerMutation, finalState];
       }, [triggerMutation, finalState]);
     };
@@ -7495,7 +7474,7 @@ function safeAssign(target) {
 }
 var reactHooksModuleName = /* @__PURE__ */ Symbol();
 var reactHooksModule = function(_c) {
-  var _d = {}, _e = _d.batch, batch = _e === void 0 ? ReactDOM.unstable_batchedUpdates : _e, _f = _d.useDispatch, useDispatch$1 = _f === void 0 ? useDispatch : _f, _g = _d.useSelector, useSelector$1 = _g === void 0 ? useSelector : _g, _h = _d.useStore, useStore$1 = _h === void 0 ? useStore : _h, _j = _d.unstable__sideEffectsInRender, unstable__sideEffectsInRender = _j === void 0 ? false : _j;
+  var _d = {}, _e = _d.batch, batch = _e === void 0 ? unstable_batchedUpdates$1 : _e, _f = _d.useDispatch, useDispatch$1 = _f === void 0 ? useDispatch : _f, _g = _d.useSelector, useSelector$1 = _g === void 0 ? useSelector : _g, _h = _d.useStore, useStore$1 = _h === void 0 ? useStore : _h, _j = _d.unstable__sideEffectsInRender, unstable__sideEffectsInRender = _j === void 0 ? false : _j;
   return {
     name: reactHooksModuleName,
     init: function(api, _c2, context) {
@@ -7619,8 +7598,8 @@ const adminSlice = createSlice({
 });
 const { setAppTheme, setAvailableThemes, setLocale, setToken, logout, login } = adminSlice.actions;
 var _mapping = {};
-(function(exports2) {
-  exports2.aliasToReal = {
+(function(exports) {
+  exports.aliasToReal = {
     // Lodash aliases.
     "each": "forEach",
     "eachRight": "forEachRight",
@@ -7685,7 +7664,7 @@ var _mapping = {};
     "whereEq": "isMatch",
     "zipObj": "zipObject"
   };
-  exports2.aryMethod = {
+  exports.aryMethod = {
     "1": [
       "assignAll",
       "assignInAll",
@@ -7920,12 +7899,12 @@ var _mapping = {};
       "updateWith"
     ]
   };
-  exports2.aryRearg = {
+  exports.aryRearg = {
     "2": [1, 0],
     "3": [2, 0, 1],
     "4": [3, 2, 0, 1]
   };
-  exports2.iterateeAry = {
+  exports.iterateeAry = {
     "dropRightWhile": 1,
     "dropWhile": 1,
     "every": 1,
@@ -7963,11 +7942,11 @@ var _mapping = {};
     "times": 1,
     "transform": 2
   };
-  exports2.iterateeRearg = {
+  exports.iterateeRearg = {
     "mapKeys": [1],
     "reduceRight": [1, 0]
   };
-  exports2.methodRearg = {
+  exports.methodRearg = {
     "assignInAllWith": [1, 0],
     "assignInWith": [1, 2, 0],
     "assignAllWith": [1, 0],
@@ -7998,7 +7977,7 @@ var _mapping = {};
     "xorWith": [1, 2, 0],
     "zipWith": [1, 2, 0]
   };
-  exports2.methodSpread = {
+  exports.methodSpread = {
     "assignAll": { "start": 0 },
     "assignAllWith": { "start": 0 },
     "assignInAll": { "start": 0 },
@@ -8014,7 +7993,7 @@ var _mapping = {};
     "without": { "start": 1 },
     "zipAll": { "start": 0 }
   };
-  exports2.mutate = {
+  exports.mutate = {
     "array": {
       "fill": true,
       "pull": true,
@@ -8051,8 +8030,8 @@ var _mapping = {};
       "updateWith": true
     }
   };
-  exports2.realToAlias = function() {
-    var hasOwnProperty2 = Object.prototype.hasOwnProperty, object2 = exports2.aliasToReal, result = {};
+  exports.realToAlias = function() {
+    var hasOwnProperty2 = Object.prototype.hasOwnProperty, object2 = exports.aliasToReal, result = {};
     for (var key in object2) {
       var value = object2[key];
       if (hasOwnProperty2.call(result, value)) {
@@ -8063,7 +8042,7 @@ var _mapping = {};
     }
     return result;
   }();
-  exports2.remap = {
+  exports.remap = {
     "assignAll": "assign",
     "assignAllWith": "assignWith",
     "assignInAll": "assignIn",
@@ -8097,7 +8076,7 @@ var _mapping = {};
     "trimCharsStart": "trimStart",
     "zipAll": "zip"
   };
-  exports2.skipFixed = {
+  exports.skipFixed = {
     "castArray": true,
     "flow": true,
     "flowRight": true,
@@ -8106,7 +8085,7 @@ var _mapping = {};
     "rearg": true,
     "runInContext": true
   };
-  exports2.skipRearg = {
+  exports.skipRearg = {
     "add": true,
     "assign": true,
     "assignIn": true,
@@ -8328,11 +8307,11 @@ function baseConvert$1(util2, name, func2, options) {
   }
   function cloneByPath(object2, path) {
     path = toPath2(path);
-    var index2 = -1, length = path.length, lastIndex = length - 1, result = clone2(Object(object2)), nested = result;
-    while (nested != null && ++index2 < length) {
-      var key = path[index2], value = nested[key];
+    var index = -1, length = path.length, lastIndex = length - 1, result = clone2(Object(object2)), nested = result;
+    while (nested != null && ++index < length) {
+      var key = path[index], value = nested[key];
       if (value != null && !(isFunction2(value) || isError2(value) || isWeakMap2(value))) {
-        nested[key] = clone2(index2 == lastIndex ? value : Object(value));
+        nested[key] = clone2(index == lastIndex ? value : Object(value));
       }
       nested = nested[key];
     }
@@ -8369,8 +8348,8 @@ function baseConvert$1(util2, name, func2, options) {
       while (length--) {
         args[length] = arguments[length];
       }
-      var index2 = config.rearg ? 0 : length - 1;
-      args[index2] = transform(args[index2]);
+      var index = config.rearg ? 0 : length - 1;
+      args[index] = transform(args[index]);
       return func3.apply(void 0, args);
     };
   }
@@ -8736,9 +8715,9 @@ function insertWrapDetails$1(source, details) {
 }
 var _insertWrapDetails = insertWrapDetails$1;
 function arrayEach$2(array2, iteratee2) {
-  var index2 = -1, length = array2 == null ? 0 : array2.length;
-  while (++index2 < length) {
-    if (iteratee2(array2[index2], index2, array2) === false) {
+  var index = -1, length = array2 == null ? 0 : array2.length;
+  while (++index < length) {
+    if (iteratee2(array2[index], index, array2) === false) {
       break;
     }
   }
@@ -8746,10 +8725,10 @@ function arrayEach$2(array2, iteratee2) {
 }
 var _arrayEach = arrayEach$2;
 function baseFindIndex$1(array2, predicate, fromIndex, fromRight) {
-  var length = array2.length, index2 = fromIndex + (fromRight ? 1 : -1);
-  while (fromRight ? index2-- : ++index2 < length) {
-    if (predicate(array2[index2], index2, array2)) {
-      return index2;
+  var length = array2.length, index = fromIndex + (fromRight ? 1 : -1);
+  while (fromRight ? index-- : ++index < length) {
+    if (predicate(array2[index], index, array2)) {
+      return index;
     }
   }
   return -1;
@@ -8760,10 +8739,10 @@ function baseIsNaN$1(value) {
 }
 var _baseIsNaN = baseIsNaN$1;
 function strictIndexOf$1(array2, value, fromIndex) {
-  var index2 = fromIndex - 1, length = array2.length;
-  while (++index2 < length) {
-    if (array2[index2] === value) {
-      return index2;
+  var index = fromIndex - 1, length = array2.length;
+  while (++index < length) {
+    if (array2[index] === value) {
+      return index;
     }
   }
   return -1;
@@ -8848,20 +8827,20 @@ var nativeMin$1 = Math.min;
 function reorder$1(array2, indexes) {
   var arrLength = array2.length, length = nativeMin$1(indexes.length, arrLength), oldArray = copyArray$2(array2);
   while (length--) {
-    var index2 = indexes[length];
-    array2[length] = isIndex(index2, arrLength) ? oldArray[index2] : void 0;
+    var index = indexes[length];
+    array2[length] = isIndex(index, arrLength) ? oldArray[index] : void 0;
   }
   return array2;
 }
 var _reorder = reorder$1;
 var PLACEHOLDER$1 = "__lodash_placeholder__";
 function replaceHolders$3(array2, placeholder2) {
-  var index2 = -1, length = array2.length, resIndex = 0, result = [];
-  while (++index2 < length) {
-    var value = array2[index2];
+  var index = -1, length = array2.length, resIndex = 0, result = [];
+  while (++index < length) {
+    var value = array2[index];
     if (value === placeholder2 || value === PLACEHOLDER$1) {
-      array2[index2] = PLACEHOLDER$1;
-      result[resIndex++] = index2;
+      array2[index] = PLACEHOLDER$1;
+      result[resIndex++] = index;
     }
   }
   return result;
@@ -8872,9 +8851,9 @@ var WRAP_BIND_FLAG$3 = 1, WRAP_BIND_KEY_FLAG$2 = 2, WRAP_CURRY_FLAG$3 = 8, WRAP_
 function createHybrid$2(func2, bitmask, thisArg, partials, holders, partialsRight, holdersRight, argPos, ary2, arity) {
   var isAry = bitmask & WRAP_ARY_FLAG$2, isBind = bitmask & WRAP_BIND_FLAG$3, isBindKey = bitmask & WRAP_BIND_KEY_FLAG$2, isCurried = bitmask & (WRAP_CURRY_FLAG$3 | WRAP_CURRY_RIGHT_FLAG$1), isFlip = bitmask & WRAP_FLIP_FLAG, Ctor = isBindKey ? void 0 : createCtor$2(func2);
   function wrapper() {
-    var length = arguments.length, args = Array(length), index2 = length;
-    while (index2--) {
-      args[index2] = arguments[index2];
+    var length = arguments.length, args = Array(length), index = length;
+    while (index--) {
+      args[index] = arguments[index];
     }
     if (isCurried) {
       var placeholder2 = getHolder$1(wrapper), holdersCount = countHolders(args, placeholder2);
@@ -8923,9 +8902,9 @@ var apply$2 = _apply, createCtor$1 = _createCtor, createHybrid$1 = _createHybrid
 function createCurry$1(func2, bitmask, arity) {
   var Ctor = createCtor$1(func2);
   function wrapper() {
-    var length = arguments.length, args = Array(length), index2 = length, placeholder2 = getHolder(wrapper);
-    while (index2--) {
-      args[index2] = arguments[index2];
+    var length = arguments.length, args = Array(length), index = length, placeholder2 = getHolder(wrapper);
+    while (index--) {
+      args[index] = arguments[index];
     }
     var holders = length < 3 && args[0] !== placeholder2 && args[length - 1] !== placeholder2 ? [] : replaceHolders$1(args, placeholder2);
     length -= holders.length;
@@ -9009,10 +8988,10 @@ function mergeData$1(data, source) {
 var _mergeData = mergeData$1;
 var reWhitespace = /\s/;
 function trimmedEndIndex$1(string2) {
-  var index2 = string2.length;
-  while (index2-- && reWhitespace.test(string2.charAt(index2))) {
+  var index = string2.length;
+  while (index-- && reWhitespace.test(string2.charAt(index))) {
   }
-  return index2;
+  return index;
 }
 var _trimmedEndIndex = trimmedEndIndex$1;
 var trimmedEndIndex = _trimmedEndIndex;
@@ -9168,10 +9147,10 @@ function baseAssignIn$1(object2, source) {
 }
 var _baseAssignIn = baseAssignIn$1;
 function arrayFilter$1(array2, predicate) {
-  var index2 = -1, length = array2 == null ? 0 : array2.length, resIndex = 0, result = [];
-  while (++index2 < length) {
-    var value = array2[index2];
-    if (predicate(value, index2, array2)) {
+  var index = -1, length = array2 == null ? 0 : array2.length, resIndex = 0, result = [];
+  while (++index < length) {
+    var value = array2[index];
+    if (predicate(value, index, array2)) {
       result[resIndex++] = value;
     }
   }
@@ -9467,19 +9446,19 @@ function setCacheHas$1(value) {
 var _setCacheHas = setCacheHas$1;
 var MapCache = _MapCache, setCacheAdd = _setCacheAdd, setCacheHas = _setCacheHas;
 function SetCache$1(values) {
-  var index2 = -1, length = values == null ? 0 : values.length;
+  var index = -1, length = values == null ? 0 : values.length;
   this.__data__ = new MapCache();
-  while (++index2 < length) {
-    this.add(values[index2]);
+  while (++index < length) {
+    this.add(values[index]);
   }
 }
 SetCache$1.prototype.add = SetCache$1.prototype.push = setCacheAdd;
 SetCache$1.prototype.has = setCacheHas;
 var _SetCache = SetCache$1;
 function arraySome$1(array2, predicate) {
-  var index2 = -1, length = array2 == null ? 0 : array2.length;
-  while (++index2 < length) {
-    if (predicate(array2[index2], index2, array2)) {
+  var index = -1, length = array2 == null ? 0 : array2.length;
+  while (++index < length) {
+    if (predicate(array2[index], index, array2)) {
       return true;
     }
   }
@@ -9502,13 +9481,13 @@ function equalArrays$2(array2, other, bitmask, customizer, equalFunc, stack) {
   if (arrStacked && othStacked) {
     return arrStacked == other && othStacked == array2;
   }
-  var index2 = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG$3 ? new SetCache() : void 0;
+  var index = -1, result = true, seen = bitmask & COMPARE_UNORDERED_FLAG$3 ? new SetCache() : void 0;
   stack.set(array2, other);
   stack.set(other, array2);
-  while (++index2 < arrLength) {
-    var arrValue = array2[index2], othValue = other[index2];
+  while (++index < arrLength) {
+    var arrValue = array2[index], othValue = other[index];
     if (customizer) {
-      var compared = isPartial ? customizer(othValue, arrValue, index2, other, array2, stack) : customizer(arrValue, othValue, index2, array2, other, stack);
+      var compared = isPartial ? customizer(othValue, arrValue, index, other, array2, stack) : customizer(arrValue, othValue, index, array2, other, stack);
     }
     if (compared !== void 0) {
       if (compared) {
@@ -9537,17 +9516,17 @@ function equalArrays$2(array2, other, bitmask, customizer, equalFunc, stack) {
 }
 var _equalArrays = equalArrays$2;
 function mapToArray$1(map2) {
-  var index2 = -1, result = Array(map2.size);
+  var index = -1, result = Array(map2.size);
   map2.forEach(function(value, key) {
-    result[++index2] = [key, value];
+    result[++index] = [key, value];
   });
   return result;
 }
 var _mapToArray = mapToArray$1;
 function setToArray$1(set2) {
-  var index2 = -1, result = Array(set2.size);
+  var index = -1, result = Array(set2.size);
   set2.forEach(function(value) {
-    result[++index2] = value;
+    result[++index] = value;
   });
   return result;
 }
@@ -9613,9 +9592,9 @@ function equalObjects$1(object2, other, bitmask, customizer, equalFunc, stack) {
   if (objLength != othLength && !isPartial) {
     return false;
   }
-  var index2 = objLength;
-  while (index2--) {
-    var key = objProps[index2];
+  var index = objLength;
+  while (index--) {
+    var key = objProps[index];
     if (!(isPartial ? key in other : hasOwnProperty$3.call(other, key))) {
       return false;
     }
@@ -9629,8 +9608,8 @@ function equalObjects$1(object2, other, bitmask, customizer, equalFunc, stack) {
   stack.set(object2, other);
   stack.set(other, object2);
   var skipCtor = isPartial;
-  while (++index2 < objLength) {
-    key = objProps[index2];
+  while (++index < objLength) {
+    key = objProps[index];
     var objValue = object2[key], othValue = other[key];
     if (customizer) {
       var compared = isPartial ? customizer(othValue, objValue, key, other, object2, stack) : customizer(objValue, othValue, key, object2, other, stack);
@@ -9702,19 +9681,19 @@ var _baseIsEqual = baseIsEqual$2;
 var Stack = _Stack, baseIsEqual$1 = _baseIsEqual;
 var COMPARE_PARTIAL_FLAG$1 = 1, COMPARE_UNORDERED_FLAG$1 = 2;
 function baseIsMatch$1(object2, source, matchData, customizer) {
-  var index2 = matchData.length, length = index2, noCustomizer = !customizer;
+  var index = matchData.length, length = index, noCustomizer = !customizer;
   if (object2 == null) {
     return !length;
   }
   object2 = Object(object2);
-  while (index2--) {
-    var data = matchData[index2];
+  while (index--) {
+    var data = matchData[index];
     if (noCustomizer && data[2] ? data[1] !== object2[data[0]] : !(data[0] in object2)) {
       return false;
     }
   }
-  while (++index2 < length) {
-    data = matchData[index2];
+  while (++index < length) {
+    data = matchData[index];
     var key = data[0], objValue = object2[key], srcValue = data[1];
     if (noCustomizer && data[2]) {
       if (objValue === void 0 && !(key in object2)) {
@@ -9869,12 +9848,12 @@ function require_createFlow() {
   var WRAP_CURRY_FLAG2 = 8, WRAP_PARTIAL_FLAG2 = 32, WRAP_ARY_FLAG2 = 128, WRAP_REARG_FLAG2 = 256;
   function createFlow(fromRight) {
     return flatRest2(function(funcs) {
-      var length = funcs.length, index2 = length, prereq = LodashWrapper.prototype.thru;
+      var length = funcs.length, index = length, prereq = LodashWrapper.prototype.thru;
       if (fromRight) {
         funcs.reverse();
       }
-      while (index2--) {
-        var func2 = funcs[index2];
+      while (index--) {
+        var func2 = funcs[index];
         if (typeof func2 != "function") {
           throw new TypeError(FUNC_ERROR_TEXT2);
         }
@@ -9882,9 +9861,9 @@ function require_createFlow() {
           var wrapper = new LodashWrapper([], true);
         }
       }
-      index2 = wrapper ? index2 : length;
-      while (++index2 < length) {
-        func2 = funcs[index2];
+      index = wrapper ? index : length;
+      while (++index < length) {
+        func2 = funcs[index];
         var funcName = getFuncName(func2), data = funcName == "wrapper" ? getData2(func2) : void 0;
         if (data && isLaziable2(data[0]) && data[1] == (WRAP_ARY_FLAG2 | WRAP_CURRY_FLAG2 | WRAP_PARTIAL_FLAG2 | WRAP_REARG_FLAG2) && !data[4].length && data[9] == 1) {
           wrapper = wrapper[getFuncName(data[0])].apply(wrapper, data[3]);
@@ -9897,9 +9876,9 @@ function require_createFlow() {
         if (wrapper && args.length == 1 && isArray2(value)) {
           return wrapper.plant(value).value();
         }
-        var index3 = 0, result = length ? funcs[index3].apply(this, args) : value;
-        while (++index3 < length) {
-          result = funcs[index3].call(this, result);
+        var index2 = 0, result = length ? funcs[index2].apply(this, args) : value;
+        while (++index2 < length) {
+          result = funcs[index2].call(this, result);
         }
         return result;
       };
@@ -11884,12 +11863,12 @@ var parseObject = function(chain, val, options, valuesParsed) {
     } else {
       obj = options.plainObjects ? /* @__PURE__ */ Object.create(null) : {};
       var cleanRoot = root2.charAt(0) === "[" && root2.charAt(root2.length - 1) === "]" ? root2.slice(1, -1) : root2;
-      var index2 = parseInt(cleanRoot, 10);
+      var index = parseInt(cleanRoot, 10);
       if (!options.parseArrays && cleanRoot === "") {
         obj = { 0: leaf };
-      } else if (!isNaN(index2) && root2 !== cleanRoot && String(index2) === cleanRoot && index2 >= 0 && (options.parseArrays && index2 <= options.arrayLimit)) {
+      } else if (!isNaN(index) && root2 !== cleanRoot && String(index) === cleanRoot && index >= 0 && (options.parseArrays && index <= options.arrayLimit)) {
         obj = [];
-        obj[index2] = leaf;
+        obj[index] = leaf;
       } else if (cleanRoot !== "__proto__") {
         obj[cleanRoot] = leaf;
       }
@@ -12291,7 +12270,7 @@ var hasRequiredScheduler_production_min;
 function requireScheduler_production_min() {
   if (hasRequiredScheduler_production_min) return scheduler_production_min;
   hasRequiredScheduler_production_min = 1;
-  (function(exports2) {
+  (function(exports) {
     function f2(a2, b2) {
       var c2 = a2.length;
       a2.push(b2);
@@ -12324,12 +12303,12 @@ function requireScheduler_production_min() {
     }
     if ("object" === typeof performance && "function" === typeof performance.now) {
       var l2 = performance;
-      exports2.unstable_now = function() {
+      exports.unstable_now = function() {
         return l2.now();
       };
     } else {
       var p2 = Date, q2 = p2.now();
-      exports2.unstable_now = function() {
+      exports.unstable_now = function() {
         return p2.now() - q2;
       };
     }
@@ -12365,7 +12344,7 @@ function requireScheduler_production_min() {
             v2.callback = null;
             y2 = v2.priorityLevel;
             var e2 = d2(v2.expirationTime <= b2);
-            b2 = exports2.unstable_now();
+            b2 = exports.unstable_now();
             "function" === typeof e2 ? v2.callback = e2 : v2 === h2(r2) && k2(r2);
             G2(b2);
           } else k2(r2);
@@ -12384,11 +12363,11 @@ function requireScheduler_production_min() {
     }
     var N2 = false, O2 = null, L2 = -1, P2 = 5, Q2 = -1;
     function M2() {
-      return exports2.unstable_now() - Q2 < P2 ? false : true;
+      return exports.unstable_now() - Q2 < P2 ? false : true;
     }
     function R2() {
       if (null !== O2) {
-        var a2 = exports2.unstable_now();
+        var a2 = exports.unstable_now();
         Q2 = a2;
         var b2 = true;
         try {
@@ -12417,31 +12396,31 @@ function requireScheduler_production_min() {
     }
     function K(a2, b2) {
       L2 = D2(function() {
-        a2(exports2.unstable_now());
+        a2(exports.unstable_now());
       }, b2);
     }
-    exports2.unstable_IdlePriority = 5;
-    exports2.unstable_ImmediatePriority = 1;
-    exports2.unstable_LowPriority = 4;
-    exports2.unstable_NormalPriority = 3;
-    exports2.unstable_Profiling = null;
-    exports2.unstable_UserBlockingPriority = 2;
-    exports2.unstable_cancelCallback = function(a2) {
+    exports.unstable_IdlePriority = 5;
+    exports.unstable_ImmediatePriority = 1;
+    exports.unstable_LowPriority = 4;
+    exports.unstable_NormalPriority = 3;
+    exports.unstable_Profiling = null;
+    exports.unstable_UserBlockingPriority = 2;
+    exports.unstable_cancelCallback = function(a2) {
       a2.callback = null;
     };
-    exports2.unstable_continueExecution = function() {
+    exports.unstable_continueExecution = function() {
       A2 || z2 || (A2 = true, I2(J));
     };
-    exports2.unstable_forceFrameRate = function(a2) {
+    exports.unstable_forceFrameRate = function(a2) {
       0 > a2 || 125 < a2 ? console.error("forceFrameRate takes a positive int between 0 and 125, forcing frame rates higher than 125 fps is not supported") : P2 = 0 < a2 ? Math.floor(1e3 / a2) : 5;
     };
-    exports2.unstable_getCurrentPriorityLevel = function() {
+    exports.unstable_getCurrentPriorityLevel = function() {
       return y2;
     };
-    exports2.unstable_getFirstCallbackNode = function() {
+    exports.unstable_getFirstCallbackNode = function() {
       return h2(r2);
     };
-    exports2.unstable_next = function(a2) {
+    exports.unstable_next = function(a2) {
       switch (y2) {
         case 1:
         case 2:
@@ -12459,11 +12438,11 @@ function requireScheduler_production_min() {
         y2 = c2;
       }
     };
-    exports2.unstable_pauseExecution = function() {
+    exports.unstable_pauseExecution = function() {
     };
-    exports2.unstable_requestPaint = function() {
+    exports.unstable_requestPaint = function() {
     };
-    exports2.unstable_runWithPriority = function(a2, b2) {
+    exports.unstable_runWithPriority = function(a2, b2) {
       switch (a2) {
         case 1:
         case 2:
@@ -12482,8 +12461,8 @@ function requireScheduler_production_min() {
         y2 = c2;
       }
     };
-    exports2.unstable_scheduleCallback = function(a2, b2, c2) {
-      var d2 = exports2.unstable_now();
+    exports.unstable_scheduleCallback = function(a2, b2, c2) {
+      var d2 = exports.unstable_now();
       "object" === typeof c2 && null !== c2 ? (c2 = c2.delay, c2 = "number" === typeof c2 && 0 < c2 ? d2 + c2 : d2) : c2 = d2;
       switch (a2) {
         case 1:
@@ -12506,8 +12485,8 @@ function requireScheduler_production_min() {
       c2 > d2 ? (a2.sortIndex = c2, f2(t2, a2), null === h2(r2) && a2 === h2(t2) && (B2 ? (E2(L2), L2 = -1) : B2 = true, K(H2, c2 - d2))) : (a2.sortIndex = e2, f2(r2, a2), A2 || z2 || (A2 = true, I2(J)));
       return a2;
     };
-    exports2.unstable_shouldYield = M2;
-    exports2.unstable_wrapCallback = function(a2) {
+    exports.unstable_shouldYield = M2;
+    exports.unstable_wrapCallback = function(a2) {
       var b2 = y2;
       return function() {
         var c2 = y2;
@@ -12536,7 +12515,7 @@ var hasRequiredScheduler_development;
 function requireScheduler_development() {
   if (hasRequiredScheduler_development) return scheduler_development;
   hasRequiredScheduler_development = 1;
-  (function(exports2) {
+  (function(exports) {
     if (process.env.NODE_ENV !== "production") {
       (function() {
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStart === "function") {
@@ -12545,9 +12524,9 @@ function requireScheduler_development() {
         var enableProfiling = false;
         var frameYieldMs = 5;
         function push2(heap, node) {
-          var index2 = heap.length;
+          var index = heap.length;
           heap.push(node);
-          siftUp(heap, node, index2);
+          siftUp(heap, node, index);
         }
         function peek(heap) {
           return heap.length === 0 ? null : heap[0];
@@ -12565,42 +12544,42 @@ function requireScheduler_development() {
           return first;
         }
         function siftUp(heap, node, i2) {
-          var index2 = i2;
-          while (index2 > 0) {
-            var parentIndex = index2 - 1 >>> 1;
+          var index = i2;
+          while (index > 0) {
+            var parentIndex = index - 1 >>> 1;
             var parent2 = heap[parentIndex];
             if (compare(parent2, node) > 0) {
               heap[parentIndex] = node;
-              heap[index2] = parent2;
-              index2 = parentIndex;
+              heap[index] = parent2;
+              index = parentIndex;
             } else {
               return;
             }
           }
         }
         function siftDown(heap, node, i2) {
-          var index2 = i2;
+          var index = i2;
           var length = heap.length;
           var halfLength = length >>> 1;
-          while (index2 < halfLength) {
-            var leftIndex = (index2 + 1) * 2 - 1;
+          while (index < halfLength) {
+            var leftIndex = (index + 1) * 2 - 1;
             var left = heap[leftIndex];
             var rightIndex = leftIndex + 1;
             var right = heap[rightIndex];
             if (compare(left, node) < 0) {
               if (rightIndex < length && compare(right, left) < 0) {
-                heap[index2] = right;
+                heap[index] = right;
                 heap[rightIndex] = node;
-                index2 = rightIndex;
+                index = rightIndex;
               } else {
-                heap[index2] = left;
+                heap[index] = left;
                 heap[leftIndex] = node;
-                index2 = leftIndex;
+                index = leftIndex;
               }
             } else if (rightIndex < length && compare(right, node) < 0) {
-              heap[index2] = right;
+              heap[index] = right;
               heap[rightIndex] = node;
-              index2 = rightIndex;
+              index = rightIndex;
             } else {
               return;
             }
@@ -12620,13 +12599,13 @@ function requireScheduler_development() {
         var hasPerformanceNow = typeof performance === "object" && typeof performance.now === "function";
         if (hasPerformanceNow) {
           var localPerformance = performance;
-          exports2.unstable_now = function() {
+          exports.unstable_now = function() {
             return localPerformance.now();
           };
         } else {
           var localDate = Date;
           var initialTime = localDate.now();
-          exports2.unstable_now = function() {
+          exports.unstable_now = function() {
             return localDate.now() - initialTime;
           };
         }
@@ -12712,7 +12691,7 @@ function requireScheduler_development() {
               currentPriorityLevel = currentTask.priorityLevel;
               var didUserCallbackTimeout = currentTask.expirationTime <= currentTime;
               var continuationCallback = callback(didUserCallbackTimeout);
-              currentTime = exports2.unstable_now();
+              currentTime = exports.unstable_now();
               if (typeof continuationCallback === "function") {
                 currentTask.callback = continuationCallback;
               } else {
@@ -12788,7 +12767,7 @@ function requireScheduler_development() {
           };
         }
         function unstable_scheduleCallback(priorityLevel, callback, options) {
-          var currentTime = exports2.unstable_now();
+          var currentTime = exports.unstable_now();
           var startTime2;
           if (typeof options === "object" && options !== null) {
             var delay = options.delay;
@@ -12872,7 +12851,7 @@ function requireScheduler_development() {
         var frameInterval = frameYieldMs;
         var startTime = -1;
         function shouldYieldToHost() {
-          var timeElapsed = exports2.unstable_now() - startTime;
+          var timeElapsed = exports.unstable_now() - startTime;
           if (timeElapsed < frameInterval) {
             return false;
           }
@@ -12893,7 +12872,7 @@ function requireScheduler_development() {
         }
         var performWorkUntilDeadline = function() {
           if (scheduledHostCallback !== null) {
-            var currentTime = exports2.unstable_now();
+            var currentTime = exports.unstable_now();
             startTime = currentTime;
             var hasTimeRemaining = true;
             var hasMoreWork = true;
@@ -12937,7 +12916,7 @@ function requireScheduler_development() {
         }
         function requestHostTimeout(callback, ms) {
           taskTimeoutID = localSetTimeout(function() {
-            callback(exports2.unstable_now());
+            callback(exports.unstable_now());
           }, ms);
         }
         function cancelHostTimeout() {
@@ -12946,24 +12925,24 @@ function requireScheduler_development() {
         }
         var unstable_requestPaint = requestPaint;
         var unstable_Profiling = null;
-        exports2.unstable_IdlePriority = IdlePriority;
-        exports2.unstable_ImmediatePriority = ImmediatePriority;
-        exports2.unstable_LowPriority = LowPriority;
-        exports2.unstable_NormalPriority = NormalPriority;
-        exports2.unstable_Profiling = unstable_Profiling;
-        exports2.unstable_UserBlockingPriority = UserBlockingPriority;
-        exports2.unstable_cancelCallback = unstable_cancelCallback;
-        exports2.unstable_continueExecution = unstable_continueExecution;
-        exports2.unstable_forceFrameRate = forceFrameRate;
-        exports2.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
-        exports2.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
-        exports2.unstable_next = unstable_next;
-        exports2.unstable_pauseExecution = unstable_pauseExecution;
-        exports2.unstable_requestPaint = unstable_requestPaint;
-        exports2.unstable_runWithPriority = unstable_runWithPriority;
-        exports2.unstable_scheduleCallback = unstable_scheduleCallback;
-        exports2.unstable_shouldYield = shouldYieldToHost;
-        exports2.unstable_wrapCallback = unstable_wrapCallback;
+        exports.unstable_IdlePriority = IdlePriority;
+        exports.unstable_ImmediatePriority = ImmediatePriority;
+        exports.unstable_LowPriority = LowPriority;
+        exports.unstable_NormalPriority = NormalPriority;
+        exports.unstable_Profiling = unstable_Profiling;
+        exports.unstable_UserBlockingPriority = UserBlockingPriority;
+        exports.unstable_cancelCallback = unstable_cancelCallback;
+        exports.unstable_continueExecution = unstable_continueExecution;
+        exports.unstable_forceFrameRate = forceFrameRate;
+        exports.unstable_getCurrentPriorityLevel = unstable_getCurrentPriorityLevel;
+        exports.unstable_getFirstCallbackNode = unstable_getFirstCallbackNode;
+        exports.unstable_next = unstable_next;
+        exports.unstable_pauseExecution = unstable_pauseExecution;
+        exports.unstable_requestPaint = unstable_requestPaint;
+        exports.unstable_runWithPriority = unstable_runWithPriority;
+        exports.unstable_scheduleCallback = unstable_scheduleCallback;
+        exports.unstable_shouldYield = shouldYieldToHost;
+        exports.unstable_wrapCallback = unstable_wrapCallback;
         if (typeof __REACT_DEVTOOLS_GLOBAL_HOOK__ !== "undefined" && typeof __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop === "function") {
           __REACT_DEVTOOLS_GLOBAL_HOOK__.registerInternalModuleStop(new Error());
         }
@@ -12978,17 +12957,17 @@ if (process.env.NODE_ENV === "production") {
   scheduler.exports = requireScheduler_development();
 }
 var schedulerExports = scheduler.exports;
-const d = Symbol(), f = Symbol(), v = "undefined" == typeof window || /ServerSideRendering/.test(window.navigator && window.navigator.userAgent) ? React.useEffect : React.useLayoutEffect, a = schedulerExports.unstable_runWithPriority ? (e2) => schedulerExports.unstable_runWithPriority(schedulerExports.unstable_NormalPriority, e2) : (e2) => e2();
+const d = Symbol(), f = Symbol(), v = "undefined" == typeof window || /ServerSideRendering/.test(window.navigator && window.navigator.userAgent) ? useEffect : useLayoutEffect, a = schedulerExports.unstable_runWithPriority ? (e2) => schedulerExports.unstable_runWithPriority(schedulerExports.unstable_NormalPriority, e2) : (e2) => e2();
 function E(r2) {
-  const t2 = React.createContext({ [d]: { v: { current: r2 }, n: { current: -1 }, l: /* @__PURE__ */ new Set(), u: (e2) => e2() } });
+  const t2 = createContext$1({ [d]: { v: { current: r2 }, n: { current: -1 }, l: /* @__PURE__ */ new Set(), u: (e2) => e2() } });
   var o2;
   return t2[f] = t2.Provider, t2.Provider = (o2 = t2.Provider, ({ value: e2, children: r3 }) => {
-    const t3 = React.useRef(e2), c2 = React.useRef(0), [i2, p2] = React.useState(null);
+    const t3 = useRef(e2), c2 = useRef(0), [i2, p2] = useState(null);
     i2 && (i2(e2), p2(null));
-    const f2 = React.useRef();
+    const f2 = useRef();
     if (!f2.current) {
       const e3 = /* @__PURE__ */ new Set(), r4 = (r5, t4) => {
-        ReactDOM.unstable_batchedUpdates(() => {
+        unstable_batchedUpdates$1(() => {
           c2.current += 1;
           const n2 = { n: c2.current };
           null != t4 && t4.suspense && (n2.n *= -1, n2.p = new Promise((e4) => {
@@ -13006,13 +12985,13 @@ function E(r2) {
           r4({ n: c2.current, v: e2 });
         });
       });
-    }, [e2]), React.createElement(o2, { value: f2.current }, r3);
+    }, [e2]), createElement(o2, { value: f2.current }, r3);
   }), delete t2.Consumer, t2;
 }
 function h(e2, n2) {
-  const o2 = React.useContext(e2)[d];
+  const o2 = useContext(e2)[d];
   if ("object" == typeof process && "production" !== process.env.NODE_ENV && !o2) throw new Error("useContextSelector requires special context");
-  const { v: { current: c2 }, n: { current: u2 }, l: s2 } = o2, i2 = n2(c2), [p2, l2] = React.useReducer((e3, r2) => {
+  const { v: { current: c2 }, n: { current: u2 }, l: s2 } = o2, i2 = n2(c2), [p2, l2] = useReducer((e3, r2) => {
     if (!r2) return [c2, i2];
     if ("p" in r2) throw r2.p;
     if (r2.n === u2) return Object.is(e3[1], i2) ? e3 : [c2, i2];
@@ -13034,13 +13013,13 @@ function createContext(rootComponentName, defaultContext) {
   const Context = E(defaultContext);
   const Provider = (props) => {
     const { children, ...context } = props;
-    const value = React__namespace.useMemo(() => context, Object.values(context));
-    return /* @__PURE__ */ jsxRuntime.jsx(Context.Provider, {
+    const value = React.useMemo(() => context, Object.values(context));
+    return /* @__PURE__ */ jsx(Context.Provider, {
       value,
       children
     });
   };
-  function useContext(consumerName, selector, shouldThrowOnMissingContext) {
+  function useContext2(consumerName, selector, shouldThrowOnMissingContext) {
     return h(Context, (ctx) => {
       if (ctx) return selector(ctx);
       if (shouldThrowOnMissingContext) {
@@ -13052,7 +13031,7 @@ function createContext(rootComponentName, defaultContext) {
   Provider.displayName = rootComponentName + "Provider";
   return [
     Provider,
-    useContext
+    useContext2
   ];
 }
 createContext("StrapiApp");
@@ -14958,7 +14937,7 @@ var QueryClient = /* @__PURE__ */ function() {
   };
   return QueryClient2;
 }();
-var unstable_batchedUpdates = ReactDOM__default.default.unstable_batchedUpdates;
+var unstable_batchedUpdates = ReactDOM.unstable_batchedUpdates;
 notifyManager.setBatchNotifyFunction(unstable_batchedUpdates);
 var logger = console;
 setLogger(logger);
@@ -14975,33 +14954,33 @@ createContext("History", {
   }
 });
 function $c512c27ab02ef895$export$fd42f52fd3ae1109(rootComponentName, defaultContext) {
-  const Context = /* @__PURE__ */ React.createContext(defaultContext);
+  const Context = /* @__PURE__ */ createContext$1(defaultContext);
   function Provider(props) {
     const { children, ...context } = props;
-    const value = React.useMemo(
+    const value = useMemo(
       () => context,
       Object.values(context)
     );
-    return /* @__PURE__ */ React.createElement(Context.Provider, {
+    return /* @__PURE__ */ createElement(Context.Provider, {
       value
     }, children);
   }
-  function useContext(consumerName) {
-    const context = React.useContext(Context);
+  function useContext$1(consumerName) {
+    const context = useContext(Context);
     if (context) return context;
     throw new Error(`\`${consumerName}\` must be used within \`${rootComponentName}\``);
   }
   Provider.displayName = rootComponentName + "Provider";
   return [
     Provider,
-    useContext
+    useContext$1
   ];
 }
 function getByteSize(value) {
   return new TextEncoder().encode(value).length;
 }
 function baseSlice$2(array2, start, end) {
-  var index2 = -1, length = array2.length;
+  var index = -1, length = array2.length;
   if (start < 0) {
     start = -start > length ? 0 : length + start;
   }
@@ -15012,8 +14991,8 @@ function baseSlice$2(array2, start, end) {
   length = start > end ? 0 : end - start >>> 0;
   start >>>= 0;
   var result = Array(length);
-  while (++index2 < length) {
-    result[index2] = array2[index2 + start];
+  while (++index < length) {
+    result[index] = array2[index + start];
   }
   return result;
 }
@@ -15695,10 +15674,10 @@ function toFormData$1(obj, formData, options) {
         value = JSON.stringify(value);
       } else if (utils$1.isArray(value) && isFlatArray(value) || (utils$1.isFileList(value) || utils$1.endsWith(key, "[]")) && (arr = utils$1.toArray(value))) {
         key = removeBrackets(key);
-        arr.forEach(function each(el, index2) {
+        arr.forEach(function each(el, index) {
           !(utils$1.isUndefined(el) || el === null) && formData.append(
             // eslint-disable-next-line no-nested-ternary
-            indexes === true ? renderKey([key], index2, dots) : indexes === null ? key : key + "[]",
+            indexes === true ? renderKey([key], index, dots) : indexes === null ? key : key + "[]",
             convertValue(el)
           );
         });
@@ -15930,11 +15909,11 @@ function arrayToObject2(arr) {
   return obj;
 }
 function formDataToJSON(formData) {
-  function buildPath(path, value, target, index2) {
-    let name = path[index2++];
+  function buildPath(path, value, target, index) {
+    let name = path[index++];
     if (name === "__proto__") return true;
     const isNumericKey = Number.isFinite(+name);
-    const isLast = index2 >= path.length;
+    const isLast = index >= path.length;
     name = !name && utils$1.isArray(target) ? target.length : name;
     if (isLast) {
       if (utils$1.hasOwnProp(target, name)) {
@@ -15947,7 +15926,7 @@ function formDataToJSON(formData) {
     if (!target[name] || !utils$1.isObject(target[name])) {
       target[name] = [];
     }
-    const result = buildPath(path, value, target[name], index2);
+    const result = buildPath(path, value, target[name], index);
     if (result && utils$1.isArray(target[name])) {
       target[name] = arrayToObject2(target[name]);
     }
@@ -17476,9 +17455,9 @@ let CancelToken$1 = class CancelToken {
     if (!this._listeners) {
       return;
     }
-    const index2 = this._listeners.indexOf(listener);
-    if (index2 !== -1) {
-      this._listeners.splice(index2, 1);
+    const index = this._listeners.indexOf(listener);
+    if (index !== -1) {
+      this._listeners.splice(index, 1);
     }
   }
   toAbortSignal() {
@@ -17630,8 +17609,8 @@ const {
   mergeConfig
 } = axios;
 function useDeviceType() {
-  const [deviceType, setDeviceType] = React__namespace.useState("desktop");
-  React__namespace.useEffect(() => {
+  const [deviceType, setDeviceType] = React.useState("desktop");
+  React.useEffect(() => {
     const userAgent = navigator.userAgent.toLowerCase();
     if (/mobile|iphone|ipod|android.*mobile|windows phone/.test(userAgent)) {
       setDeviceType("mobile");
@@ -17644,14 +17623,14 @@ function useDeviceType() {
   return deviceType;
 }
 const [AppInfoProvider, useAppInfo] = createContext("AppInfo", {});
-const TrackingContext = /* @__PURE__ */ React__namespace.createContext({
+const TrackingContext = /* @__PURE__ */ React.createContext({
   uuid: false
 });
 const useTracking = () => {
   const deviceType = useDeviceType();
-  const { uuid, telemetryProperties } = React__namespace.useContext(TrackingContext);
+  const { uuid, telemetryProperties } = React.useContext(TrackingContext);
   const userId = useAppInfo("useTracking", (state) => state.userId);
-  const trackUsage = React__namespace.useCallback(async (event, properties) => {
+  const trackUsage = React.useCallback(async (event, properties) => {
     try {
       if (uuid && !window.strapi.telemetryDisabled) {
         const res = await axios.post(`${process.env.STRAPI_ANALYTICS_URL || "https://analytics.strapi.io"}/api/v2/track`, {
@@ -17706,10 +17685,10 @@ const StepCount = ({ tourName, displayedCurrentStep, displayedTourLength }) => {
   const state = useGuidedTour("GuidedTourPopover", (s2) => s2.state);
   const currentStep = displayedCurrentStep ?? state.tours[tourName].currentStep + 1;
   const displayedStepCount = displayedTourLength ?? tours[tourName]._meta.displayedStepCount;
-  return /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, {
+  return /* @__PURE__ */ jsx(Typography, {
     variant: "omega",
     fontSize: "12px",
-    children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+    children: /* @__PURE__ */ jsx(FormattedMessage, {
       id: "tours.stepCount",
       defaultMessage: "Step {currentStep} of {tourLength}",
       values: {
@@ -17720,9 +17699,9 @@ const StepCount = ({ tourName, displayedCurrentStep, displayedTourLength }) => {
   });
 };
 const GotItAction = ({ onClick }) => {
-  return /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, {
+  return /* @__PURE__ */ jsx(Button, {
     onClick,
-    children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+    children: /* @__PURE__ */ jsx(FormattedMessage, {
       id: "tours.gotIt",
       defaultMessage: "Got it"
     })
@@ -17768,36 +17747,36 @@ const DefaultActions = ({ showSkip, showPrevious, to, tourName, onNextStep, onPr
       });
     }
   };
-  return /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, {
+  return /* @__PURE__ */ jsxs(Flex, {
     gap: 2,
     children: [
-      showSkip && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, {
+      showSkip && /* @__PURE__ */ jsx(Button, {
         variant: "tertiary",
         onClick: handleSkip,
-        children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+        children: /* @__PURE__ */ jsx(FormattedMessage, {
           id: "tours.skip",
           defaultMessage: "Skip"
         })
       }),
-      !showSkip && showPrevious && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, {
+      !showSkip && showPrevious && /* @__PURE__ */ jsx(Button, {
         variant: "tertiary",
         onClick: handlePreviousStep,
-        children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+        children: /* @__PURE__ */ jsx(FormattedMessage, {
           id: "tours.previous",
           defaultMessage: "Previous"
         })
       }),
-      to ? /* @__PURE__ */ jsxRuntime.jsx(designSystem.LinkButton, {
+      to ? /* @__PURE__ */ jsx(LinkButton, {
         tag: NavLink,
         to,
         onClick: handleNextStep,
-        children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+        children: /* @__PURE__ */ jsx(FormattedMessage, {
           id: "tours.next",
           defaultMessage: "Next"
         })
-      }) : /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, {
+      }) : /* @__PURE__ */ jsx(Button, {
         onClick: handleNextStep,
-        children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+        children: /* @__PURE__ */ jsx(FormattedMessage, {
           id: "tours.next",
           defaultMessage: "Next"
         })
@@ -17805,10 +17784,10 @@ const DefaultActions = ({ showSkip, showPrevious, to, tourName, onNextStep, onPr
     ]
   });
 };
-const ActionsContainer = styled.styled(designSystem.Flex)`
+const ActionsContainer = styled(Flex)`
   border-top: ${({ theme }) => `1px solid ${theme.colors.neutral150}`};
 `;
-const ContentContainer = styled.styled(designSystem.Box)`
+const ContentContainer = styled(Box)`
   p {
     margin-top: ${({ theme }) => theme.spaces[5]};
   }
@@ -17817,13 +17796,13 @@ const ContentContainer = styled.styled(designSystem.Box)`
     padding-left: ${({ theme }) => theme.spaces[4]};
   }
 `;
-const PopoverArrow = styled.styled(designSystem.Popover.Arrow)`
+const PopoverArrow = styled(Popover.Arrow)`
   fill: ${({ theme }) => theme.colors.neutral0};
   transform: translateY(-16px) rotate(-90deg);
 `;
 const createStepComponents = (tourName) => ({
-  Root: /* @__PURE__ */ React__namespace.forwardRef(({ withArrow = true, ...props }, ref2) => {
-    return /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Popover.Content, {
+  Root: /* @__PURE__ */ React.forwardRef(({ withArrow = true, ...props }, ref2) => {
+    return /* @__PURE__ */ jsxs(Popover.Content, {
       ref: ref2,
       "aria-labelledby": "guided-tour-title",
       side: "top",
@@ -17834,20 +17813,20 @@ const createStepComponents = (tourName) => ({
       onClick: (e2) => e2.stopPropagation(),
       ...props,
       children: [
-        withArrow && /* @__PURE__ */ jsxRuntime.jsx(PopoverArrow, {
+        withArrow && /* @__PURE__ */ jsx(PopoverArrow, {
           asChild: true,
-          children: /* @__PURE__ */ jsxRuntime.jsx("svg", {
+          children: /* @__PURE__ */ jsx("svg", {
             xmlns: "http://www.w3.org/2000/svg",
             width: "23",
             height: "25",
             viewBox: "0 0 23 25",
             fill: "none",
-            children: /* @__PURE__ */ jsxRuntime.jsx("path", {
+            children: /* @__PURE__ */ jsx("path", {
               d: "M11 24.5L1.82843 15.3284C0.266332 13.7663 0.26633 11.2337 1.82843 9.67157L11 0.5L23 12.5L11 24.5Z"
             })
           })
         }),
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Flex, {
+        /* @__PURE__ */ jsx(Flex, {
           width: "360px",
           direction: "column",
           alignItems: "start",
@@ -17857,18 +17836,18 @@ const createStepComponents = (tourName) => ({
     });
   }),
   Title: (props) => {
-    return /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, {
+    return /* @__PURE__ */ jsx(Box, {
       paddingTop: 5,
       paddingLeft: 5,
       paddingRight: 5,
       paddingBottom: 1,
       width: "100%",
-      children: "children" in props ? props.children : /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, {
+      children: "children" in props ? props.children : /* @__PURE__ */ jsx(Typography, {
         tag: "h1",
         id: "guided-tour-title",
         variant: "omega",
         fontWeight: "bold",
-        children: /* @__PURE__ */ jsxRuntime.jsx(reactIntl.FormattedMessage, {
+        children: /* @__PURE__ */ jsx(FormattedMessage, {
           id: props.id,
           defaultMessage: props.defaultMessage
         })
@@ -17876,7 +17855,7 @@ const createStepComponents = (tourName) => ({
     });
   },
   Content: (props) => {
-    const { formatMessage } = reactIntl.useIntl();
+    const { formatMessage } = useIntl();
     let content = "";
     if (!("children" in props)) {
       content = formatMessage({
@@ -17884,13 +17863,13 @@ const createStepComponents = (tourName) => ({
         defaultMessage: props.defaultMessage
       });
     }
-    return /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, {
+    return /* @__PURE__ */ jsx(Box, {
       paddingBottom: 5,
       paddingLeft: 5,
       paddingRight: 5,
       width: "100%",
-      children: "children" in props ? props.children : /* @__PURE__ */ jsxRuntime.jsx(ContentContainer, {
-        children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, {
+      children: "children" in props ? props.children : /* @__PURE__ */ jsx(ContentContainer, {
+        children: /* @__PURE__ */ jsx(Typography, {
           tag: "div",
           variant: "omega",
           dangerouslySetInnerHTML: {
@@ -17901,18 +17880,18 @@ const createStepComponents = (tourName) => ({
     });
   },
   Actions: ({ showStepCount = true, showPrevious = true, showSkip = false, to, children, ...flexProps }) => {
-    return /* @__PURE__ */ jsxRuntime.jsx(ActionsContainer, {
+    return /* @__PURE__ */ jsx(ActionsContainer, {
       width: "100%",
       padding: 3,
       paddingLeft: 5,
       justifyContent: showStepCount ? "space-between" : "flex-end",
       ...flexProps,
-      children: children ? children : /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, {
+      children: children ? children : /* @__PURE__ */ jsxs(Fragment, {
         children: [
-          showStepCount && /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+          showStepCount && /* @__PURE__ */ jsx(StepCount, {
             tourName
           }),
-          /* @__PURE__ */ jsxRuntime.jsx(DefaultActions, {
+          /* @__PURE__ */ jsx(DefaultActions, {
             tourName,
             showSkip,
             showPrevious: !showSkip && showPrevious,
@@ -17923,57 +17902,57 @@ const createStepComponents = (tourName) => ({
     });
   }
 });
-const Introduction$2 = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Introduction$2 = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "top",
   sideOffset: 32,
   withArrow: false,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.apiTokens.Introduction.title",
       defaultMessage: "Last but not least, API tokens"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.apiTokens.Introduction.content",
       defaultMessage: "Control API access with highly customizable permissions."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
       showSkip: true
     })
   ]
 });
-const ManageAPIToken = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const ManageAPIToken = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "bottom",
   align: "end",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.apiTokens.ManageAPIToken.title",
       defaultMessage: "Manage an API token"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.apiTokens.ManageAPIToken.content",
       defaultMessage: 'Click the "Pencil" icon to view and update an existing API token.'
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {})
+    /* @__PURE__ */ jsx(Step.Actions, {})
   ]
 });
-const ViewAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const ViewAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "bottom",
   align: "end",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.apiTokens.ViewAPIToken.title",
       defaultMessage: "View API token"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.apiTokens.ViewAPIToken.content",
       defaultMessage: 'Click the "View token" button to see your API token.'
     }),
-    /* @__PURE__ */ jsxRuntime.jsxs(Step.Actions, {
+    /* @__PURE__ */ jsxs(Step.Actions, {
       children: [
-        /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+        /* @__PURE__ */ jsx(StepCount, {
           tourName: "apiTokens"
         }),
-        /* @__PURE__ */ jsxRuntime.jsx(GotItAction, {
+        /* @__PURE__ */ jsx(GotItAction, {
           onClick: () => dispatch({
             type: "next_step",
             payload: "apiTokens"
@@ -17983,35 +17962,35 @@ const ViewAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Ste
     })
   ]
 });
-const CopyAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const CopyAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "bottom",
   align: "start",
   sideOffset: -5,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.apiTokens.CopyAPIToken.title",
       defaultMessage: "Copy your new API token"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.apiTokens.CopyAPIToken.content",
       defaultMessage: "Copy your API token",
       values: {
-        spacer: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, {
+        spacer: /* @__PURE__ */ jsx(Box, {
           paddingTop: 2
         }),
-        a: (msg) => /* @__PURE__ */ jsxRuntime.jsx(designSystem.Link, {
+        a: (msg) => /* @__PURE__ */ jsx(Link$1, {
           isExternal: true,
           href: "https://docs.strapi.io/cms/features/api-tokens#usage",
           children: msg
         })
       }
     }),
-    /* @__PURE__ */ jsxRuntime.jsxs(Step.Actions, {
+    /* @__PURE__ */ jsxs(Step.Actions, {
       children: [
-        /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+        /* @__PURE__ */ jsx(StepCount, {
           tourName: "apiTokens"
         }),
-        /* @__PURE__ */ jsxRuntime.jsx(GotItAction, {
+        /* @__PURE__ */ jsx(GotItAction, {
           onClick: () => dispatch({
             type: "next_step",
             payload: "apiTokens"
@@ -18021,19 +18000,19 @@ const CopyAPIToken = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Ste
     })
   ]
 });
-const Finish$2 = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Finish$2 = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   align: "start",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.apiTokens.FinalStep.title",
       defaultMessage: "Congratulations, it's time to deploy your application!"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.apiTokens.FinalStep.content",
       defaultMessage: "Your application is ready to be deployed and its content to be shared with the world!"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
       showPrevious: false,
       showStepCount: false,
       to: "/"
@@ -18112,27 +18091,27 @@ const ContentManagerActions = ({ isActionRequired = false, ...props }) => {
     }
   };
   if (isActionRequired) {
-    return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, {
+    return /* @__PURE__ */ jsxs(Fragment, {
       children: [
-        /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+        /* @__PURE__ */ jsx(StepCount, {
           tourName: "contentManager",
           displayedCurrentStep,
           displayedTourLength
         }),
-        /* @__PURE__ */ jsxRuntime.jsx(GotItAction, {
+        /* @__PURE__ */ jsx(GotItAction, {
           onClick: handleNextStep
         })
       ]
     });
   }
-  return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, {
+  return /* @__PURE__ */ jsxs(Fragment, {
     children: [
-      /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+      /* @__PURE__ */ jsx(StepCount, {
         tourName: "contentManager",
         displayedCurrentStep,
         displayedTourLength
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(DefaultActions, {
+      /* @__PURE__ */ jsx(DefaultActions, {
         tourName: "contentManager",
         onNextStep: handleNextStep,
         onPreviousStep: handlePreviousStep,
@@ -18142,21 +18121,21 @@ const ContentManagerActions = ({ isActionRequired = false, ...props }) => {
   });
 };
 const Introduction$1 = ({ Step }) => {
-  return /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+  return /* @__PURE__ */ jsxs(Step.Root, {
     side: "top",
     sideOffset: 33,
     withArrow: false,
     children: [
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+      /* @__PURE__ */ jsx(Step.Title, {
         id: "tours.contentManager.Introduction.title",
         defaultMessage: "Content manager"
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+      /* @__PURE__ */ jsx(Step.Content, {
         id: "tours.contentManager.Introduction.content",
         defaultMessage: "Create and manage content from your collection types and single types."
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-        children: /* @__PURE__ */ jsxRuntime.jsx(ContentManagerActions, {
+      /* @__PURE__ */ jsx(Step.Actions, {
+        children: /* @__PURE__ */ jsx(ContentManagerActions, {
           showSkip: true
         })
       })
@@ -18164,75 +18143,75 @@ const Introduction$1 = ({ Step }) => {
   });
 };
 const CreateNewEntry = ({ Step }) => {
-  return /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+  return /* @__PURE__ */ jsxs(Step.Root, {
     side: "bottom",
     align: "end",
     children: [
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+      /* @__PURE__ */ jsx(Step.Title, {
         id: "tours.contentManager.CreateNewEntry.title",
         defaultMessage: "Create new entry"
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+      /* @__PURE__ */ jsx(Step.Content, {
         id: "tours.contentManager.CreateNewEntry.content",
         defaultMessage: 'Click the "Create new entry" button to create and publish a new entry for this collection type.'
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-        children: /* @__PURE__ */ jsxRuntime.jsx(ContentManagerActions, {
+      /* @__PURE__ */ jsx(Step.Actions, {
+        children: /* @__PURE__ */ jsx(ContentManagerActions, {
           showPrevious: true
         })
       })
     ]
   });
 };
-const Fields = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Fields = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   sideOffset: -12,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentManager.Fields.title",
       defaultMessage: "Fields"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentManager.Fields.content",
       defaultMessage: "First, fill in the fields you created in the Content-Type Builder."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentManagerActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentManagerActions, {
         showPrevious: true
       })
     })
   ]
 });
-const Publish = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Publish = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "left",
   align: "center",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentManager.Publish.title",
       defaultMessage: "Publish"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentManager.Publish.content",
       defaultMessage: 'Then click the "Publish" button to make your content available through the content API.'
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentManagerActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentManagerActions, {
         isActionRequired: true
       })
     })
   ]
 });
-const Finish$1 = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Finish$1 = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentManager.FinalStep.title",
       defaultMessage: "Time to setup API tokens!"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentManager.FinalStep.content",
       defaultMessage: "Now that you've created and published an entry, let's setup an API token to manage access to your content."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
       showStepCount: false,
       showPrevious: false,
       to: "/settings/api-tokens"
@@ -18338,14 +18317,14 @@ const ContentTypeBuilderActions = ({ ...props }) => {
       });
     }
   };
-  return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, {
+  return /* @__PURE__ */ jsxs(Fragment, {
     children: [
-      /* @__PURE__ */ jsxRuntime.jsx(StepCount, {
+      /* @__PURE__ */ jsx(StepCount, {
         tourName: "contentTypeBuilder",
         displayedCurrentStep,
         displayedTourLength
       }),
-      props.children || /* @__PURE__ */ jsxRuntime.jsx(DefaultActions, {
+      props.children || /* @__PURE__ */ jsx(DefaultActions, {
         tourName: "contentTypeBuilder",
         onNextStep: handleNextStep,
         onPreviousStep: handlePreviousStep,
@@ -18354,134 +18333,134 @@ const ContentTypeBuilderActions = ({ ...props }) => {
     ]
   });
 };
-const Introduction = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Introduction = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   sideOffset: 33,
   withArrow: false,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.Introduction.title",
       defaultMessage: "Content-Type Builder"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.Introduction.content",
       defaultMessage: "Create and manage your content structure with collection types, single types and components."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showSkip: true
       })
     })
   ]
 });
-const AIChat = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const AIChat = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "left",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.AIChat.title",
       defaultMessage: "Time to get started!"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.AIChat.content",
       defaultMessage: "<p>If you have any questions about the Content-Type Builder or Strapi ask them here.</p><p>Strapi AI can generate schemas tailored to your needs. Ask for exactly what you want, for example:<ul><li>Date picker</li><li>Email and password fields</li><li>Media of any type</li><li>UIDs</li></ul></p><p>Don’t be shy, try it out !</p>"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true
       })
     })
   ]
 });
-const CollectionTypes = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const CollectionTypes = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   sideOffset: 16,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.CollectionTypes.title",
       defaultMessage: "Collection Types"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.CollectionTypes.content",
       defaultMessage: "A content structure that can manage multiple entries, such as articles or products."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true
       })
     })
   ]
 });
-const SingleTypes = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const SingleTypes = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   sideOffset: 16,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.SingleTypes.title",
       defaultMessage: "Single Types"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.SingleTypes.content",
       defaultMessage: "A content structure that can manage a single entry, such as a homepage or a header."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true
       })
     })
   ]
 });
-const Components = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Components = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   sideOffset: 16,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.Components.title",
       defaultMessage: "Components"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.Components.content",
       defaultMessage: "A reusable content structure that can be used across multiple content types, such as buttons, sliders or cards."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true
       })
     })
   ]
 });
-const YourTurn = ({ Step }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const YourTurn = ({ Step }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   sideOffset: 16,
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.YourTurn.title",
       defaultMessage: "Your turn"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.YourTurn.content",
       defaultMessage: "Create a collection type or single type and configure it."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true
       })
     })
   ]
 });
-const AddFields = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const AddFields = ({ Step, dispatch }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "bottom",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.AddFields.title",
       defaultMessage: "Don't forget to add a field to your content type"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.AddFields.content",
       defaultMessage: "Add the fields your content needs such as text, media and relations."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true,
-        children: /* @__PURE__ */ jsxRuntime.jsx(GotItAction, {
+        children: /* @__PURE__ */ jsx(GotItAction, {
           onClick: () => dispatch({
             type: "next_step",
             payload: "contentTypeBuilder"
@@ -18491,21 +18470,21 @@ const AddFields = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.R
     })
   ]
 });
-const Save = ({ Step, dispatch }) => /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+const Save = ({ Step, dispatch }) => /* @__PURE__ */ jsxs(Step.Root, {
   side: "right",
   children: [
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+    /* @__PURE__ */ jsx(Step.Title, {
       id: "tours.contentTypeBuilder.Save.title",
       defaultMessage: "Save before you leave!"
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+    /* @__PURE__ */ jsx(Step.Content, {
       id: "tours.contentTypeBuilder.Save.content",
       defaultMessage: "Save the changes you made here before leaving this page."
     }),
-    /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
-      children: /* @__PURE__ */ jsxRuntime.jsx(ContentTypeBuilderActions, {
+    /* @__PURE__ */ jsx(Step.Actions, {
+      children: /* @__PURE__ */ jsx(ContentTypeBuilderActions, {
         showPrevious: true,
-        children: /* @__PURE__ */ jsxRuntime.jsx(GotItAction, {
+        children: /* @__PURE__ */ jsx(GotItAction, {
           onClick: () => {
             dispatch({
               type: "remove_completed_action",
@@ -18531,18 +18510,18 @@ const Finish = ({ Step }) => {
     singleType: "single-types"
   };
   const to = contentType ? `/content-manager/${contentTypeKindDictionary[contentType.kind]}/${contentType.uid}` : "/content-manager";
-  return /* @__PURE__ */ jsxRuntime.jsxs(Step.Root, {
+  return /* @__PURE__ */ jsxs(Step.Root, {
     side: "right",
     children: [
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Title, {
+      /* @__PURE__ */ jsx(Step.Title, {
         id: "tours.contentTypeBuilder.Finish.title",
         defaultMessage: "First Step: Done! 🎉"
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Content, {
+      /* @__PURE__ */ jsx(Step.Content, {
         id: "tours.contentTypeBuilder.Finish.content",
         defaultMessage: "You've built your first content type! Now head over to the Content Manager to start adding entries!"
       }),
-      /* @__PURE__ */ jsxRuntime.jsx(Step.Actions, {
+      /* @__PURE__ */ jsx(Step.Actions, {
         showStepCount: false,
         showPrevious: false,
         to
@@ -18608,12 +18587,12 @@ const GuidedTourTooltip = ({ children, ...props }) => {
   if (!state.enabled || state.hidden) {
     return children;
   }
-  return /* @__PURE__ */ jsxRuntime.jsx(GuidedTourTooltipImpl, {
+  return /* @__PURE__ */ jsx(GuidedTourTooltipImpl, {
     ...props,
     children
   });
 };
-const GuidedTourOverlay = styled.styled(designSystem.Box)`
+const GuidedTourOverlay = styled(Box)`
   position: fixed;
   top: 0;
   left: 0;
@@ -18629,7 +18608,7 @@ const GuidedTourTooltipImpl = ({ children, content, tourName, step, when }) => {
   const isCurrentStep = state.tours[tourName].currentStep === step;
   const isStepConditionMet = when ? when(state.completedActions) : true;
   const isPopoverOpen = guidedTourMeta?.data?.isFirstSuperAdminUser && !state.tours[tourName].isCompleted && isCurrentStep && isStepConditionMet;
-  React__namespace.useEffect(() => {
+  React.useEffect(() => {
     if (!isPopoverOpen) return;
     const originalStyle = window.getComputedStyle(document.body).overflow;
     document.body.style.overflow = "hidden";
@@ -18639,11 +18618,11 @@ const GuidedTourTooltipImpl = ({ children, content, tourName, step, when }) => {
   }, [
     isPopoverOpen
   ]);
-  const Step = React__namespace.useMemo(() => createStepComponents(tourName), [
+  const Step = React.useMemo(() => createStepComponents(tourName), [
     tourName
   ]);
   const hasApiSchema = Object.keys(guidedTourMeta?.data?.schemas ?? {}).filter((key) => key.startsWith("api::")).length > 0;
-  React__namespace.useEffect(() => {
+  React.useEffect(() => {
     if (hasApiSchema) {
       dispatch({
         type: "set_completed_actions",
@@ -18658,15 +18637,15 @@ const GuidedTourTooltipImpl = ({ children, content, tourName, step, when }) => {
     step,
     tourName
   ]);
-  return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, {
+  return /* @__PURE__ */ jsxs(Fragment, {
     children: [
-      isPopoverOpen && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Portal, {
-        children: /* @__PURE__ */ jsxRuntime.jsx(GuidedTourOverlay, {})
+      isPopoverOpen && /* @__PURE__ */ jsx(Portal, {
+        children: /* @__PURE__ */ jsx(GuidedTourOverlay, {})
       }),
-      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Popover.Root, {
+      /* @__PURE__ */ jsxs(Popover.Root, {
         open: isPopoverOpen,
         children: [
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Popover.Anchor, {
+          /* @__PURE__ */ jsx(Popover.Anchor, {
             children
           }),
           content({
@@ -18680,15 +18659,15 @@ const GuidedTourTooltipImpl = ({ children, content, tourName, step, when }) => {
   });
 };
 function createTour(tourName, steps) {
-  const tour = steps.reduce((acc, step, index2) => {
+  const tour = steps.reduce((acc, step, index) => {
     const name = step.name;
     if (name in acc) {
       throw Error(`The tour: ${tourName} with step: ${step.name} has already been registered`);
     }
     acc[name] = ({ children }) => {
-      return /* @__PURE__ */ jsxRuntime.jsx(GuidedTourTooltip, {
+      return /* @__PURE__ */ jsx(GuidedTourTooltip, {
         tourName,
-        step: index2,
+        step: index,
         content: step.content,
         when: step.when,
         children
@@ -18727,7 +18706,7 @@ baseRest(function(args) {
   args.push(void 0, customDefaultsMerge);
   return apply(mergeWith, void 0, args);
 });
-styled.createGlobalStyle`
+createGlobalStyle`
   body {
     background: ${({ theme }) => theme.colors.neutral100};
   }
@@ -18762,7 +18741,7 @@ new QueryClient({
     }
   }
 });
-styled.styled(designSystem.Alert)`
+styled(Alert)`
   & > div:first-child {
     display: none;
   }
@@ -18771,7 +18750,7 @@ styled.styled(designSystem.Alert)`
     display: none;
   }
 `;
-styled.styled(designSystem.Typography)`
+styled(Typography)`
   word-break: break-all;
   color: ${({ theme }) => theme.colors.danger600};
 `;
@@ -18779,7 +18758,7 @@ const GridColSize = {
   S: 180,
   M: 250
 };
-styled.styled(designSystem.Box)`
+styled(Box)`
   display: grid;
   grid-template-columns: repeat(
     auto-fit,
@@ -18787,7 +18766,7 @@ styled.styled(designSystem.Box)`
   );
   grid-gap: ${({ theme }) => theme.spaces[4]};
 `;
-styled.styled(designSystem.Box)`
+styled(Box)`
   max-width: 100%;
   display: grid;
   grid-template-columns: 1fr;
@@ -18797,7 +18776,7 @@ styled.styled(designSystem.Box)`
     grid-template-columns: ${({ $hasSideNav }) => $hasSideNav ? `auto 1fr` : "1fr"};
   }
 `;
-styled.styled(designSystem.Flex)`
+styled(Flex)`
   display: none;
   background: ${({ theme }) => theme.colors.neutral0};
 
@@ -18807,7 +18786,7 @@ styled.styled(designSystem.Flex)`
     transform: none;
   }
 `;
-styled.styled(designSystem.Box)`
+styled(Box)`
   overflow-x: hidden;
 
   ${({ theme }) => theme.breakpoints.medium} {
@@ -18835,12 +18814,12 @@ function capitalize$1(string2) {
 }
 var capitalize_1 = capitalize$1;
 function arrayReduce$1(array2, iteratee2, accumulator, initAccum) {
-  var index2 = -1, length = array2 == null ? 0 : array2.length;
+  var index = -1, length = array2 == null ? 0 : array2.length;
   if (initAccum && length) {
-    accumulator = array2[++index2];
+    accumulator = array2[++index];
   }
-  while (++index2 < length) {
-    accumulator = iteratee2(accumulator, array2[index2], index2, array2);
+  while (++index < length) {
+    accumulator = iteratee2(accumulator, array2[index], index, array2);
   }
   return accumulator;
 }
@@ -19105,9 +19084,9 @@ function createCompounder$2(callback) {
 }
 var _createCompounder = createCompounder$2;
 var capitalize = capitalize_1, createCompounder$1 = _createCompounder;
-var camelCase = createCompounder$1(function(result, word, index2) {
+var camelCase = createCompounder$1(function(result, word, index) {
   word = word.toLowerCase();
-  return result + (index2 ? capitalize(word) : word);
+  return result + (index ? capitalize(word) : word);
 });
 var camelCase_1 = camelCase;
 const camelCase$1 = /* @__PURE__ */ getDefaultExportFromCjs(camelCase_1);
@@ -19447,25 +19426,25 @@ var propertyExpr = {
   setter: function(path) {
     var parts = normalizePath(path);
     return setCache.get(path) || setCache.set(path, function setter(obj, value) {
-      var index2 = 0;
+      var index = 0;
       var len = parts.length;
       var data = obj;
-      while (index2 < len - 1) {
-        var part = parts[index2];
+      while (index < len - 1) {
+        var part = parts[index];
         if (part === "__proto__" || part === "constructor" || part === "prototype") {
           return obj;
         }
-        data = data[parts[index2++]];
+        data = data[parts[index++]];
       }
-      data[parts[index2]] = value;
+      data[parts[index]] = value;
     });
   },
   getter: function(path, safe) {
     var parts = normalizePath(path);
     return getCache.get(path) || getCache.set(path, function getter(data) {
-      var index2 = 0, len = parts.length;
-      while (index2 < len) {
-        if (data != null || !safe) data = data[parts[index2++]];
+      var index = 0, len = parts.length;
+      while (index < len) {
+        if (data != null || !safe) data = data[parts[index++]];
         else return;
       }
       return data;
@@ -20495,8 +20474,8 @@ class DateSchema extends BaseSchema {
 }
 DateSchema.INVALID_DATE = invalidDate;
 var createCompounder = _createCompounder;
-var snakeCase = createCompounder(function(result, word, index2) {
-  return result + (index2 ? "_" : "") + word.toLowerCase();
+var snakeCase = createCompounder(function(result, word, index) {
+  return result + (index ? "_" : "") + word.toLowerCase();
 });
 var snakeCase_1 = snakeCase;
 const snakeCase$1 = /* @__PURE__ */ getDefaultExportFromCjs(snakeCase_1);
@@ -20935,15 +20914,15 @@ createContext("Form", {
   },
   values: {}
 });
-styled.styled.img`
+styled.img`
   height: 7.2rem;
 `;
-styled.styled(designSystem.Box)`
+styled(Box)`
   margin: 0 auto;
   width: 100%;
   max-width: 55.2rem;
 `;
-styled.styled(designSystem.Flex)`
+styled(Flex)`
   flex-direction: column;
 `;
 const errorsTrads = {
@@ -21014,7 +20993,7 @@ flatRest(function(object2, paths) {
   }
   return result;
 });
-styled.styled(designSystem.Field.Root)`
+styled(Field.Root)`
   height: 3.2rem;
   width: 3.2rem;
 
@@ -21159,7 +21138,7 @@ create().shape({
     defaultMessage: "Email is required"
   }).nullable()
 });
-styled.styled.a`
+styled.a`
   color: ${({ theme }) => theme.colors.primary600};
 `;
 create().shape({
@@ -21209,7 +21188,7 @@ create().shape({
 ({
   [adminApi.reducerPath]: adminApi.reducer
 });
-styled.styled(icons.WarningCircle)`
+styled(WarningCircle)`
   width: 24px;
   height: 24px;
 
@@ -21220,10 +21199,10 @@ styled.styled(icons.WarningCircle)`
 createContext("Filters");
 createContext("Pagination");
 createContext("Table");
-styled.styled(icons.CaretDown)`
+styled(CaretDown)`
   transform: ${({ $isUp }) => `rotate(${$isUp ? "180" : "0"}deg)`};
 `;
-styled.styled(designSystem.Flex)`
+styled(Flex)`
   margin-right: ${({ theme }) => theme.spaces[6]};
 
   svg {
@@ -21231,11 +21210,11 @@ styled.styled(designSystem.Flex)`
     height: 3.2rem;
   }
 `;
-styled.styled(designSystem.Typography)`
+styled(Typography)`
   color: ${({ theme }) => theme.colors.neutral800};
   word-break: break-all;
 `;
-const MainSubNav = styled.styled(designSystem.SubNav)`
+const MainSubNav = styled(SubNav)`
   width: 100%;
   height: calc(100dvh - ${HEIGHT_TOP_NAVIGATION} - 1px);
   overflow: hidden;
@@ -21258,7 +21237,7 @@ const MainSubNav = styled.styled(designSystem.SubNav)`
     height: 100dvh;
   }
 `;
-const StyledLink = styled.styled(NavLink)`
+const StyledLink = styled(NavLink)`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -21297,11 +21276,11 @@ const StyledLink = styled.styled(NavLink)`
     outline-offset: -2px;
   }
 `;
-styled.styled(designSystem.Flex)`
+styled(Flex)`
   flex: 0 0 ${HEIGHT_TOP_NAVIGATION};
   height: ${HEIGHT_TOP_NAVIGATION};
 `;
-styled.styled.button`
+styled.button`
   cursor: pointer;
   width: 100%;
   border: none;
@@ -21319,12 +21298,12 @@ styled.styled.button`
     background-color: ${({ theme }) => theme.colors.neutral100};
   }
 `;
-styled.styled.li`
+styled.li`
   ${StyledLink} > div {
     padding-left: 36px;
   }
 `;
-styled.styled(designSystem.Box)`
+styled(Box)`
   ${MainSubNav} {
     background-color: transparent;
     border-right: none;
@@ -21336,7 +21315,7 @@ styled.styled(designSystem.Box)`
     }
   }
 `;
-styled.styled(designSystem.Badge)`
+styled(Badge)`
   background: linear-gradient(
     90deg,
     ${({ theme }) => theme.colors.primary600} 0%,
@@ -21617,10 +21596,10 @@ const homepageService = adminApi.enhanceEndpoints({
 });
 const { useGetKeyStatisticsQuery, useGetCountDocumentsQuery, useGetHomepageLayoutQuery, useUpdateHomepageLayoutMutation } = homepageService;
 var logic = { exports: {} };
-(function(module2, exports2) {
+(function(module, exports) {
   (function(root2, factory2) {
     {
-      module2.exports = factory2();
+      module.exports = factory2();
     }
   })(commonjsGlobal, function() {
     if (!Array.isArray) {
@@ -24451,10 +24430,10 @@ class ZodObject extends ZodType {
   //   }) as any;
   //   return merged;
   // }
-  catchall(index2) {
+  catchall(index) {
     return new ZodObject({
       ...this._def,
-      catchall: index2
+      catchall: index
     });
   }
   pick(mask) {
@@ -24665,9 +24644,9 @@ function mergeValues(a2, b2) {
       return { valid: false };
     }
     const newArray = [];
-    for (let index2 = 0; index2 < a2.length; index2++) {
-      const itemA = a2[index2];
-      const itemB = b2[index2];
+    for (let index = 0; index < a2.length; index++) {
+      const itemA = a2[index];
+      const itemB = b2[index];
       const sharedValue = mergeValues(itemA, itemB);
       if (!sharedValue.valid) {
         return { valid: false };
@@ -24820,10 +24799,10 @@ class ZodMap extends ZodType {
     }
     const keyType = this._def.keyType;
     const valueType = this._def.valueType;
-    const pairs = [...ctx.data.entries()].map(([key, value], index2) => {
+    const pairs = [...ctx.data.entries()].map(([key, value], index) => {
       return {
-        key: keyType._parse(new ParseInputLazyPath(ctx, key, ctx.path, [index2, "key"])),
-        value: valueType._parse(new ParseInputLazyPath(ctx, value, ctx.path, [index2, "value"]))
+        key: keyType._parse(new ParseInputLazyPath(ctx, key, ctx.path, [index, "key"])),
+        value: valueType._parse(new ParseInputLazyPath(ctx, value, ctx.path, [index, "value"]))
       };
     });
     if (ctx.common.async) {
@@ -25564,13 +25543,27 @@ objectType({
     booleanType()
   ])
 });
+const getStrapiAdminBackendBaseUrl = () => {
+  if (typeof window === "undefined") return "";
+  const { origin: origin2, pathname } = window.location;
+  const adminSegmentIndex = pathname.indexOf("/admin");
+  const prefix = adminSegmentIndex !== -1 ? pathname.slice(0, adminSegmentIndex) : "";
+  return `${origin2}${prefix}/admin`;
+};
+const adminApiUrl = (pluginId, subPath = "") => {
+  const base = getStrapiAdminBackendBaseUrl();
+  const cleanSubPath = typeof subPath === "string" ? subPath : "";
+  const normalizedSubPath = cleanSubPath.startsWith("/") ? cleanSubPath : `/${cleanSubPath}`;
+  if (!base) return `/${pluginId}${normalizedSubPath}`;
+  return `${base}/${pluginId}${normalizedSubPath}`;
+};
 function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = null, contentTypes = [] }) {
-  const { formatMessage } = reactIntl.useIntl();
-  const [form, setForm] = React.useState({ type: "", basePath: "", filename: "", subPath: "", pattern: "", priority: "0.5", frequency: "monthly", lastModified: "false" });
-  const [submitting, setSubmitting] = React.useState(false);
-  const [errorMessage, setErrorMessage] = React.useState(null);
-  const fetchClient = React.useMemo(() => getFetchClient(), []);
-  const labelIds = React.useMemo(() => {
+  const { formatMessage } = useIntl();
+  const [form, setForm] = useState({ type: "", basePath: "", filename: "", subPath: "", pattern: "", priority: "0.5", frequency: "monthly", lastModified: "false" });
+  const [submitting, setSubmitting] = useState(false);
+  const [errorMessage, setErrorMessage] = useState(null);
+  const fetchClient = useMemo(() => getFetchClient(), []);
+  const labelIds = useMemo(() => {
     const unique = Math.random().toString(36).slice(2);
     return {
       contentType: `collection-type-select-label-${unique}`,
@@ -25588,7 +25581,7 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
     if (!trimmed) return "";
     return `/${trimmed}`;
   };
-  React.useEffect(() => {
+  useEffect(() => {
     if (typeToEdit) {
       const resolvedType = (() => {
         if (typeToEdit.type && typeToEdit.type.includes("::")) {
@@ -25628,13 +25621,13 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
     };
     if (typeToEdit?.id) payload.id = typeToEdit.id;
     if (!payload.type) {
-      const message = formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.error.type`, defaultMessage: "Select a content type." });
+      const message = formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.error.type`, defaultMessage: "Select a content type." });
       setErrorMessage(message);
       onError?.(message);
       return;
     }
     if (!payload.pattern) {
-      const message = formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.error.pattern`, defaultMessage: "Provide a pattern for the sitemap entries." });
+      const message = formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.error.pattern`, defaultMessage: "Provide a pattern for the sitemap entries." });
       setErrorMessage(message);
       onError?.(message);
       return;
@@ -25642,10 +25635,10 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
     try {
       setSubmitting(true);
       setErrorMessage(null);
-      await fetchClient.post(`/${index.PLUGIN_ID}/admin`, payload);
+      await fetchClient.post(adminApiUrl(PLUGIN_ID, "/admin"), payload);
       await onSaved?.();
     } catch (error) {
-      const message = error?.response?.data?.error?.message || error?.message || formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.error.request`, defaultMessage: "Failed to save the collection sitemap." });
+      const message = error?.response?.data?.error?.message || error?.message || formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.error.request`, defaultMessage: "Failed to save the collection sitemap." });
       setErrorMessage(message);
       onError?.(message);
     } finally {
@@ -25662,98 +25655,98 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
     fontFamily: "inherit",
     backgroundColor: "#ffffff"
   };
-  return /* @__PURE__ */ jsxRuntime.jsx(
-    designSystem.Modal.Root,
+  return /* @__PURE__ */ jsx(
+    Modal.Root,
     {
       open: isOpen,
       onOpenChange: (open) => {
         if (!open) onClose?.();
       },
-      children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Modal.Content, { style: { width: "clamp(360px, 90vw, 700px)" }, children: [
-        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Modal.Header, { closeLabel: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.close`, defaultMessage: "Close modal" }), children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Modal.Title, { children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.title`, defaultMessage: typeToEdit ? "Edit Content Type Sitemap" : "Add Content Type Sitemap" }) }) }),
-        /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Modal.Body, { children: [
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { paddingTop: 2, display: "grid", gap: 4, children: [
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.contentType, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.collection`, defaultMessage: "Content Type" }) }),
-              /* @__PURE__ */ jsxRuntime.jsxs("select", { "aria-labelledby": labelIds.contentType, value: form.type, onChange: (e2) => setField("type", e2.target.value), style: selectStyle, disabled: submitting, children: [
-                /* @__PURE__ */ jsxRuntime.jsx("option", { value: "", children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.collection.placeholder`, defaultMessage: "Select a content type" }) }),
-                contentTypes.map((ct) => /* @__PURE__ */ jsxRuntime.jsx("option", { value: ct.uid, children: ct.displayName || ct.singularName || ct.uid }, ct.uid))
+      children: /* @__PURE__ */ jsxs(Modal.Content, { style: { width: "clamp(360px, 90vw, 700px)" }, children: [
+        /* @__PURE__ */ jsx(Modal.Header, { closeLabel: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.close`, defaultMessage: "Close modal" }), children: /* @__PURE__ */ jsx(Modal.Title, { children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.title`, defaultMessage: typeToEdit ? "Edit Content Type Sitemap" : "Add Content Type Sitemap" }) }) }),
+        /* @__PURE__ */ jsxs(Modal.Body, { children: [
+          /* @__PURE__ */ jsxs(Box, { paddingTop: 2, display: "grid", gap: 4, children: [
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.contentType, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.collection`, defaultMessage: "Content Type" }) }),
+              /* @__PURE__ */ jsxs("select", { "aria-labelledby": labelIds.contentType, value: form.type, onChange: (e2) => setField("type", e2.target.value), style: selectStyle, disabled: submitting, children: [
+                /* @__PURE__ */ jsx("option", { value: "", children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.collection.placeholder`, defaultMessage: "Select a content type" }) }),
+                contentTypes.map((ct) => /* @__PURE__ */ jsx("option", { value: ct.uid, children: ct.displayName || ct.singularName || ct.uid }, ct.uid))
               ] })
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.basePath, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.basePath`, defaultMessage: "Route (optional)" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx(
-                designSystem.TextInput,
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.basePath, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.basePath`, defaultMessage: "Route (optional)" }) }),
+              /* @__PURE__ */ jsx(
+                TextInput,
                 {
                   name: "basePath",
                   "aria-labelledby": labelIds.basePath,
-                  label: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.basePath`, defaultMessage: "Route (optional)" }),
+                  label: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.basePath`, defaultMessage: "Route (optional)" }),
                   placeholder: "/sitemap",
                   value: form.basePath,
                   onChange: (e2) => setField("basePath", e2.target.value),
                   disabled: submitting,
-                  hint: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.basePath.hint`, defaultMessage: "Sets where the sitemap file lives, e.g. /sitemap." })
+                  hint: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.basePath.hint`, defaultMessage: "Sets where the sitemap file lives, e.g. /sitemap." })
                 }
               )
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.filename, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.filename`, defaultMessage: "Filename" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx(
-                designSystem.TextInput,
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.filename, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.filename`, defaultMessage: "Filename" }) }),
+              /* @__PURE__ */ jsx(
+                TextInput,
                 {
                   name: "filename",
                   "aria-labelledby": labelIds.filename,
-                  label: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.filename`, defaultMessage: "Filename" }),
+                  label: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.filename`, defaultMessage: "Filename" }),
                   placeholder: "article-list.xml",
                   value: form.filename,
                   onChange: (e2) => setField("filename", e2.target.value),
                   disabled: submitting,
-                  hint: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.filename.hint`, defaultMessage: "Required to expose the sitemap at the sub URL." })
+                  hint: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.filename.hint`, defaultMessage: "Required to expose the sitemap at the sub URL." })
                 }
               )
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.subPath, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.subPath`, defaultMessage: "Entry prefix (optional)" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx(
-                designSystem.TextInput,
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.subPath, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.subPath`, defaultMessage: "Entry prefix (optional)" }) }),
+              /* @__PURE__ */ jsx(
+                TextInput,
                 {
                   name: "subPath",
                   "aria-labelledby": labelIds.subPath,
-                  label: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.subPath`, defaultMessage: "Entry prefix (optional)" }),
+                  label: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.subPath`, defaultMessage: "Entry prefix (optional)" }),
                   placeholder: "/blog",
                   value: form.subPath,
                   onChange: (e2) => setField("subPath", e2.target.value),
                   disabled: submitting,
-                  hint: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.subPath.hint`, defaultMessage: "Static path segment added before the pattern." })
+                  hint: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.subPath.hint`, defaultMessage: "Static path segment added before the pattern." })
                 }
               )
             ] })
           ] }),
-          /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.pattern, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.pattern`, defaultMessage: "Pattern" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx(
-                designSystem.TextInput,
+          /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.pattern, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.pattern`, defaultMessage: "Pattern" }) }),
+              /* @__PURE__ */ jsx(
+                TextInput,
                 {
                   name: "pattern",
                   "aria-labelledby": labelIds.pattern,
-                  label: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.pattern`, defaultMessage: "Pattern" }),
+                  label: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.pattern`, defaultMessage: "Pattern" }),
                   placeholder: "/[slug]",
                   value: form.pattern,
                   onChange: (e2) => setField("pattern", e2.target.value),
                   disabled: submitting,
-                  hint: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.pattern.hint`, defaultMessage: "Use tokens like [slug] to reference entry fields." })
+                  hint: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.pattern.hint`, defaultMessage: "Use tokens like [slug] to reference entry fields." })
                 }
               )
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.priority, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.priority`, defaultMessage: "Priority" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx(
-                designSystem.TextInput,
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.priority, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.priority`, defaultMessage: "Priority" }) }),
+              /* @__PURE__ */ jsx(
+                TextInput,
                 {
                   name: "priority",
                   "aria-labelledby": labelIds.priority,
-                  label: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.priority`, defaultMessage: "Priority" }),
+                  label: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.priority`, defaultMessage: "Priority" }),
                   type: "number",
                   step: "0.1",
                   min: "0",
@@ -25764,23 +25757,23 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
                 }
               )
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginBottom: 3, children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.frequency, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.frequency`, defaultMessage: "Change Frequency" }) }),
-              /* @__PURE__ */ jsxRuntime.jsx("select", { "aria-labelledby": labelIds.frequency, value: form.frequency, onChange: (e2) => setField("frequency", e2.target.value), style: selectStyle, disabled: submitting, children: frequencyOptions.map((option) => /* @__PURE__ */ jsxRuntime.jsx("option", { value: option, children: option }, option)) })
+            /* @__PURE__ */ jsxs(Box, { marginBottom: 3, children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.frequency, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.frequency`, defaultMessage: "Change Frequency" }) }),
+              /* @__PURE__ */ jsx("select", { "aria-labelledby": labelIds.frequency, value: form.frequency, onChange: (e2) => setField("frequency", e2.target.value), style: selectStyle, disabled: submitting, children: frequencyOptions.map((option) => /* @__PURE__ */ jsx("option", { value: option, children: option }, option)) })
             ] }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: labelIds.lastModified, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.lastModified`, defaultMessage: "Include Last Modified" }) }),
-              /* @__PURE__ */ jsxRuntime.jsxs("select", { "aria-labelledby": labelIds.lastModified, value: form.lastModified, onChange: (e2) => setField("lastModified", e2.target.value), style: selectStyle, disabled: submitting, children: [
-                /* @__PURE__ */ jsxRuntime.jsx("option", { value: "true", children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.lastModified.yes`, defaultMessage: "Yes" }) }),
-                /* @__PURE__ */ jsxRuntime.jsx("option", { value: "false", children: formatMessage({ id: `${index.PLUGIN_ID}.modal.collectionType.lastModified.no`, defaultMessage: "No" }) })
+            /* @__PURE__ */ jsxs(Box, { children: [
+              /* @__PURE__ */ jsx(Typography, { id: labelIds.lastModified, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.lastModified`, defaultMessage: "Include Last Modified" }) }),
+              /* @__PURE__ */ jsxs("select", { "aria-labelledby": labelIds.lastModified, value: form.lastModified, onChange: (e2) => setField("lastModified", e2.target.value), style: selectStyle, disabled: submitting, children: [
+                /* @__PURE__ */ jsx("option", { value: "true", children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.lastModified.yes`, defaultMessage: "Yes" }) }),
+                /* @__PURE__ */ jsx("option", { value: "false", children: formatMessage({ id: `${PLUGIN_ID}.modal.collectionType.lastModified.no`, defaultMessage: "No" }) })
               ] })
             ] }),
-            errorMessage && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "danger600", children: errorMessage }) })
+            errorMessage && /* @__PURE__ */ jsx(Box, { children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "danger600", children: errorMessage }) })
           ] })
         ] }),
-        /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Modal.Footer, { justifyContent: "flex-end", gap: 2, children: [
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "tertiary", onClick: onClose, disabled: submitting, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.action.cancel`, defaultMessage: "Cancel" }) }),
-          /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { onClick: handleSubmit, loading: submitting, disabled: submitting, children: formatMessage({ id: `${index.PLUGIN_ID}.modal.action.save`, defaultMessage: "Save" }) })
+        /* @__PURE__ */ jsxs(Modal.Footer, { justifyContent: "flex-end", gap: 2, children: [
+          /* @__PURE__ */ jsx(Button, { variant: "tertiary", onClick: onClose, disabled: submitting, children: formatMessage({ id: `${PLUGIN_ID}.modal.action.cancel`, defaultMessage: "Cancel" }) }),
+          /* @__PURE__ */ jsx(Button, { onClick: handleSubmit, loading: submitting, disabled: submitting, children: formatMessage({ id: `${PLUGIN_ID}.modal.action.save`, defaultMessage: "Save" }) })
         ] })
       ] })
     }
@@ -25788,43 +25781,43 @@ function CollectionTypeModal({ isOpen, onClose, onSaved, onError, typeToEdit = n
 }
 const trimSlashes = (value = "") => value.replace(/^\/+/, "").replace(/\/+$/, "");
 const Settings = () => {
-  const { formatMessage, locale } = reactIntl.useIntl();
-  const createId = React.useCallback(() => Math.random().toString(36).slice(2), []);
-  const makeBlankUrl = React.useCallback(() => ({ id: createId(), loc: "", priority: "0.5" }), [createId]);
-  const makeBlankSitemap = React.useCallback(
+  const { formatMessage, locale } = useIntl();
+  const createId = useCallback(() => Math.random().toString(36).slice(2), []);
+  const makeBlankUrl = useCallback(() => ({ id: createId(), loc: "", priority: "0.5" }), [createId]);
+  const makeBlankSitemap = useCallback(
     () => ({ id: createId(), kind: "single", basePath: "", filename: "", urls: [makeBlankUrl()] }),
     [createId, makeBlankUrl]
   );
-  const [frontendSettings, setFrontendSettings] = React.useState({ baseUrl: "" });
-  const [isFrontendLoading, setFrontendLoading] = React.useState(true);
-  const [isFrontendSaving, setFrontendSaving] = React.useState(false);
-  const [frontendFeedback, setFrontendFeedback] = React.useState(null);
-  const [manualSitemaps, setManualSitemaps] = React.useState([]);
-  const [isLoading, setIsLoading] = React.useState(true);
-  const [isSaving, setIsSaving] = React.useState(false);
-  const [feedback, setFeedback] = React.useState(null);
-  const [lastSavedSignature, setLastSavedSignature] = React.useState(null);
-  const [collectionConfigs, setCollectionConfigs] = React.useState([]);
-  const [isCollectionLoading, setIsCollectionLoading] = React.useState(true);
-  const [collectionFeedback, setCollectionFeedback] = React.useState(null);
-  const [collectionActionId, setCollectionActionId] = React.useState(null);
-  const [isCollectionModalOpen, setCollectionModalOpen] = React.useState(false);
-  const [collectionToEdit, setCollectionToEdit] = React.useState(null);
-  const [contentTypes, setContentTypes] = React.useState([]);
-  const loadFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.loadFailed`, defaultMessage: "Failed to load manual sitemaps." });
-  const saveFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.saveFailed`, defaultMessage: "Failed to save manual sitemaps." });
-  const saveSuccessMessage = formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.saveSuccess`, defaultMessage: "Manual sitemaps saved." });
-  const loadingMessage = formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.loading`, defaultMessage: "Loading manual sitemap data..." });
-  const frontendLoadFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.loadFailed`, defaultMessage: "Failed to load the frontend website URL." });
-  const frontendSaveSuccessMessage = formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.saveSuccess`, defaultMessage: "Frontend website URL saved." });
-  const frontendSaveFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.saveFailed`, defaultMessage: "Failed to save the frontend website URL." });
-  const collectionLoadFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.loadFailed`, defaultMessage: "Failed to load collection sitemap configurations." });
-  const collectionSaveSuccessMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.saveSuccess`, defaultMessage: "Collection sitemap saved." });
-  const collectionDeleteSuccessMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.deleteSuccess`, defaultMessage: "Collection sitemap removed." });
-  const collectionDeleteFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.deleteFailed`, defaultMessage: "Failed to delete collection sitemap." });
-  const collectionLoadingMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.loading`, defaultMessage: "Loading collection sitemap data..." });
-  const contentTypesLoadFailedMessage = formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.contentTypesFailed`, defaultMessage: "Failed to load collection types." });
-  const formatBasePathForDisplay = React.useCallback(
+  const [frontendSettings, setFrontendSettings] = useState({ baseUrl: "" });
+  const [isFrontendLoading, setFrontendLoading] = useState(true);
+  const [isFrontendSaving, setFrontendSaving] = useState(false);
+  const [frontendFeedback, setFrontendFeedback] = useState(null);
+  const [manualSitemaps, setManualSitemaps] = useState([]);
+  const [isLoading, setIsLoading] = useState(true);
+  const [isSaving, setIsSaving] = useState(false);
+  const [feedback, setFeedback] = useState(null);
+  const [lastSavedSignature, setLastSavedSignature] = useState(null);
+  const [collectionConfigs, setCollectionConfigs] = useState([]);
+  const [isCollectionLoading, setIsCollectionLoading] = useState(true);
+  const [collectionFeedback, setCollectionFeedback] = useState(null);
+  const [collectionActionId, setCollectionActionId] = useState(null);
+  const [isCollectionModalOpen, setCollectionModalOpen] = useState(false);
+  const [collectionToEdit, setCollectionToEdit] = useState(null);
+  const [contentTypes, setContentTypes] = useState([]);
+  const loadFailedMessage = formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.loadFailed`, defaultMessage: "Failed to load manual sitemaps." });
+  const saveFailedMessage = formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.saveFailed`, defaultMessage: "Failed to save manual sitemaps." });
+  const saveSuccessMessage = formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.saveSuccess`, defaultMessage: "Manual sitemaps saved." });
+  const loadingMessage = formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.loading`, defaultMessage: "Loading manual sitemap data..." });
+  const frontendLoadFailedMessage = formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.loadFailed`, defaultMessage: "Failed to load the frontend website URL." });
+  const frontendSaveSuccessMessage = formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.saveSuccess`, defaultMessage: "Frontend website URL saved." });
+  const frontendSaveFailedMessage = formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.saveFailed`, defaultMessage: "Failed to save the frontend website URL." });
+  const collectionLoadFailedMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.loadFailed`, defaultMessage: "Failed to load collection sitemap configurations." });
+  const collectionSaveSuccessMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.saveSuccess`, defaultMessage: "Collection sitemap saved." });
+  const collectionDeleteSuccessMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.deleteSuccess`, defaultMessage: "Collection sitemap removed." });
+  const collectionDeleteFailedMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.deleteFailed`, defaultMessage: "Failed to delete collection sitemap." });
+  const collectionLoadingMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.loading`, defaultMessage: "Loading collection sitemap data..." });
+  const contentTypesLoadFailedMessage = formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.contentTypesFailed`, defaultMessage: "Failed to load collection types." });
+  const formatBasePathForDisplay = useCallback(
     (value = "") => {
       const trimmed = trimSlashes(value);
       if (!trimmed) return "";
@@ -25832,7 +25825,7 @@ const Settings = () => {
     },
     []
   );
-  const formatBasePathForSave = React.useCallback(
+  const formatBasePathForSave = useCallback(
     (value = "") => {
       const trimmed = value.trim();
       if (!trimmed) return "";
@@ -25848,7 +25841,7 @@ const Settings = () => {
     },
     []
   );
-  const formatSlugForSave = React.useCallback((value = "") => {
+  const formatSlugForSave = useCallback((value = "") => {
     const trimmed = value.trim();
     if (!trimmed) return "";
     if (/^https?:\/\//i.test(trimmed)) {
@@ -25856,7 +25849,7 @@ const Settings = () => {
     }
     return trimSlashes(trimmed);
   }, []);
-  const frontendOrigin = React.useMemo(() => {
+  const frontendOrigin = useMemo(() => {
     const raw = typeof frontendSettings?.baseUrl === "string" ? frontendSettings.baseUrl.trim() : "";
     if (raw) {
       return raw.replace(/\/+$/, "");
@@ -25866,13 +25859,13 @@ const Settings = () => {
     }
     return "";
   }, [frontendSettings.baseUrl]);
-  const backendOrigin = React.useMemo(() => {
+  const backendOrigin = useMemo(() => {
     if (typeof window !== "undefined") {
       return window.location?.origin?.replace(/\/+$/, "") || "";
     }
     return "";
   }, []);
-  const computeManualSitemapUrl = React.useCallback(
+  const computeManualSitemapUrl = useCallback(
     (sitemap) => {
       if (!sitemap) {
         return null;
@@ -25891,7 +25884,7 @@ const Settings = () => {
     },
     [backendOrigin, formatBasePathForSave]
   );
-  const hydrateSitemaps = React.useCallback(
+  const hydrateSitemaps = useCallback(
     (raw = []) => raw.map((sitemap) => ({
       id: createId(),
       kind: sitemap?.kind === "index" ? "index" : "single",
@@ -25905,14 +25898,14 @@ const Settings = () => {
     })),
     [createId, formatBasePathForDisplay]
   );
-  const parsePriority = React.useCallback((value) => {
+  const parsePriority = useCallback((value) => {
     if (value === "" || value === void 0 || value === null) {
       return null;
     }
     const numeric = Number(value);
     return Number.isFinite(numeric) ? numeric : null;
   }, []);
-  const toPayload = React.useCallback(
+  const toPayload = useCallback(
     (sitemaps) => sitemaps.map(({ id: _id, kind, basePath, filename, urls }) => ({
       kind: kind === "index" ? "index" : "single",
       basePath: typeof basePath === "string" ? formatBasePathForSave(basePath) : "",
@@ -25924,11 +25917,11 @@ const Settings = () => {
     })),
     [formatBasePathForSave, formatSlugForSave, parsePriority]
   );
-  const currentPayload = React.useMemo(() => toPayload(manualSitemaps), [manualSitemaps, toPayload]);
-  const currentSignature = React.useMemo(() => JSON.stringify(currentPayload), [currentPayload]);
+  const currentPayload = useMemo(() => toPayload(manualSitemaps), [manualSitemaps, toPayload]);
+  const currentSignature = useMemo(() => JSON.stringify(currentPayload), [currentPayload]);
   const isDirty2 = lastSavedSignature !== null && currentSignature !== lastSavedSignature;
   const disableCollectionActions = isCollectionLoading || collectionActionId !== null;
-  const manualSelectStyle = React.useMemo(
+  const manualSelectStyle = useMemo(
     () => ({
       width: "100%",
       padding: "8px 12px",
@@ -25940,20 +25933,20 @@ const Settings = () => {
     }),
     []
   );
-  const manualSitemapTypeOptions = React.useMemo(
+  const manualSitemapTypeOptions = useMemo(
     () => [
       {
         value: "single",
-        label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.type.single`, defaultMessage: "Single sitemap (URL set)" })
+        label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.type.single`, defaultMessage: "Single sitemap (URL set)" })
       },
       {
         value: "index",
-        label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.type.index`, defaultMessage: "Sitemap index (list of sitemaps)" })
+        label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.type.index`, defaultMessage: "Sitemap index (list of sitemaps)" })
       }
     ],
     [formatMessage]
   );
-  const contentTypeLookup = React.useMemo(() => {
+  const contentTypeLookup = useMemo(() => {
     const map2 = /* @__PURE__ */ new Map();
     contentTypes.forEach((ct) => {
       if (ct && ct.uid) {
@@ -25962,13 +25955,13 @@ const Settings = () => {
     });
     return map2;
   }, [contentTypes]);
-  const fetchClient = React.useMemo(() => getFetchClient(), []);
-  const adminPath = React.useCallback((subPath) => `/${index.PLUGIN_ID}${subPath}`, []);
-  const loadCollectionConfigs = React.useCallback(async () => {
+  const fetchClient = useMemo(() => getFetchClient(), []);
+  const adminUrl = useCallback((subPath) => adminApiUrl(PLUGIN_ID, subPath), []);
+  const loadCollectionConfigs = useCallback(async () => {
     setIsCollectionLoading(true);
     setCollectionFeedback(null);
     try {
-      const { data } = await fetchClient.get(adminPath("/admin"));
+      const { data } = await fetchClient.get(adminUrl("/admin"));
       const results = Array.isArray(data?.results) ? data.results : [];
       const sorted = [...results].sort((a2, b2) => {
         const aDate = a2?.createdAt ? new Date(a2.createdAt).getTime() : null;
@@ -25988,12 +25981,12 @@ const Settings = () => {
     } finally {
       setIsCollectionLoading(false);
     }
-  }, [adminPath, collectionLoadFailedMessage, fetchClient]);
-  const loadFrontendSettings = React.useCallback(async () => {
+  }, [adminUrl, collectionLoadFailedMessage, fetchClient]);
+  const loadFrontendSettings = useCallback(async () => {
     setFrontendLoading(true);
     setFrontendFeedback(null);
     try {
-      const { data } = await fetchClient.get(adminPath("/admin-get-options"));
+      const { data } = await fetchClient.get(adminUrl("/admin-get-options"));
       const baseUrl = typeof data?.baseUrl === "string" ? data.baseUrl : "";
       setFrontendSettings({ baseUrl });
     } catch (error) {
@@ -26003,10 +25996,10 @@ const Settings = () => {
     } finally {
       setFrontendLoading(false);
     }
-  }, [adminPath, fetchClient, frontendLoadFailedMessage]);
-  const loadContentTypes = React.useCallback(async () => {
+  }, [adminUrl, fetchClient, frontendLoadFailedMessage]);
+  const loadContentTypes = useCallback(async () => {
     try {
-      const { data } = await fetchClient.get(adminPath("/admin-get-content-types"));
+      const { data } = await fetchClient.get(adminUrl("/admin-get-content-types"));
       const collectionTypes = Array.isArray(data?.collectionTypes) ? data.collectionTypes : [];
       setContentTypes(
         collectionTypes.filter((type2) => type2?.uid).map((type2) => ({
@@ -26020,14 +26013,14 @@ const Settings = () => {
       const message = error?.response?.data?.error?.message || error?.message || contentTypesLoadFailedMessage;
       setCollectionFeedback({ type: "error", message });
     }
-  }, [adminPath, contentTypesLoadFailedMessage, fetchClient]);
-  React.useEffect(() => {
+  }, [adminUrl, contentTypesLoadFailedMessage, fetchClient]);
+  useEffect(() => {
     let isMounted = true;
     const loadManual = async () => {
       setIsLoading(true);
       setFeedback(null);
       try {
-        const { data } = await fetchClient.get(adminPath("/manual-sitemaps"));
+        const { data } = await fetchClient.get(adminUrl("/manual-sitemaps"));
         const raw = Array.isArray(data?.sitemaps) ? data.sitemaps : [];
         if (!isMounted) return;
         const hydrated = hydrateSitemaps(raw);
@@ -26051,38 +26044,38 @@ const Settings = () => {
     return () => {
       isMounted = false;
     };
-  }, [adminPath, fetchClient, hydrateSitemaps, loadFailedMessage, loadCollectionConfigs, loadContentTypes, loadFrontendSettings]);
-  React.useEffect(() => {
+  }, [adminUrl, fetchClient, hydrateSitemaps, loadFailedMessage, loadCollectionConfigs, loadContentTypes, loadFrontendSettings]);
+  useEffect(() => {
     if (feedback?.type === "success") {
       const timeout = setTimeout(() => setFeedback(null), 3e3);
       return () => clearTimeout(timeout);
     }
     return void 0;
   }, [feedback]);
-  React.useEffect(() => {
+  useEffect(() => {
     if (collectionFeedback?.type === "success") {
       const timeout = setTimeout(() => setCollectionFeedback(null), 3e3);
       return () => clearTimeout(timeout);
     }
     return void 0;
   }, [collectionFeedback]);
-  React.useEffect(() => {
+  useEffect(() => {
     if (frontendFeedback?.type === "success") {
       const timeout = setTimeout(() => setFrontendFeedback(null), 3e3);
       return () => clearTimeout(timeout);
     }
     return void 0;
   }, [frontendFeedback]);
-  const updateManualSitemap = React.useCallback((id, field, value) => {
+  const updateManualSitemap = useCallback((id, field, value) => {
     setManualSitemaps((current) => current.map((sitemap) => sitemap.id === id ? { ...sitemap, [field]: value } : sitemap));
   }, []);
-  const removeManualSitemap = React.useCallback((id) => {
+  const removeManualSitemap = useCallback((id) => {
     setManualSitemaps((current) => current.filter((sitemap) => sitemap.id !== id));
   }, []);
-  const addManualSitemap = React.useCallback(() => {
+  const addManualSitemap = useCallback(() => {
     setManualSitemaps((current) => [...current, makeBlankSitemap()]);
   }, [makeBlankSitemap]);
-  const addManualUrl = React.useCallback(
+  const addManualUrl = useCallback(
     (sitemapId) => {
       setManualSitemaps(
         (current) => current.map(
@@ -26092,7 +26085,7 @@ const Settings = () => {
     },
     [makeBlankUrl]
   );
-  const updateManualUrl = React.useCallback((sitemapId, urlId, field, value) => {
+  const updateManualUrl = useCallback((sitemapId, urlId, field, value) => {
     setManualSitemaps(
       (current) => current.map(
         (sitemap) => sitemap.id === sitemapId ? {
@@ -26102,34 +26095,34 @@ const Settings = () => {
       )
     );
   }, []);
-  const removeManualUrl = React.useCallback((sitemapId, urlId) => {
+  const removeManualUrl = useCallback((sitemapId, urlId) => {
     setManualSitemaps(
       (current) => current.map(
         (sitemap) => sitemap.id === sitemapId ? { ...sitemap, urls: sitemap.urls.filter((url) => url.id !== urlId) } : sitemap
       )
     );
   }, []);
-  const moveManualUrl = React.useCallback((sitemapId, urlId, direction) => {
+  const moveManualUrl = useCallback((sitemapId, urlId, direction) => {
     setManualSitemaps(
       (current) => current.map((sitemap) => {
         if (sitemap.id !== sitemapId) return sitemap;
-        const index2 = sitemap.urls.findIndex((url) => url.id === urlId);
-        if (index2 === -1) return sitemap;
-        const targetIndex = direction === "up" ? index2 - 1 : index2 + 1;
+        const index = sitemap.urls.findIndex((url) => url.id === urlId);
+        if (index === -1) return sitemap;
+        const targetIndex = direction === "up" ? index - 1 : index + 1;
         if (targetIndex < 0 || targetIndex >= sitemap.urls.length) return sitemap;
         const nextUrls = [...sitemap.urls];
-        const [moved] = nextUrls.splice(index2, 1);
+        const [moved] = nextUrls.splice(index, 1);
         nextUrls.splice(targetIndex, 0, moved);
         return { ...sitemap, urls: nextUrls };
       })
     );
   }, []);
-  const handleSave = React.useCallback(async () => {
+  const handleSave = useCallback(async () => {
     setIsSaving(true);
     setFeedback(null);
     try {
       const payload = toPayload(manualSitemaps);
-      await fetchClient.put(adminPath("/manual-sitemaps"), { sitemaps: payload });
+      await fetchClient.put(adminUrl("/manual-sitemaps"), { sitemaps: payload });
       setLastSavedSignature(JSON.stringify(payload));
       setFeedback({ type: "success", message: saveSuccessMessage });
     } catch (error) {
@@ -26138,11 +26131,11 @@ const Settings = () => {
     } finally {
       setIsSaving(false);
     }
-  }, [adminPath, manualSitemaps, saveFailedMessage, saveSuccessMessage, toPayload, fetchClient]);
-  const handleFrontendSave = React.useCallback(async () => {
+  }, [adminUrl, manualSitemaps, saveFailedMessage, saveSuccessMessage, toPayload, fetchClient]);
+  const handleFrontendSave = useCallback(async () => {
     setFrontendSaving(true);
     try {
-      await fetchClient.put(adminPath("/admin-put-options"), { baseUrl: frontendSettings.baseUrl });
+      await fetchClient.put(adminUrl("/admin-put-options"), { baseUrl: frontendSettings.baseUrl });
       setFrontendFeedback({ type: "success", message: frontendSaveSuccessMessage });
     } catch (error) {
       const message = error?.response?.data?.error?.message || error?.message || frontendSaveFailedMessage;
@@ -26150,30 +26143,30 @@ const Settings = () => {
     } finally {
       setFrontendSaving(false);
     }
-  }, [adminPath, fetchClient, frontendSettings.baseUrl, frontendSaveFailedMessage, frontendSaveSuccessMessage]);
+  }, [adminUrl, fetchClient, frontendSettings.baseUrl, frontendSaveFailedMessage, frontendSaveSuccessMessage]);
   const disableActions = isLoading || isSaving;
-  const handleCollectionAdd = React.useCallback(() => {
+  const handleCollectionAdd = useCallback(() => {
     setCollectionToEdit(null);
     setCollectionModalOpen(true);
   }, []);
-  const handleCollectionEdit = React.useCallback((config) => {
+  const handleCollectionEdit = useCallback((config) => {
     setCollectionToEdit(config);
     setCollectionModalOpen(true);
   }, []);
-  const handleCollectionSaved = React.useCallback(async () => {
+  const handleCollectionSaved = useCallback(async () => {
     setCollectionModalOpen(false);
     setCollectionToEdit(null);
     await loadCollectionConfigs();
     setCollectionFeedback({ type: "success", message: collectionSaveSuccessMessage });
   }, [collectionSaveSuccessMessage, loadCollectionConfigs]);
-  const handleCollectionError = React.useCallback((message) => {
+  const handleCollectionError = useCallback((message) => {
     setCollectionFeedback({ type: "error", message });
   }, []);
-  const handleCollectionDelete = React.useCallback(
+  const handleCollectionDelete = useCallback(
     async (id) => {
       setCollectionActionId(id);
       try {
-        await fetchClient.del(`${adminPath("/admin")}?id=${encodeURIComponent(id)}`);
+        await fetchClient.del(`${adminUrl("/admin")}?id=${encodeURIComponent(id)}`);
         await loadCollectionConfigs();
         setCollectionFeedback({ type: "success", message: collectionDeleteSuccessMessage });
       } catch (error) {
@@ -26183,20 +26176,20 @@ const Settings = () => {
         setCollectionActionId(null);
       }
     },
-    [adminPath, collectionDeleteFailedMessage, collectionDeleteSuccessMessage, loadCollectionConfigs, fetchClient]
+    [adminUrl, collectionDeleteFailedMessage, collectionDeleteSuccessMessage, loadCollectionConfigs, fetchClient]
   );
-  return /* @__PURE__ */ jsxRuntime.jsxs(designSystem.DesignSystemProvider, { locale, tooltipConfig: { delayDuration: 200 }, children: [
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Main, { children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { padding: 8, children: [
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "alpha", as: "h1", children: formatMessage({
-        id: `${index.PLUGIN_ID}.settings.pageTitle`,
+  return /* @__PURE__ */ jsxs(DesignSystemProvider, { locale, tooltipConfig: { delayDuration: 200 }, children: [
+    /* @__PURE__ */ jsx(Main, { children: /* @__PURE__ */ jsxs(Box, { padding: 8, children: [
+      /* @__PURE__ */ jsx(Typography, { variant: "alpha", as: "h1", children: formatMessage({
+        id: `${PLUGIN_ID}.settings.pageTitle`,
         defaultMessage: "Configure Sitemap"
       }) }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 2, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({
-        id: `${index.PLUGIN_ID}.settings.subtitle`,
+      /* @__PURE__ */ jsx(Box, { marginTop: 2, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({
+        id: `${PLUGIN_ID}.settings.subtitle`,
         defaultMessage: "Configure your sitemap settings"
       }) }) }),
-      /* @__PURE__ */ jsxRuntime.jsxs(
-        designSystem.Box,
+      /* @__PURE__ */ jsxs(
+        Box,
         {
           background: "neutral0",
           hasRadius: true,
@@ -26207,18 +26200,18 @@ const Settings = () => {
           paddingRight: 7,
           marginTop: 6,
           children: [
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.title`, defaultMessage: "Frontend website URL" }) }),
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", marginTop: 2, children: formatMessage({
-              id: `${index.PLUGIN_ID}.settings.frontendUrl.description`,
+            /* @__PURE__ */ jsx(Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.title`, defaultMessage: "Frontend website URL" }) }),
+            /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", marginTop: 2, children: formatMessage({
+              id: `${PLUGIN_ID}.settings.frontendUrl.description`,
               defaultMessage: "Used to prefix relative sitemap entries and to power link previews."
             }) }),
-            /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 4, display: "grid", gap: 2, style: { maxWidth: "480px" }, children: /* @__PURE__ */ jsxRuntime.jsx(
-              designSystem.TextInput,
+            /* @__PURE__ */ jsx(Box, { marginTop: 4, display: "grid", gap: 2, style: { maxWidth: "480px" }, children: /* @__PURE__ */ jsx(
+              TextInput,
               {
-                label: formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.label`, defaultMessage: "Website URL" }),
-                placeholder: formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.placeholder`, defaultMessage: "https://www.example.com" }),
+                label: formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.label`, defaultMessage: "Website URL" }),
+                placeholder: formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.placeholder`, defaultMessage: "https://www.example.com" }),
                 hint: formatMessage({
-                  id: `${index.PLUGIN_ID}.settings.frontendUrl.hint`,
+                  id: `${PLUGIN_ID}.settings.frontendUrl.hint`,
                   defaultMessage: "Leave blank to fall back to this Strapi host."
                 }),
                 value: frontendSettings.baseUrl,
@@ -26226,15 +26219,15 @@ const Settings = () => {
                 disabled: isFrontendLoading || isFrontendSaving
               }
             ) }),
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 3, marginTop: 4, alignItems: "center", children: [
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { onClick: handleFrontendSave, loading: isFrontendSaving, disabled: isFrontendSaving || isFrontendLoading, children: formatMessage({ id: `${index.PLUGIN_ID}.settings.frontendUrl.save`, defaultMessage: "Save URL" }) }),
-              frontendFeedback && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: frontendFeedback.type === "error" ? "danger600" : "success600", children: frontendFeedback.message })
+            /* @__PURE__ */ jsxs(Flex, { gap: 3, marginTop: 4, alignItems: "center", children: [
+              /* @__PURE__ */ jsx(Button, { onClick: handleFrontendSave, loading: isFrontendSaving, disabled: isFrontendSaving || isFrontendLoading, children: formatMessage({ id: `${PLUGIN_ID}.settings.frontendUrl.save`, defaultMessage: "Save URL" }) }),
+              frontendFeedback && /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: frontendFeedback.type === "error" ? "danger600" : "success600", children: frontendFeedback.message })
             ] })
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntime.jsxs(
-        designSystem.Box,
+      /* @__PURE__ */ jsxs(
+        Box,
         {
           background: "neutral0",
           hasRadius: true,
@@ -26245,27 +26238,27 @@ const Settings = () => {
           paddingRight: 7,
           marginTop: 6,
           children: [
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { justifyContent: "space-between", alignItems: "flex-start", gap: 4, wrap: "wrap", children: [
-              /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.title`, defaultMessage: "Manual sitemap files" }) }),
-                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.subtitle`, defaultMessage: "Define custom sitemap XML files composed from manually curated URLs." }) })
+            /* @__PURE__ */ jsxs(Flex, { justifyContent: "space-between", alignItems: "flex-start", gap: 4, wrap: "wrap", children: [
+              /* @__PURE__ */ jsxs(Box, { children: [
+                /* @__PURE__ */ jsx(Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.title`, defaultMessage: "Manual sitemap files" }) }),
+                /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.subtitle`, defaultMessage: "Define custom sitemap XML files composed from manually curated URLs." }) })
               ] }),
-              /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 2, wrap: "wrap", children: [
-                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "secondary", onClick: addManualSitemap, disabled: disableActions, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.add`, defaultMessage: "Add sitemap" }) }),
-                /* @__PURE__ */ jsxRuntime.jsx(
-                  designSystem.Button,
+              /* @__PURE__ */ jsxs(Flex, { gap: 2, wrap: "wrap", children: [
+                /* @__PURE__ */ jsx(Button, { variant: "secondary", onClick: addManualSitemap, disabled: disableActions, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.add`, defaultMessage: "Add sitemap" }) }),
+                /* @__PURE__ */ jsx(
+                  Button,
                   {
                     onClick: handleSave,
                     loading: isSaving,
                     disabled: isLoading || isSaving || !isDirty2,
-                    children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.save`, defaultMessage: "Save changes" })
+                    children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.save`, defaultMessage: "Save changes" })
                   }
                 )
               ] })
             ] }),
-            feedback && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: feedback.type === "error" ? "danger600" : "success600", children: feedback.message }) }),
-            isLoading && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: feedback ? 2 : 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", children: loadingMessage }) }),
-            manualSitemaps.length === 0 && !isLoading && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 6, padding: 6, background: "neutral100", hasRadius: true, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "epsilon", textColor: "neutral600", children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.empty`, defaultMessage: "No manual sitemaps yet. Add one to get started." }) }) }),
+            feedback && /* @__PURE__ */ jsx(Box, { marginTop: 4, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: feedback.type === "error" ? "danger600" : "success600", children: feedback.message }) }),
+            isLoading && /* @__PURE__ */ jsx(Box, { marginTop: feedback ? 2 : 4, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", children: loadingMessage }) }),
+            manualSitemaps.length === 0 && !isLoading && /* @__PURE__ */ jsx(Box, { marginTop: 6, padding: 6, background: "neutral100", hasRadius: true, children: /* @__PURE__ */ jsx(Typography, { variant: "epsilon", textColor: "neutral600", children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.empty`, defaultMessage: "No manual sitemaps yet. Add one to get started." }) }) }),
             manualSitemaps.map((sitemap, sitemapIndex) => {
               const sitemapPublicUrl = computeManualSitemapUrl(sitemap);
               const resolvedPathHint = (() => {
@@ -26285,8 +26278,8 @@ const Settings = () => {
               const filenameLabelId = `manual-sitemap-${sitemap.id}-filename-label`;
               const sitemapKind = sitemap?.kind === "index" ? "index" : "single";
               const isIndexSitemap = sitemapKind === "index";
-              return /* @__PURE__ */ jsxRuntime.jsxs(
-                designSystem.Box,
+              return /* @__PURE__ */ jsxs(
+                Box,
                 {
                   marginTop: 6,
                   padding: 6,
@@ -26294,62 +26287,62 @@ const Settings = () => {
                   background: "neutral100",
                   style: { border: "1px solid #dcdce4" },
                   children: [
-                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { justifyContent: "space-between", alignItems: "center", gap: 4, wrap: "wrap", children: [
-                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.cardTitle`, defaultMessage: "Sitemap #{index}" }, { index: sitemapIndex + 1 }) }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 2, wrap: "wrap", children: [
-                        sitemapPublicUrl && /* @__PURE__ */ jsxRuntime.jsx(
-                          designSystem.Button,
+                    /* @__PURE__ */ jsxs(Flex, { justifyContent: "space-between", alignItems: "center", gap: 4, wrap: "wrap", children: [
+                      /* @__PURE__ */ jsx(Typography, { variant: "delta", children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.cardTitle`, defaultMessage: "Sitemap #{index}" }, { index: sitemapIndex + 1 }) }),
+                      /* @__PURE__ */ jsxs(Flex, { gap: 2, wrap: "wrap", children: [
+                        sitemapPublicUrl && /* @__PURE__ */ jsx(
+                          Button,
                           {
                             variant: "tertiary",
                             onClick: () => window.open(sitemapPublicUrl, "_blank", "noopener,noreferrer"),
                             disabled: disableActions,
-                            children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.open`, defaultMessage: "Show sitemap" })
+                            children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.open`, defaultMessage: "Show sitemap" })
                           }
                         ),
-                        /* @__PURE__ */ jsxRuntime.jsx(
-                          designSystem.Button,
+                        /* @__PURE__ */ jsx(
+                          Button,
                           {
                             variant: "tertiary",
-                            startIcon: /* @__PURE__ */ jsxRuntime.jsx(icons.Trash, {}),
+                            startIcon: /* @__PURE__ */ jsx(Trash, {}),
                             onClick: () => removeManualSitemap(sitemap.id),
                             disabled: disableActions,
-                            children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.remove`, defaultMessage: "Remove sitemap" })
+                            children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.remove`, defaultMessage: "Remove sitemap" })
                           }
                         )
                       ] })
                     ] }),
-                    sitemapPublicUrl && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 3, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", style: { wordBreak: "break-all" }, children: formatMessage(
-                      { id: `${index.PLUGIN_ID}.manualSitemaps.publicUrl`, defaultMessage: "Public URL: {url}" },
+                    sitemapPublicUrl && /* @__PURE__ */ jsx(Box, { marginTop: 3, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", style: { wordBreak: "break-all" }, children: formatMessage(
+                      { id: `${PLUGIN_ID}.manualSitemaps.publicUrl`, defaultMessage: "Public URL: {url}" },
                       { url: sitemapPublicUrl }
                     ) }) }),
-                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginTop: 4, display: "grid", gap: 4, style: { gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }, children: [
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginRight: 3, children: [
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: basePathLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.basePath`, defaultMessage: "Base Path (optional)" }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(
-                          designSystem.TextInput,
+                    /* @__PURE__ */ jsxs(Box, { marginTop: 4, display: "grid", gap: 4, style: { gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }, children: [
+                      /* @__PURE__ */ jsxs(Box, { marginRight: 3, children: [
+                        /* @__PURE__ */ jsx(Typography, { id: basePathLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.basePath`, defaultMessage: "Base Path (optional)" }) }),
+                        /* @__PURE__ */ jsx(
+                          TextInput,
                           {
                             name: `manual-basePath-${sitemap.id}`,
                             "aria-labelledby": basePathLabelId,
-                            label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.basePath`, defaultMessage: "Base Path (optional)" }),
-                            placeholder: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.basePath.placeholder`, defaultMessage: "e.g. /sitemap" }),
+                            label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.basePath`, defaultMessage: "Base Path (optional)" }),
+                            placeholder: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.basePath.placeholder`, defaultMessage: "e.g. /sitemap" }),
                             value: sitemap.basePath,
                             disabled: disableActions,
                             onChange: (event) => updateManualSitemap(sitemap.id, "basePath", event.target.value),
                             hint: formatMessage(
-                              { id: `${index.PLUGIN_ID}.manualSitemaps.basePath.hint`, defaultMessage: "Resolved path: {path}. Preview: {url}" },
+                              { id: `${PLUGIN_ID}.manualSitemaps.basePath.hint`, defaultMessage: "Resolved path: {path}. Preview: {url}" },
                               { path: resolvedPathHint, url: resolvedUrlPreview }
                             )
                           }
                         )
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginRight: 3, children: [
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: filenameLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.filename`, defaultMessage: "Filename" }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(
-                          designSystem.TextInput,
+                      /* @__PURE__ */ jsxs(Box, { marginRight: 3, children: [
+                        /* @__PURE__ */ jsx(Typography, { id: filenameLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.filename`, defaultMessage: "Filename" }) }),
+                        /* @__PURE__ */ jsx(
+                          TextInput,
                           {
                             name: `manual-filename-${sitemap.id}`,
                             "aria-labelledby": filenameLabelId,
-                            label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.filename`, defaultMessage: "Filename" }),
+                            label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.filename`, defaultMessage: "Filename" }),
                             placeholder: "sitemap.xml",
                             value: sitemap.filename,
                             disabled: disableActions,
@@ -26357,31 +26350,31 @@ const Settings = () => {
                           }
                         )
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.type.label`, defaultMessage: "Sitemap type" }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(
+                      /* @__PURE__ */ jsxs(Box, { children: [
+                        /* @__PURE__ */ jsx(Typography, { variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.type.label`, defaultMessage: "Sitemap type" }) }),
+                        /* @__PURE__ */ jsx(
                           "select",
                           {
                             value: sitemapKind,
                             onChange: (event) => updateManualSitemap(sitemap.id, "kind", event.target.value),
                             style: manualSelectStyle,
                             disabled: disableActions,
-                            children: manualSitemapTypeOptions.map((option) => /* @__PURE__ */ jsxRuntime.jsx("option", { value: option.value, children: option.label }, option.value))
+                            children: manualSitemapTypeOptions.map((option) => /* @__PURE__ */ jsx("option", { value: option.value, children: option.label }, option.value))
                           }
                         ),
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", marginTop: 1, children: formatMessage({
-                          id: `${index.PLUGIN_ID}.manualSitemaps.type.hint`,
+                        /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", marginTop: 1, children: formatMessage({
+                          id: `${PLUGIN_ID}.manualSitemaps.type.hint`,
                           defaultMessage: "Choose whether this file lists URLs or links out to other sitemap files."
                         }) })
                       ] })
                     ] }),
-                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginTop: 6, children: [
-                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "epsilon", marginRight: 3, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.urlsTitle`, defaultMessage: "URLs" }) }),
-                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", marginTop: 1, children: formatMessage({
-                        id: isIndexSitemap ? `${index.PLUGIN_ID}.manualSitemaps.urlsDescription.index` : `${index.PLUGIN_ID}.manualSitemaps.urlsDescription`,
+                    /* @__PURE__ */ jsxs(Box, { marginTop: 6, children: [
+                      /* @__PURE__ */ jsx(Typography, { variant: "epsilon", marginRight: 3, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.urlsTitle`, defaultMessage: "URLs" }) }),
+                      /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", marginTop: 1, children: formatMessage({
+                        id: isIndexSitemap ? `${PLUGIN_ID}.manualSitemaps.urlsDescription.index` : `${PLUGIN_ID}.manualSitemaps.urlsDescription`,
                         defaultMessage: isIndexSitemap ? "Add links to the sitemap files included in this index." : "Add the URLs that should appear inside this sitemap file. Reorder to adjust priority."
                       }) }),
-                      sitemap.urls.length === 0 && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 4, padding: 4, background: "neutral0", hasRadius: true, style: { border: "1px dashed #dcdce4" }, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.urlsEmpty`, defaultMessage: "No URLs yet. Add one below." }) }) }),
+                      sitemap.urls.length === 0 && /* @__PURE__ */ jsx(Box, { marginTop: 4, padding: 4, background: "neutral0", hasRadius: true, style: { border: "1px dashed #dcdce4" }, children: /* @__PURE__ */ jsx(Typography, { variant: "omega", textColor: "neutral600", children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.urlsEmpty`, defaultMessage: "No URLs yet. Add one below." }) }) }),
                       sitemap.urls.map((url, urlIndex) => {
                         const urlLabelId = `manual-url-${url.id}-label`;
                         const priorityLabelId = `manual-priority-${url.id}-label`;
@@ -26398,8 +26391,8 @@ const Settings = () => {
                           }
                           return slug ? `${origin2}/${slug}` : origin2;
                         })();
-                        return /* @__PURE__ */ jsxRuntime.jsxs(
-                          designSystem.Box,
+                        return /* @__PURE__ */ jsxs(
+                          Box,
                           {
                             marginTop: 4,
                             padding: 4,
@@ -26407,76 +26400,76 @@ const Settings = () => {
                             hasRadius: true,
                             style: { border: "1px solid #dcdce4" },
                             children: [
-                              /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { justifyContent: "space-between", alignItems: "center", children: [
-                                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.urlLabel`, defaultMessage: "Entry #{index}" }, { index: urlIndex + 1 }) }),
-                                /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 1, children: [
-                                  /* @__PURE__ */ jsxRuntime.jsx(
-                                    designSystem.IconButton,
+                              /* @__PURE__ */ jsxs(Flex, { justifyContent: "space-between", alignItems: "center", children: [
+                                /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral800", children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.urlLabel`, defaultMessage: "Entry #{index}" }, { index: urlIndex + 1 }) }),
+                                /* @__PURE__ */ jsxs(Flex, { gap: 1, children: [
+                                  /* @__PURE__ */ jsx(
+                                    IconButton,
                                     {
-                                      label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.moveUp`, defaultMessage: "Move up" }),
+                                      label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.moveUp`, defaultMessage: "Move up" }),
                                       disabled: disableActions || urlIndex === 0,
                                       onClick: () => moveManualUrl(sitemap.id, url.id, "up"),
-                                      children: /* @__PURE__ */ jsxRuntime.jsx(icons.ArrowUp, {})
+                                      children: /* @__PURE__ */ jsx(ArrowUp, {})
                                     }
                                   ),
-                                  /* @__PURE__ */ jsxRuntime.jsx(
-                                    designSystem.IconButton,
+                                  /* @__PURE__ */ jsx(
+                                    IconButton,
                                     {
-                                      label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.moveDown`, defaultMessage: "Move down" }),
+                                      label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.moveDown`, defaultMessage: "Move down" }),
                                       disabled: disableActions || urlIndex === sitemap.urls.length - 1,
                                       onClick: () => moveManualUrl(sitemap.id, url.id, "down"),
-                                      children: /* @__PURE__ */ jsxRuntime.jsx(icons.ArrowDown, {})
+                                      children: /* @__PURE__ */ jsx(ArrowDown, {})
                                     }
                                   ),
-                                  /* @__PURE__ */ jsxRuntime.jsx(
-                                    designSystem.IconButton,
+                                  /* @__PURE__ */ jsx(
+                                    IconButton,
                                     {
-                                      label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.delete`, defaultMessage: "Delete URL" }),
+                                      label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.delete`, defaultMessage: "Delete URL" }),
                                       disabled: disableActions,
                                       onClick: () => removeManualUrl(sitemap.id, url.id),
-                                      children: /* @__PURE__ */ jsxRuntime.jsx(icons.Trash, {})
+                                      children: /* @__PURE__ */ jsx(Trash, {})
                                     }
                                   )
                                 ] })
                               ] }),
-                              /* @__PURE__ */ jsxRuntime.jsxs(
-                                designSystem.Box,
+                              /* @__PURE__ */ jsxs(
+                                Box,
                                 {
                                   marginTop: 3,
                                   display: "grid",
                                   gap: 4,
                                   style: { gridTemplateColumns: isIndexSitemap ? "minmax(0, 1fr)" : "minmax(0, 3fr) minmax(0, 1fr)" },
                                   children: [
-                                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginRight: 3, children: [
-                                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: urlLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.urlField`, defaultMessage: "Location" }) }),
-                                      /* @__PURE__ */ jsxRuntime.jsx(
-                                        designSystem.TextInput,
+                                    /* @__PURE__ */ jsxs(Box, { marginRight: 3, children: [
+                                      /* @__PURE__ */ jsx(Typography, { id: urlLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.urlField`, defaultMessage: "Location" }) }),
+                                      /* @__PURE__ */ jsx(
+                                        TextInput,
                                         {
                                           name: `manual-url-${url.id}`,
                                           "aria-labelledby": urlLabelId,
-                                          label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.urlField`, defaultMessage: "Location" }),
+                                          label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.urlField`, defaultMessage: "Location" }),
                                           placeholder: "page-sitemap.xml",
                                           value: url.loc,
                                           disabled: disableActions,
                                           onChange: (event) => updateManualUrl(sitemap.id, url.id, "loc", event.target.value),
                                           hint: entryPreviewUrl ? formatMessage(
-                                            { id: `${index.PLUGIN_ID}.manualSitemaps.urlField.hintPreview`, defaultMessage: "Enter only the path or file name. Preview: {url}" },
+                                            { id: `${PLUGIN_ID}.manualSitemaps.urlField.hintPreview`, defaultMessage: "Enter only the path or file name. Preview: {url}" },
                                             { url: entryPreviewUrl }
                                           ) : formatMessage({
-                                            id: `${index.PLUGIN_ID}.manualSitemaps.urlField.hint`,
+                                            id: `${PLUGIN_ID}.manualSitemaps.urlField.hint`,
                                             defaultMessage: "Enter only the path or file name. The site URL and base path are added automatically."
                                           })
                                         }
                                       )
                                     ] }),
-                                    !isIndexSitemap && /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-                                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { id: priorityLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.priorityField`, defaultMessage: "Priority" }) }),
-                                      /* @__PURE__ */ jsxRuntime.jsx(
-                                        designSystem.TextInput,
+                                    !isIndexSitemap && /* @__PURE__ */ jsxs(Box, { children: [
+                                      /* @__PURE__ */ jsx(Typography, { id: priorityLabelId, variant: "pi", fontWeight: "semiBold", textColor: "neutral800", marginBottom: 2, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.priorityField`, defaultMessage: "Priority" }) }),
+                                      /* @__PURE__ */ jsx(
+                                        TextInput,
                                         {
                                           name: `manual-priority-${url.id}`,
                                           "aria-labelledby": priorityLabelId,
-                                          label: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.priorityField`, defaultMessage: "Priority" }),
+                                          label: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.priorityField`, defaultMessage: "Priority" }),
                                           type: "number",
                                           step: "0.1",
                                           min: "0",
@@ -26490,8 +26483,8 @@ const Settings = () => {
                                   ]
                                 }
                               ),
-                              entryPreviewUrl && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", marginTop: 2, style: { wordBreak: "break-all" }, children: formatMessage(
-                                { id: `${index.PLUGIN_ID}.manualSitemaps.urlField.preview`, defaultMessage: "Preview URL: {url}" },
+                              entryPreviewUrl && /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", marginTop: 2, style: { wordBreak: "break-all" }, children: formatMessage(
+                                { id: `${PLUGIN_ID}.manualSitemaps.urlField.preview`, defaultMessage: "Preview URL: {url}" },
                                 { url: entryPreviewUrl }
                               ) })
                             ]
@@ -26499,7 +26492,7 @@ const Settings = () => {
                           url.id
                         );
                       }),
-                      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "secondary", onClick: () => addManualUrl(sitemap.id), disabled: disableActions, children: formatMessage({ id: `${index.PLUGIN_ID}.manualSitemaps.addUrl`, defaultMessage: "Add URL" }) }) })
+                      /* @__PURE__ */ jsx(Box, { marginTop: 4, children: /* @__PURE__ */ jsx(Button, { variant: "secondary", onClick: () => addManualUrl(sitemap.id), disabled: disableActions, children: formatMessage({ id: `${PLUGIN_ID}.manualSitemaps.addUrl`, defaultMessage: "Add URL" }) }) })
                     ] })
                   ]
                 },
@@ -26509,8 +26502,8 @@ const Settings = () => {
           ]
         }
       ),
-      /* @__PURE__ */ jsxRuntime.jsxs(
-        designSystem.Box,
+      /* @__PURE__ */ jsxs(
+        Box,
         {
           background: "neutral0",
           hasRadius: true,
@@ -26521,20 +26514,20 @@ const Settings = () => {
           paddingRight: 7,
           marginTop: 8,
           children: [
-            /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { justifyContent: "space-between", alignItems: "flex-start", gap: 4, wrap: "wrap", children: [
-              /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.title`, defaultMessage: "Collection sitemaps" }) }),
-                /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.subtitle`, defaultMessage: "Generate sitemap entries from Strapi collection types using dynamic URL patterns." }) })
+            /* @__PURE__ */ jsxs(Flex, { justifyContent: "space-between", alignItems: "flex-start", gap: 4, wrap: "wrap", children: [
+              /* @__PURE__ */ jsxs(Box, { children: [
+                /* @__PURE__ */ jsx(Typography, { variant: "beta", marginRight: 3, children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.title`, defaultMessage: "Collection sitemaps" }) }),
+                /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.subtitle`, defaultMessage: "Generate sitemap entries from Strapi collection types using dynamic URL patterns." }) })
               ] }),
-              /* @__PURE__ */ jsxRuntime.jsx(designSystem.Flex, { gap: 2, wrap: "wrap", children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "secondary", onClick: handleCollectionAdd, disabled: disableCollectionActions, children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.add`, defaultMessage: "Add collection sitemap" }) }) })
+              /* @__PURE__ */ jsx(Flex, { gap: 2, wrap: "wrap", children: /* @__PURE__ */ jsx(Button, { variant: "secondary", onClick: handleCollectionAdd, disabled: disableCollectionActions, children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.add`, defaultMessage: "Add collection sitemap" }) }) })
             ] }),
-            collectionFeedback && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: collectionFeedback.type === "error" ? "danger600" : "success600", children: collectionFeedback.message }) }),
-            isCollectionLoading && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: collectionFeedback ? 2 : 4, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", children: collectionLoadingMessage }) }),
-            !isCollectionLoading && collectionConfigs.length === 0 && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 6, padding: 6, background: "neutral100", hasRadius: true, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "epsilon", textColor: "neutral600", children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.empty`, defaultMessage: "No collection sitemaps yet. Add one to start generating dynamic entries." }) }) }),
-            collectionConfigs.map((config, index$1) => {
-              const typeLabel = contentTypeLookup.get(config.type) || config.type || formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.unknownCollection`, defaultMessage: "Unknown collection" });
+            collectionFeedback && /* @__PURE__ */ jsx(Box, { marginTop: 4, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: collectionFeedback.type === "error" ? "danger600" : "success600", children: collectionFeedback.message }) }),
+            isCollectionLoading && /* @__PURE__ */ jsx(Box, { marginTop: collectionFeedback ? 2 : 4, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", children: collectionLoadingMessage }) }),
+            !isCollectionLoading && collectionConfigs.length === 0 && /* @__PURE__ */ jsx(Box, { marginTop: 6, padding: 6, background: "neutral100", hasRadius: true, children: /* @__PURE__ */ jsx(Typography, { variant: "epsilon", textColor: "neutral600", children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.empty`, defaultMessage: "No collection sitemaps yet. Add one to start generating dynamic entries." }) }) }),
+            collectionConfigs.map((config, index) => {
+              const typeLabel = contentTypeLookup.get(config.type) || config.type || formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.unknownCollection`, defaultMessage: "Unknown collection" });
               const priorityValue = config.priority === null || config.priority === void 0 || config.priority === "" ? "—" : Number(config.priority).toFixed(1).replace(/\.0$/, "");
-              const lastModifiedLabel = String(config.lastModified).toLowerCase() === "true" ? formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.lastModified.yes`, defaultMessage: "Yes" }) : formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.lastModified.no`, defaultMessage: "No" });
+              const lastModifiedLabel = String(config.lastModified).toLowerCase() === "true" ? formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.lastModified.yes`, defaultMessage: "Yes" }) : formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.lastModified.no`, defaultMessage: "No" });
               const friendlyPath = (() => {
                 const basePathSegment = trimSlashes(config.basePath || "");
                 const filenameSegment = trimSlashes(config.filename || "");
@@ -26554,7 +26547,7 @@ const Settings = () => {
                 if (config.id === void 0 || config.id === null) {
                   return null;
                 }
-                return `${origin2}/api/${index.PLUGIN_ID}/collection-sitemaps/${encodeURIComponent(String(config.id))}.xml`;
+                return `${origin2}/api/${PLUGIN_ID}/collection-sitemaps/${encodeURIComponent(String(config.id))}.xml`;
               })();
               const subPathLabel = config.subPath ? `/${trimSlashes(config.subPath)}` : "/";
               const fileBaseLabel = config.basePath ? `/${trimSlashes(config.basePath)}` : "/";
@@ -26562,10 +26555,10 @@ const Settings = () => {
                 if (typeof window === "undefined" || config.id === void 0 || config.id === null) return null;
                 const origin2 = window.location?.origin?.replace(/\/+$/, "") || "";
                 if (!origin2) return null;
-                return `${origin2}/api/${index.PLUGIN_ID}/collection-sitemaps/${encodeURIComponent(String(config.id))}.xml`;
+                return `${origin2}/api/${PLUGIN_ID}/collection-sitemaps/${encodeURIComponent(String(config.id))}.xml`;
               })();
-              return /* @__PURE__ */ jsxRuntime.jsxs(
-                designSystem.Box,
+              return /* @__PURE__ */ jsxs(
+                Box,
                 {
                   marginTop: 6,
                   padding: 6,
@@ -26573,74 +26566,74 @@ const Settings = () => {
                   background: "neutral100",
                   style: { border: "1px solid #dcdce4" },
                   children: [
-                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { justifyContent: "space-between", alignItems: "center", gap: 4, wrap: "wrap", children: [
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { children: [
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "delta", children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.cardTitle`, defaultMessage: "Sitemap #{index}" }, { index: index$1 + 1 }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", children: typeLabel })
+                    /* @__PURE__ */ jsxs(Flex, { justifyContent: "space-between", alignItems: "center", gap: 4, wrap: "wrap", children: [
+                      /* @__PURE__ */ jsxs(Box, { children: [
+                        /* @__PURE__ */ jsx(Typography, { variant: "delta", children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.cardTitle`, defaultMessage: "Sitemap #{index}" }, { index: index + 1 }) }),
+                        /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", children: typeLabel })
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 2, wrap: "wrap", children: [
-                        collectionSitemapUrl && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "tertiary", onClick: () => window.open(collectionSitemapUrl, "_blank", "noopener,noreferrer"), children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.open`, defaultMessage: "Show sitemap" }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: "secondary", onClick: () => handleCollectionEdit(config), disabled: disableCollectionActions, children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.edit`, defaultMessage: "Edit" }) }),
-                        /* @__PURE__ */ jsxRuntime.jsx(
-                          designSystem.Button,
+                      /* @__PURE__ */ jsxs(Flex, { gap: 2, wrap: "wrap", children: [
+                        collectionSitemapUrl && /* @__PURE__ */ jsx(Button, { variant: "tertiary", onClick: () => window.open(collectionSitemapUrl, "_blank", "noopener,noreferrer"), children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.open`, defaultMessage: "Show sitemap" }) }),
+                        /* @__PURE__ */ jsx(Button, { variant: "secondary", onClick: () => handleCollectionEdit(config), disabled: disableCollectionActions, children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.edit`, defaultMessage: "Edit" }) }),
+                        /* @__PURE__ */ jsx(
+                          Button,
                           {
                             variant: "danger",
                             onClick: () => handleCollectionDelete(config.id),
                             loading: collectionActionId === config.id,
                             disabled: disableCollectionActions && collectionActionId !== config.id,
-                            children: formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.remove`, defaultMessage: "Remove" })
+                            children: formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.remove`, defaultMessage: "Remove" })
                           }
                         )
                       ] })
                     ] }),
-                    collectionSitemapUrl && /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { marginTop: 3, children: /* @__PURE__ */ jsxRuntime.jsx(designSystem.Typography, { variant: "pi", textColor: "neutral600", style: { wordBreak: "break-all" }, marginRight: 3, children: collectionSitemapUrl }) }),
-                    /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Box, { marginTop: 4, display: "grid", gap: 2, style: { gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }, children: [
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.fileBasePath`, defaultMessage: "Route" }),
+                    collectionSitemapUrl && /* @__PURE__ */ jsx(Box, { marginTop: 3, children: /* @__PURE__ */ jsx(Typography, { variant: "pi", textColor: "neutral600", style: { wordBreak: "break-all" }, marginRight: 3, children: collectionSitemapUrl }) }),
+                    /* @__PURE__ */ jsxs(Box, { marginTop: 4, display: "grid", gap: 2, style: { gridTemplateColumns: "repeat(auto-fit, minmax(240px, 1fr))" }, children: [
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.fileBasePath`, defaultMessage: "Route" }),
                         ": ",
                         fileBaseLabel
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.filename`, defaultMessage: "Filename" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.filename`, defaultMessage: "Filename" }),
                         ": ",
                         config.filename || "—"
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.subPath`, defaultMessage: "Entry prefix" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.subPath`, defaultMessage: "Entry prefix" }),
                         ": ",
                         subPathLabel
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.pattern`, defaultMessage: "Pattern" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.pattern`, defaultMessage: "Pattern" }),
                         ": ",
                         config.pattern || "—"
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.frequency`, defaultMessage: "Change frequency" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.frequency`, defaultMessage: "Change frequency" }),
                         ": ",
                         config.frequency || "—"
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.priority`, defaultMessage: "Priority" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.priority`, defaultMessage: "Priority" }),
                         ": ",
                         priorityValue
                       ] }),
-                      /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Typography, { variant: "pi", textColor: "neutral800", children: [
-                        formatMessage({ id: `${index.PLUGIN_ID}.collectionSitemaps.lastModified`, defaultMessage: "Include last modified" }),
+                      /* @__PURE__ */ jsxs(Typography, { variant: "pi", textColor: "neutral800", children: [
+                        formatMessage({ id: `${PLUGIN_ID}.collectionSitemaps.lastModified`, defaultMessage: "Include last modified" }),
                         ": ",
                         lastModifiedLabel
                       ] })
                     ] })
                   ]
                 },
-                config.id || `collection-${index$1}`
+                config.id || `collection-${index}`
               );
             })
           ]
         }
       )
     ] }) }),
-    /* @__PURE__ */ jsxRuntime.jsx(
+    /* @__PURE__ */ jsx(
       CollectionTypeModal,
       {
         isOpen: isCollectionModalOpen,
@@ -26657,19 +26650,21 @@ const Settings = () => {
   ] });
 };
 const Home = () => {
-  const initialTab = React.useMemo(() => {
+  const initialTab = useMemo(() => {
     if (typeof window === "undefined") return "overview";
     const params = new URLSearchParams(window.location.search);
     const tab = params.get("tab");
     return tab === "config" ? "config" : "overview";
   }, []);
-  const [activeTab, setActiveTab] = React.useState(initialTab);
-  return /* @__PURE__ */ jsxRuntime.jsxs(jsxRuntime.Fragment, { children: [
-    /* @__PURE__ */ jsxRuntime.jsx(designSystem.Box, { paddingTop: 6, paddingLeft: 8, paddingRight: 8, children: /* @__PURE__ */ jsxRuntime.jsxs(designSystem.Flex, { gap: 2, children: [
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: activeTab === "overview" ? "default" : "secondary", onClick: () => setActiveTab("overview"), children: "Overview" }),
-      /* @__PURE__ */ jsxRuntime.jsx(designSystem.Button, { variant: activeTab === "config" ? "default" : "secondary", onClick: () => setActiveTab("config"), children: "Configuration" })
+  const [activeTab, setActiveTab] = useState(initialTab);
+  return /* @__PURE__ */ jsxs(Fragment, { children: [
+    /* @__PURE__ */ jsx(Box, { paddingTop: 6, paddingLeft: 8, paddingRight: 8, children: /* @__PURE__ */ jsxs(Flex, { gap: 2, children: [
+      /* @__PURE__ */ jsx(Button, { variant: activeTab === "overview" ? "default" : "secondary", onClick: () => setActiveTab("overview"), children: "Overview" }),
+      /* @__PURE__ */ jsx(Button, { variant: activeTab === "config" ? "default" : "secondary", onClick: () => setActiveTab("config"), children: "Configuration" })
     ] }) }),
-    activeTab === "overview" ? /* @__PURE__ */ jsxRuntime.jsx(Overview, {}) : /* @__PURE__ */ jsxRuntime.jsx(Settings, {})
+    activeTab === "overview" ? /* @__PURE__ */ jsx(Overview, {}) : /* @__PURE__ */ jsx(Settings, {})
   ] });
 };
-exports.default = Home;
+export {
+  Home as default
+};
