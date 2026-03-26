@@ -1,6 +1,6 @@
 {
   "name": "@webbycrown/strapi-advanced-sitemap",
-  "version": "1.0.8",
+  "version": "1.0.7",
   "keywords": [
     "strapi",
     "plugin",
@@ -22,11 +22,13 @@
   },
   "files": [
     "dist",
+    "strapi-server.js",
     "README.md",
     "LICENSE"
   ],
   "scripts": {
-    "build": "npm run build:admin",
+    "build": "npm run build:admin && npm run build:server",
+    "build:server": "node ./scripts/build-server.mjs",
     "build:admin": "strapi-plugin build",
     "watch": "strapi-plugin watch",
     "watch:link": "strapi-plugin watch:link",

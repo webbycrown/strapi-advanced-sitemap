@@ -23,6 +23,8 @@ build-config
 # Keep only built files (dist)
 # ----------------------------
 !dist
+!dist/server/src
+
 
 # ----------------------------
 # Ignore editor & OS metadata
