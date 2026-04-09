@@ -1,6 +1,7 @@
 {
   "name": "@webbycrown/strapi-advanced-sitemap",
   "version": "1.0.7",
+  "homepage": "https://www.webbycrown.com/guides/strapi-advanced-sitemap/strapi-quick-start", 
   "keywords": [
     "strapi",
     "plugin",

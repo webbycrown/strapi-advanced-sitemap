@@ -1,13 +1,26 @@
 # 🚀 Strapi Advanced Sitemap
 
-[![npm version](https://badge.fury.io/js/%40webbycrown%2Fstrapi-advanced-sitemap.svg)](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)
+[![npm version](https://img.shields.io/badge/npm-1.0.7-CB3837?style=flat-square&logo=npm)](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 [![Strapi](https://img.shields.io/badge/Strapi-5.x-blue.svg)](https://strapi.io/)
+[![Strapi Market](https://img.shields.io/badge/Strapi%20Market-Plugin-7A5AF8?style=flat-square&logo=strapi)](https://market.strapi.io/plugins/@webbycrown-strapi-advanced-sitemap)
 
 SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes, generate dynamic feeds from collection types, and expose every endpoint behind role-based permissions—no external services required.
 
-📦 **NPM Package**: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)  
-💻 **Repository**: [GitHub – webbycrown/strapi-advanced-sitemap](https://github.com/webbycrown/strapi-advanced-sitemap)
+- **NPM Package**: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)  
+- **Strapi Market**: https://market.strapi.io/plugins/@webbycrown-strapi-advanced-sitemap
+
+
+
+## 📘 User Guide
+
+📺 **Learn how to use Advanced Sitemap in Strapi with our step-by-step guide**
+
+[![Open User Guide](https://img.shields.io/badge/Open%20User%20Guide-Getting%20Started-2563eb?style=for-the-badge)](https://www.webbycrown.com/guides/strapi-advanced-sitemap/strapi-quick-start)
+
+**Direct link:** https://www.webbycrown.com/guides/strapi-advanced-sitemap/strapi-quick-start
+
+---
 
 ## 🎥 Overview & Usage Demo
 
