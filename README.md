@@ -1,7 +1,7 @@
 # 🚀 Strapi Advanced Sitemap
 
 [![npm version](https://img.shields.io/badge/npm-1.0.7-CB3837?style=flat-square&logo=npm)](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)
-[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://github.com/webbycrown/strapi-advanced-sitemap/blame/main/LICENSE)
 [![Strapi](https://img.shields.io/badge/Strapi-5.x-blue.svg)](https://strapi.io/)
 [![Strapi Market](https://img.shields.io/badge/Strapi%20Market-Plugin-7A5AF8?style=flat-square&logo=strapi)](https://market.strapi.io/plugins/@webbycrown-strapi-advanced-sitemap)
 
@@ -9,7 +9,6 @@ SEO-ready XML sitemaps for Strapi CMS. Create manual URL sets or sitemap indexes
 
 - **NPM Package**: [@webbycrown/strapi-advanced-sitemap](https://www.npmjs.com/package/@webbycrown/strapi-advanced-sitemap)  
 - **Strapi Market**: https://market.strapi.io/plugins/@webbycrown-strapi-advanced-sitemap
-
 
 
 ## 📘 User Guide
