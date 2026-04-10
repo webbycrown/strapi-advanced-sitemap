@@ -1,6 +1,15 @@
 {
   "name": "@webbycrown/strapi-advanced-sitemap",
   "version": "1.0.7",
+  "github": "https://github.com/webbycrown/strapi-advanced-sitemap",
+  "repository": "https://github.com/webbycrown/strapi-advanced-sitemap",
+  "bugs": "https://github.com/webbycrown/strapi-advanced-sitemap/issues",
+  "license": "MIT",
+  "author": {
+    "name": "WebbyCrown",
+    "email": "support@webbycrown.com",
+    "url": "https://webbycrown.com"
+  },
   "homepage": "https://www.webbycrown.com/guides/strapi-advanced-sitemap/strapi-quick-start", 
   "keywords": [
     "strapi",
